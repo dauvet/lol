@@ -149,6 +149,14 @@ function landing_settings_render()
                 update_option(LOL_PREFIX . $key, $settings[$key]);
             }
         }
+        ?>
+        <div id="setting-error-settings_updated" class="updated settings-error">
+<p><strong>Settings saved.</strong></p></div>
+        <?php
+    }else{
+        foreach($landing_settings_keys as $key=>$tag){
+            $settings[$key] = get_option(LOL_PREFIX . $key);
+        }
     }
 	?>
 	<div class="wrap">
@@ -162,7 +170,7 @@ function landing_settings_render()
                         <th><?php echo $tag['title']; ?></th>
                         <td>
                             <?php if ($tag['type'] == 'text'): ?>
-                            <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]">
+                            <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]" value="<?php if(isset($settings[$key])) echo $settings[$key];  ?>">
                             <?php endif; ?>
                         </td>
                     </tr>
