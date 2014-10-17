@@ -1,0 +1,5 @@
+[HieuPhan]
+2014/10/17
+- Start Project
+- Research about wordpress and responsive layout
+- Coding Landing page (first for Desktop)
