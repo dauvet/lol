@@ -1,4 +1,7 @@
 <?php
+
+define('LOL_PREFIX', 'lol_');
+global $landing_settings_keys;
 $landing_settings_keys = array(
     'qrcode_link' => array(
         'title' => __('QR Code link', 'responsive'),
@@ -21,11 +24,3 @@ $landing_settings_keys = array(
         'type' => 'text'
     ),
 );
-function dlog($object, $before = '', $after = '')
-{
-	echo $before;
-	echo "<pre>";
-	print_r($object);
-	echo "</pre>";
-	echo $after;
-}

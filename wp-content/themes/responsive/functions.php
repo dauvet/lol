@@ -4,7 +4,8 @@
  *
  * @package responsive
  */
-require get_template_directory() . '/inc/utils.php';
+include  'inc/utils.php';
+include  'inc/consts.php';
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -135,59 +136,37 @@ add_action( 'admin_menu', 'register_landing_menu' );
 
 function register_landing_menu(){
 	add_menu_page( 'Landing page', 'Landing settings', 'manage_options', 'landing_settings', 'landing_settings_render',
-		plugins_url( 'myplugin/images/icon.png' ), 6 );
+        get_template_directory_uri() . '/images/landing-page.png', 6 );
 }
-
 
 function landing_settings_render()
 {
-	if (isset($_POST['settings'])){
-		dlog($_POST['settings']);
-
-	}
+    global $landing_settings_keys;
+	if (isset($_POST['settings']) && check_admin_referer( 'landing-settings')) {
+        $settings = $_POST['settings'];
+        foreach($landing_settings_keys as $key=>$tag){
+            if (isset($settings[$key])){
+                update_option(LOL_PREFIX . $key, $settings[$key]);
+            }
+        }
+    }
 	?>
 	<div class="wrap">
 		<h2>Landing page settings</h2>
 		<form method="post" action="">
+            <?php wp_nonce_field( 'landing-settings'); ?>
 			<table class="form-table">
 				<tbody>
-					<tr>
-						<th>QR Code</th>
-						<td>
-							<select name="settings[qr]">
-								<option>QR1</option>
-								<option>QR2</option>
-							</select>
-							<p class="description"><?php echo sprintf(__('You can manage your QR Links <a
-							href="%s">click
-							here</a>',
-									'responsive'), 'http://google.com.vn'); ?></p>
-						</td>
-					</tr>
-					<tr>
-						<th>iOS Jailbreak Download Link</th>
-						<td>
-							<input class="regular-text" type="text" name="settings[ios_jailbreak_link]">
-						</td>
-					</tr>
-					<tr>
-						<th>iOS iTunes Download Link</th>
-						<td>
-							<input class="regular-text" type="text" name="settings[ios_link]">
-						</td>
-					</tr>
-					<tr>
-						<th>Android Download link</th>
-						<td>
-							<input class="regular-text" type="text" name="settings[android_link]">
-						</td>
-					</tr>
-					<tr>
-						<th>Youtube Video Clip link</th>
-						<td>
-							<input class="regular-text" type="text" name="settings[youtube_link]">
-						</td>
-					</tr>
+                    <?php foreach($landing_settings_keys as $key=>$tag): ?>
+                    <tr>
+                        <th><?php echo $tag['title']; ?></th>
+                        <td>
+                            <?php if ($tag['type'] == 'text'): ?>
+                            <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]">
+                            <?php endif; ?>
+                        </td>
+                    </tr>
+                    <?php endforeach; ?>
 				</tbody>
 			</table>
 
@@ -195,4 +174,8 @@ function landing_settings_render()
 		</form>
 	</div>
 	<?php
+}
+
+function landing_settings_get($key){
+    return get_option(LOL_PREFIX . $key);
 }
