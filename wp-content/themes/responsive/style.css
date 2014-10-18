@@ -807,156 +807,167 @@ object {
 	clear: both;
 }
 
-body.trang-chu {
-	background: url("images/home/header_bg.jpg") #031326 top center no-repeat;
-	margin: 0 auto;
-	max-width: 1903px;
+/*For desktop*/
+@media screen and (min-width: 640px) {
+	body.trang-chu {
+		background: url("images/home/header_bg.jpg") #031326 top center no-repeat;
+		margin: 0 auto;
+		max-width: 1903px;
+	}
+
+	body.trang-chu #page {
+		margin: 0 auto;
+		position: relative;
+	}
+
+	body.trang-chu .site-header, body.trang-chu .site-content {
+		width: 1000px;
+		margin: 0 auto;
+	}
+
+	body.trang-chu div.logo {
+		margin-top: 35px;
+		width: 296px;
+		height: 154px;
+		background-image: url("images/home/logo.png");
+	}
+
+	body.trang-chu .download-menu {
+		margin-top: 210px;
+		padding-left: 8px;
+	}
+
+	body.trang-chu #site-navigation-bg {
+		background: url("images/home/navigation-bg.png") transparent top center no-repeat;
+		height: 102px;
+		position: absolute;
+		top: 477px;
+		left: 0;
+		width: 100%;
+	}
+
+	body.trang-chu #site-navigation {
+		height: 102px;
+		margin-top: -7px;
+	}
+
+	body.trang-chu #site-navigation .menu .menu-item {
+		width: 192px;
+		line-height: 102px;
+		font-family: "Tahoma";
+		font-size: 18.4px;
+		text-align: center;
+	}
+
+	body.trang-chu #site-navigation .menu .menu-item a {
+		color: #fdfbfb;
+	}
+
+	body.trang-chu #site-navigation .menu .menu-item:first-child a {
+		color: #fffda5;
+	}
+
+	body.trang-chu main {
+		padding: 20px 0;
+	}
+
+	body.trang-chu .main-content {
+		margin-top: 10px;
+	}
+
+	body.trang-chu .news-with-tabs .tabs-section {
+		background-color: #202741;
+		height: 38px;
+		margin-bottom: 20px;
+	}
+
+	body.trang-chu .news-with-tabs .tabs-section .tabs-name {
+		display: inline-block;
+		line-height: 39px;
+		color: #fdfbfb;
+		font-size: 14px;
+		width: 79px;
+		height: 38px;
+		text-align: center;
+	}
+
+	body.trang-chu .news-with-tabs .tabs-section a.active .tabs-name {
+		background: url("images/home/tab-active.png");
+		height: 44px;
+	}
+
+	body.trang-chu .news-with-tabs .content-section .content-title {
+		float: left;
+	}
+
+	body.trang-chu .news-with-tabs .content-section .content-date-modified {
+		float: right;
+		padding-right: 15px;
+	}
+
+	body.trang-chu .news-with-tabs-section {
+		float: left;
+	}
+
+	body.trang-chu .news-with-tabs-section[rel="1"] {
+		width: 420px;
+	}
+
+	body.trang-chu .news-with-tabs-section[rel="2"] {
+		width: 597px;
+	}
+
+	body.trang-chu .banner-1 {
+		width: 570px;
+		height: 238px;
+		float: right;
+	}
+
+	body.trang-chu .clip-1 {
+		width: 392px;
+		padding: 10px 11px;
+		float: right;
+		background-color: #202840;
+	}
+
+	body.trang-chu .clip-1 .clip-title {
+		font-weight: bold;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+
+	body.trang-chu .clip-1 .clip-section {
+		width: 370px;
+		margin: 0 auto;
+	}
+
+	body.trang-chu .facebook-1 {
+		float: right;
+		width: 392px;
+		background-color: #202840;
+	}
+
+	body.trang-chu .facebook-1 .facebook-1-title {
+		background: url("images/home/fb_logo.png") 16px center no-repeat #ba091d;
+		font-weight: bold;
+		font-size: 18px;
+		color: #ffffff;
+		height: 46px;
+		line-height: 46px;
+		padding-left: 75px;
+	}
+
+	body.trang-chu .facebook-1 iframe body {
+		color: #697171 !important;
+	}
+
+	body.trang-chu footer {
+		color: #8b94b0;
+		background-color: #060b1b;
+	}
+
 }
 
-body.trang-chu #page {
-	margin: 0 auto;
-	position: relative;
-}
-
-body.trang-chu .site-header, body.trang-chu .site-content {
-	width: 1000px;
-	margin: 0 auto;
-}
-
-body.trang-chu div.logo {
-	margin-top: 35px;
-	width: 296px;
-	height: 154px;
-	background-image: url("images/home/logo.png");
-}
-
-body.trang-chu .download-menu {
-	margin-top: 210px;
-	padding-left: 8px;
-}
-
-body.trang-chu #site-navigation-bg {
-	background: url("images/home/navigation-bg.png") transparent top center no-repeat;
-	height: 102px;
-	position: absolute;
-	top: 477px;
-	left: 0;
-	width: 100%;
-}
-
-body.trang-chu #site-navigation {
-	height: 102px;
-	margin-top: -7px;
-}
-
-body.trang-chu #site-navigation .menu .menu-item {
-	width: 192px;
-	line-height: 102px;
-	font-family: "Tahoma";
-	font-size: 18.4px;
-	text-align: center;
-}
-
-body.trang-chu #site-navigation .menu .menu-item a {
-	color: #fdfbfb;
-}
-body.trang-chu #site-navigation .menu .menu-item:first-child a {
-	color: #fffda5;
-}
-
-body.trang-chu main {
-	padding: 20px 0;
-}
-
-body.trang-chu .main-content {
-	margin-top: 10px;
-}
-
-body.trang-chu .news-with-tabs .tabs-section {
-	background-color: #202741;
-	height: 38px;
-	margin-bottom: 20px;
-}
-
-body.trang-chu .news-with-tabs .tabs-section .tabs-name {
-	display: inline-block;
-	line-height: 39px;
-	color: #fdfbfb;
-	font-size: 14px;
-	width: 79px;
-	height: 38px ;
-	text-align: center;
-}
-
-body.trang-chu .news-with-tabs .tabs-section a.active .tabs-name {
-	background: url("images/home/tab-active.png");
-	height: 44px;
-}
-
-body.trang-chu .news-with-tabs .content-section .content-title {
-	float: left;
-}
-body.trang-chu .news-with-tabs .content-section .content-date-modified {
-	float: right;
-	padding-right: 15px;
-}
-
-body.trang-chu .news-with-tabs-section {
-	float: left;
-}
-
-body.trang-chu .news-with-tabs-section[rel="1"] {
-	width: 420px;
-}
-body.trang-chu .news-with-tabs-section[rel="2"] {
-	width: 597px;
-}
-
-body.trang-chu .banner-1 {
-	width: 570px;
-	height: 238px;
-	float: right;
-}
-
-body.trang-chu .clip-1 {
-	width: 392px;
-	padding: 10px 11px;
-	float: right;
-	background-color: #202840;
-}
-
-body.trang-chu .clip-1 .clip-title {
-	font-weight: bold;
-	font-size: 14px;
-	margin-bottom: 10px;
-}
-
-body.trang-chu .clip-1 .clip-section {
-	width: 370px;
-	margin: 0 auto;
-}
-
-body.trang-chu .facebook-1 {
-	float: right;
-	width: 392px;
-	background-color: #202840;
-}
-
-body.trang-chu .facebook-1 .facebook-1-title {
-	background: url("images/home/fb_logo.png") 16px center no-repeat #ba091d;
-	font-weight: bold;
-	font-size: 18px;
-	color: #ffffff;
-	height: 46px;
-	line-height: 46px;
-	padding-left: 75px;
-}
-
-body.trang-chu .facebook-1 iframe body {
-	color: #697171 !important;
-}
-
-body.trang-chu footer {
-	color: #8b94b0;
-	background-color: #060b1b;
+@media screen and (max-width: 640px) {
+	/*TODO*/
 }
