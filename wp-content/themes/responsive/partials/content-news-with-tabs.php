@@ -12,6 +12,7 @@ if(!empty($tabs_array)): ?>
 				$category = get_category_by_slug($tab); ?>
 				<a <?php echo ($i == 0) ? "class='active'" : "" ?> href="javascript:void(0);" rel="<?php echo $tab ?>"><div class="tabs-name"><?php echo $category->name ?></div></a>
 			<?php endforeach; ?>
+			<a class="see-more" href="javascript:void(0);">xem thêm >></a>
 		</div>
 		<?php foreach ( $tabs_array as $i => $tab ) : ?>
 			<div class="content-section" rel="<?php echo $tab ?>">

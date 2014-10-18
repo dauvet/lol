@@ -20,6 +20,21 @@ get_header("trang-chu"); ?>
 			<div class="clear"></div>
 		</div>
 		<div class="main-content">
+			<div class="question-title">CÂU HỎI<a class="see-more" href="javascript:void(0);">xem thêm >></a></div>
+			<div class="question-section">
+				<div class="question-wrapper">
+					<div id="question-content-1" class="question-content scrollbar-arrow">
+						<?php for($i = 0; $i < 10; $i++): ?>
+							<div class="question"><span>Q:</span> Đá linh thạch có tác dụng gì ?</div>
+							<div class="answer"><span>A:</span> Dùng để nâng cấp sao cho anh hùng, thấp nhất cấp 1, cao nhất cấp 5.</div>
+						<?php endfor; ?>
+					</div>
+					<div class="question-ask">
+						<div class="question-ask-btn"></div>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
 			<div class="clip-1">
 				<div class="clip-title">TRAILER</div>
 				<div class="clip-section">
@@ -37,7 +52,7 @@ get_header("trang-chu"); ?>
 			</div>
 			<div class="facebook-1">
 				<div class="facebook-1-title">FACEBOOK</div>
-				<iframe src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=1488293541445840" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:210px;" allowTransparency="true"></iframe>
+				<iframe src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:210px;" allowTransparency="true"></iframe>
 			</div>
 			<div class="clear"></div>
 		</div>

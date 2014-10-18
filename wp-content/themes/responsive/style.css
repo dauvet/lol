@@ -879,6 +879,17 @@ object {
 		background-color: #202741;
 		height: 38px;
 		margin-bottom: 20px;
+		position: relative;
+	}
+
+	body.trang-chu .news-with-tabs .tabs-section a.see-more {
+		position: absolute;
+		top: 12px;
+		right: 5px;
+		text-decoration: none;
+		color: #8b94b0;
+		font-weight: normal;
+		font-size: 12px;
 	}
 
 	body.trang-chu .news-with-tabs .tabs-section .tabs-name {
@@ -929,10 +940,85 @@ object {
 		width: 597px;
 	}
 
+	body.trang-chu .question-section {
+		width: 597px;
+		height: 300px;
+		float: left;
+	}
+
+	body.trang-chu .question-title {
+		border-bottom: 2px solid #202840;
+		margin-bottom: 10px;
+		height: 30px;
+		line-height: 28px;
+		position: relative;
+		font-weight: bold;
+		font-size: 14px;
+		color: #f8f9fb;
+	}
+
+	body.trang-chu .question-title a.see-more {
+		position: absolute;
+		top: 2px;
+		left: 518px;
+		font-size: 12px;
+		font-weight: normal;
+		color: #8b94b0;
+		text-decoration: none;
+	}
+
+	body.trang-chu .question-wrapper {
+		background-color: #020f1e;
+		border: 1px solid #081e38;
+		padding: 10px 0 10px 10px;
+	}
+
+	body.trang-chu .question-wrapper > .question-content {
+		width: 427px;
+		height: 280px;
+		float: left;
+	}
+
+	body.trang-chu .question-content-1 {
+		padding-right: 20px;
+	}
+
+	body.trang-chu .question, body.trang-chu .answer {
+		font-size: 14px;
+		line-height: 30px;
+		padding-right: 40px;
+	}
+
+	body.trang-chu .question {
+		color: #02c8cf;
+		font-weight: bold;
+	}
+
+	body.trang-chu .answer {
+		font-weight: normal;
+	}
+
+	body.trang-chu .question-ask {
+		float: right;
+		width: 150px;
+		height: 280px;
+		background: url("images/home/nidelee.png") center no-repeat transparent;
+	}
+
+	body.trang-chu .question-ask-btn {
+		margin: 210px auto 0 auto;
+		background: url("images/home/ask-btn.png") center no-repeat transparent ;
+		width: 96px;
+		height: 39px;
+		cursor: pointer;
+		cursor: hand;
+	}
+
 	body.trang-chu .banner-1 {
 		width: 570px;
 		height: 238px;
 		float: right;
+		margin-top: 1px;
 	}
 
 	body.trang-chu .clip-1 {
