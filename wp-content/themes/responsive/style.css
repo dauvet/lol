@@ -936,6 +936,26 @@ body.trang-chu .clip-1 .clip-section {
 	margin: 0 auto;
 }
 
+body.trang-chu .facebook-1 {
+	float: right;
+	width: 392px;
+	background-color: #202840;
+}
+
+body.trang-chu .facebook-1 .facebook-1-title {
+	background: url("images/home/fb_logo.png") 16px center no-repeat #ba091d;
+	font-weight: bold;
+	font-size: 18px;
+	color: #ffffff;
+	height: 46px;
+	line-height: 46px;
+	padding-left: 75px;
+}
+
+body.trang-chu .facebook-1 iframe body {
+	color: #697171 !important;
+}
+
 body.trang-chu footer {
 	color: #8b94b0;
 	background-color: #060b1b;

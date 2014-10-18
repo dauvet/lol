@@ -24,7 +24,7 @@ $landing_settings_keys = array(
         'type' => 'text'
     ),
     'facebook_link' => array(
-        'title' => __('Facebook link', 'responsive'),
+        'title' => __('Facebook Page link', 'responsive'),
         'type' => 'text'
     ),
 );
