@@ -18,7 +18,7 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class("trang-chu"); ?>>
 <div id="page" class="hfeed site">
 	<div id="site-navigation-bg"></div>
 

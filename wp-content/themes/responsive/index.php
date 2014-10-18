@@ -11,14 +11,7 @@
  * @package responsive
  */
 
-if(is_home()) {
-	// for Homepage
-	get_header("home");
-} else {
-	get_header();
-}
-
-?>
+	get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
