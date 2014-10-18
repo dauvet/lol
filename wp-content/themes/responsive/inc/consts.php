@@ -23,4 +23,8 @@ $landing_settings_keys = array(
         'title' => __('Youtube Video Clip link', 'responsive'),
         'type' => 'text'
     ),
+    'facebook_link' => array(
+        'title' => __('Facebook link', 'responsive'),
+        'type' => 'text'
+    ),
 );
