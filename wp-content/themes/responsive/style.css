@@ -85,6 +85,9 @@ html {
 
 body {
 	background: #fff; /* Fallback for when there is no custom background color defined. */
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 12px;
+	color: #8b94b0;
 }
 
 article,
@@ -98,6 +101,12 @@ main,
 nav,
 section {
 	display: block;
+}
+
+footer {
+	text-align: center;
+	line-height: 95px;
+	font-size: 14px;
 }
 
 ol,
@@ -149,11 +158,9 @@ button,
 input,
 select,
 textarea {
-	color: #404040;
-	font-family: sans-serif;
-	font-size: 16px;
-	font-size: 1.6rem;
-	line-height: 1.5;
+	color: #8b94b0;
+	font-family: Tahoma, Arial, sans-serif;
+	font-size: 14px;
 }
 
 h1,
@@ -796,6 +803,9 @@ object {
 /*--------------------------------------------------------------
 13.0 Home Page
 --------------------------------------------------------------*/
+.clear {
+	clear: both;
+}
 
 body.trang-chu {
 	background: url("images/home/header_bg.jpg") #031326 top center no-repeat;
@@ -808,7 +818,7 @@ body.trang-chu #page {
 	position: relative;
 }
 
-body.trang-chu .site-header {
+body.trang-chu .site-header, body.trang-chu .site-content {
 	width: 1000px;
 	margin: 0 auto;
 }
@@ -852,4 +862,81 @@ body.trang-chu #site-navigation .menu .menu-item a {
 }
 body.trang-chu #site-navigation .menu .menu-item:first-child a {
 	color: #fffda5;
+}
+
+body.trang-chu main {
+	padding: 20px 0;
+}
+
+body.trang-chu .main-content {
+	margin-top: 10px;
+}
+
+body.trang-chu .news-with-tabs .tabs-section {
+	background-color: #202741;
+	height: 38px;
+	margin-bottom: 20px;
+}
+
+body.trang-chu .news-with-tabs .tabs-section .tabs-name {
+	display: inline-block;
+	line-height: 39px;
+	color: #fdfbfb;
+	font-size: 14px;
+	width: 79px;
+	height: 38px ;
+	text-align: center;
+}
+
+body.trang-chu .news-with-tabs .tabs-section a.active .tabs-name {
+	background: url("images/home/tab-active.png");
+	height: 44px;
+}
+
+body.trang-chu .news-with-tabs .content-section .content-title {
+	float: left;
+}
+body.trang-chu .news-with-tabs .content-section .content-date-modified {
+	float: right;
+	padding-right: 15px;
+}
+
+body.trang-chu .news-with-tabs-section {
+	float: left;
+}
+
+body.trang-chu .news-with-tabs-section[rel="1"] {
+	width: 420px;
+}
+body.trang-chu .news-with-tabs-section[rel="2"] {
+	width: 597px;
+}
+
+body.trang-chu .banner-1 {
+	width: 570px;
+	height: 238px;
+	float: right;
+}
+
+body.trang-chu .clip-1 {
+	width: 392px;
+	padding: 10px 11px;
+	float: right;
+	background-color: #202840;
+}
+
+body.trang-chu .clip-1 .clip-title {
+	font-weight: bold;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+body.trang-chu .clip-1 .clip-section {
+	width: 370px;
+	margin: 0 auto;
+}
+
+body.trang-chu footer {
+	color: #8b94b0;
+	background-color: #060b1b;
 }

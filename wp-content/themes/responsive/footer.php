@@ -11,11 +11,7 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'responsive' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'responsive' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'responsive' ), 'responsive', '<a href="http://underscores.me/" rel="designer">Trương Văn Hiếu</a>' ); ?>
-		</div><!-- .site-info -->
+		<span>Copyright © 2014 Ingamemobi - All rights reserved.</span>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
