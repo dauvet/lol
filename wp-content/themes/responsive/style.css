@@ -896,6 +896,10 @@ object {
 		height: 44px;
 	}
 
+	body.trang-chu .news-with-tabs .content-section {
+		display: none;
+	}
+
 	body.trang-chu .news-with-tabs .content-section .content-items {
 		line-height: 40px;
 	}
