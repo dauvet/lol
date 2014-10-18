@@ -23,7 +23,7 @@ get_header("trang-chu"); ?>
 			<div class="clip-1">
 				<div class="clip-title">TRAILER</div>
 				<div class="clip-section">
-					<iframe width="370" height="226" src="//www.youtube.com/embed/oO3Eqb5dPm8" frameborder="0" allowfullscreen></iframe>
+					<iframe width="370" height="226" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -37,7 +37,7 @@ get_header("trang-chu"); ?>
 			</div>
 			<div class="facebook-1">
 				<div class="facebook-1-title">FACEBOOK</div>
-				<iframe src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=1488293541445840" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:258px;" allowTransparency="true"></iframe>
+				<iframe src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false&amp;appId=1488293541445840" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:210px;" allowTransparency="true"></iframe>
 			</div>
 			<div class="clear"></div>
 		</div>

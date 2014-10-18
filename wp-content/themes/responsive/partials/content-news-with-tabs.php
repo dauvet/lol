@@ -14,7 +14,7 @@ if(!empty($tabs_array)): ?>
 			<?php endforeach; ?>
 		</div>
 		<?php foreach ( $tabs_array as $i => $tab ) : ?>
-			<div class="content-section" rel="<?php echo $tabs ?>">
+			<div class="content-section" rel="<?php echo $tab ?>">
 				<?php
 				$args = array(
 					'posts_per_page' => 5,
@@ -27,10 +27,13 @@ if(!empty($tabs_array)): ?>
 				);
 				$news_posts_array = get_posts( $args );
 				foreach ( $news_posts_array as $post ) :
+					//print_r($post);
 					setup_postdata( $post ); ?>
-					<div class="content-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
-					<div class="content-date-modified"><?php the_date('d/m/Y'); ?></div>
-					<div class="clear"></div>
+					<div class="content-items">
+						<div class="content-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+						<div class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></div>
+						<div class="clear"></div>
+					</div>
 				<?php endforeach;
 				wp_reset_postdata();
 				?>
