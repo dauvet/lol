@@ -29,9 +29,9 @@
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><div class="logo" ></div></a>
 		</div>
 		<div class="download-menu">
-			<a href="javascript: void(0);"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
-			<a href="javascript: void(0);"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
-			<a href="javascript: void(0);"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
+			<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
+			<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
+			<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
