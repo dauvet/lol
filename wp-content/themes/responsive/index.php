@@ -11,36 +11,42 @@
  * @package responsive
  */
 
-	get_header(); ?>
+	get_header("landing"); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<?php if ( have_posts() ) : ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php responsive_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
+			<div class="logo" ></div>
+			<div class="video"></div>
+			<div class="menus">
+				<div class="buttons-group-left">
+					<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>">
+						<div class="buttons-left">
+							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-jail-break-btn.png">
+						</div>
+					</a>
+					<a href="<?php echo landing_settings_get("ios_link") ?>">
+						<div class="buttons-left">
+							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-btn.png">
+						</div>
+					</a>
+					<a href="<?php echo landing_settings_get("android_link") ?>">
+						<div class="buttons-left">
+							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/android-btn.png">
+						</div>
+					</a>
+				</div>
+				<div class="buttons-group-right">
+					<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" rel="home">
+						<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/home-btn.jpg" />
+					</a>
+					<div class="champ-1"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/champ-1.jpg" /></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="customers-support"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/cskh.png" /></div>
 		</main><!-- #main -->
+		<div class="clear"></div>
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
