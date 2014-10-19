@@ -934,6 +934,9 @@ body.trang-chu a {
 	body.trang-chu .news-with-tabs .content-section .content-items a {
 		text-decoration: none;
 	}
+	body.trang-chu .news-with-tabs .content-section .content-items a:hover {
+		color: #fc240 !important;
+	}
 
 	body.trang-chu .news-with-tabs .content-section .content-title {
 		float: left;
@@ -1086,8 +1089,19 @@ body.trang-chu a {
 		background-color: #060b1b;
 	}
 
+    body.trang-chu div.mobile {
+	    display: none;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
 	/*TODO*/
+	body.trang-chu {
+		background: url("images/home/mobile/header-bg.png") #020c23 top center no-repeat;
+	}
+
+	body.trang-chu div.desktop {
+		display: none;
+	}
 }

@@ -60,6 +60,9 @@ get_header("trang-chu"); ?>
 				<div class="clear"></div>
 			</div>
 		</div>
+		<div class="mobile">
+
+		</div>
 	</main><!-- #main -->
 </div><!-- #primary -->
 

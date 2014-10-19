@@ -8,6 +8,7 @@ $(document).on("ready", function() {
 			_self.find(".content-section").hide();
 			_self.find(".content-section[rel='"+ rel +"']").show();
 			$(this).addClass("active");
+			_self.find("a.see-more").attr("href", $(this).attr("see-more-link"))
 		});
 		$(this).find(".tabs-section a.active").trigger("click");
 	});
@@ -21,13 +22,26 @@ $(document).on("ready", function() {
 	});
 
 	// truncate
-	$('.truncate').each(function() {
-		var size = $(this).width();
-		$(this).truncate({
-			width: size,
-			token: '...',
-			side: 'right',
-			multiline: false
+	function truncate() {
+		$('.truncate').each(function() {
+			var size = $(this).width();
+			var moreText = '...';
+			var title = $(this).text();
+			if(title.length <= moreText.length) {
+				$(this).html($(this).attr("title-text"));
+			}
+
+			$(this).truncate({
+				width: size,
+				token: moreText,
+				side: 'right',
+				multiline: false
+			});
 		});
+	}
+	truncate();
+	$(window).on("resize", function() {
+		truncate();
 	});
+
 });

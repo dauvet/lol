@@ -11,7 +11,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<span>Copyright © 2014 Ingamemobi - All rights reserved.</span>
+		<div class="desktop">
+			<span>Copyright © 2014 Ingamemobi - All rights reserved.</span>
+		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
