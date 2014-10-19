@@ -20,8 +20,14 @@ $(document).on("ready", function() {
 		}
 	});
 
-	$(".facebook-1 iframe").contents().find("body,div,span").css({
-		"color" : "#5d6365 !important"
+	// truncate
+	$('.truncate').each(function() {
+		var size = $(this).width();
+		$(this).truncate({
+			width: size,
+			token: '...',
+			side: 'right',
+			multiline: false
+		});
 	});
-
 });

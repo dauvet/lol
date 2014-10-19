@@ -935,9 +935,15 @@ object {
 	body.trang-chu .news-with-tabs-section[rel="1"] {
 		width: 420px;
 	}
+	body.trang-chu .news-with-tabs-section[rel="1"] .content-title {
+		width: 300px;
+	}
 
 	body.trang-chu .news-with-tabs-section[rel="2"] {
 		width: 597px;
+	}
+	body.trang-chu .news-with-tabs-section[rel="2"] .content-title {
+		width: 460px;
 	}
 
 	body.trang-chu .question-section {

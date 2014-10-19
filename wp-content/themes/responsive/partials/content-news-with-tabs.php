@@ -31,7 +31,7 @@ if(!empty($tabs_array)): ?>
 					//print_r($post);
 					setup_postdata( $post ); ?>
 					<div class="content-items">
-						<div class="content-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+						<a href="<?php the_permalink(); ?>"><div class="content-title truncate"><?php the_title(); ?></div></a>
 						<div class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></div>
 						<div class="clear"></div>
 					</div>
