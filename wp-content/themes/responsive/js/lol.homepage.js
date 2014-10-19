@@ -23,7 +23,7 @@ $(document).on("ready", function() {
 
 	// truncate
 	function truncate() {
-		$('.truncate').each(function() {
+		$('.desktop .truncate').each(function() {
 			var size = $(this).width();
 			var moreText = '...';
 			var title = $(this).text();
@@ -43,5 +43,26 @@ $(document).on("ready", function() {
 	$(window).on("resize", function() {
 		truncate();
 	});
+
+	// Mobile
+	if(!$(".mobile").is(":hidden")) {
+		function setWindowSize() {
+			var winW = $(window).width();
+			var winH = (winW * 1798 / 640);
+			console.log(winW + "x" + winH);
+			$("#page").css({
+				"width" : winW,
+				"height" : winH
+			});
+
+			$("#video").css({
+				"margin-top": winH * 355/1798
+			});
+		}
+		setWindowSize();
+		$(window).on("resize", function() {
+			setWindowSize();
+		});
+	}
 
 });

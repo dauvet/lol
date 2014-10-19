@@ -61,7 +61,19 @@ get_header("trang-chu"); ?>
 			</div>
 		</div>
 		<div class="mobile">
+			<div id="video" class="video">
+				<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/home/mobile/video-bg.jpg"/>
+				<!--					<iframe src="--><?php //echo landing_settings_get("youtube_link") ?><!--" frameborder="0" allowfullscreen></iframe>-->
+			</div>
+			<div id="champion_slider" class="champion_slider">
 
+			</div>
+			<div id="events" class="news-section">
+				<div class="events-title">SỰ KIỆN</div>
+				<div class="events-content">
+					
+				</div>
+			</div>
 		</div>
 	</main><!-- #main -->
 </div><!-- #primary -->

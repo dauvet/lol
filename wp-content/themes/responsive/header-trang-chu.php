@@ -52,7 +52,7 @@
 
 		<!-- MOBILE -->
 		<div class="mobile">
-
+			<a class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/mobile/logo.png"></a>
 		</div>
 		<!-- END MOBILE -->
 	</header><!-- #masthead -->
