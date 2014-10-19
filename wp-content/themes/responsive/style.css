@@ -1144,3 +1144,212 @@ body.trang-chu a {
 		display: none;
 	}
 }
+
+/*--------------------------------------------------------------
+13.0 Event Page
+--------------------------------------------------------------*/
+ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+}
+a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #d1d1d1;
+}
+img {
+    border: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+#sub {
+    width: 100%;
+    background: url(images/event/banner.png) no-repeat center top;
+    height: 425px;
+    overflow: visible;
+}
+.nav {
+    width: 100%;
+    background: url(images/event/nav.png) repeat-x left top;
+    margin: 0 auto;
+    height: 102px;
+    overflow: visible;
+    position: relative;
+}
+.navBox {
+    margin: 0 auto;
+    width: 1000px;
+}
+.nav ul li {
+    width: 200px;
+    height: 102px;
+    float: left;
+    background: url(images/event/nav_li.png) no-repeat right top;
+}
+.nav ul li a {
+    display: block;
+    width: 200px;
+    text-align: center;
+    height: 70px;
+    padding-top: 42px;
+    color: #fff;
+    font-size: 20px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif
+}
+.nav ul li a p {
+    font-size: 10px;
+    color: #516296;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.nav ul li.home a {
+    padding-top: 15px;
+}
+.nav ul li.ddLast {
+    background: none;
+}
+
+.nav ul li a:hover {
+    background: url(http://image.daw.so/hero/themes/images/nav_a.jpg) no-repeat center bottom;
+    color: #02c8cf;
+}
+.home a img{
+    position: absolute;
+    right: 40%;
+}
+/*<!-- END HEADER -->*/
+
+.sub_wrap {
+    width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-top: 15px;
+}
+.sub_left {
+    width: 250px;
+    float: left;
+}
+.sub_left .subdownload li {
+    float: left;
+}
+.adds dd {
+    margin-bottom: 5px;
+}
+/* Right */
+.sub_right {
+    width: 740px;
+    float: right;
+    overflow: hidden;
+}
+.subtab2 {
+    float: left;
+    background: url(images/event/news_tab.jpg) repeat-x left top;
+    height: 46px;
+    width: 100%;
+    line-height: 38px;
+    color: #02c8cf;
+    font-weight: bold;
+}
+.subtab2 li {
+    height: 46px;
+    line-height: 36px;
+    width: 79px;
+    color: #02c8cf;
+    font-size: 16px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    float: left;
+    text-align: center;
+}
+.subtab2 li a.active, .subtab2 li a:hover {
+    background: url(images/event/tab_active.jpg) no-repeat left top;
+}
+.subtab2 li a {
+    display: block;
+    float: left;
+    width: 100%;
+    height: 100%;
+    font-size: 13px;
+    color: #fff;
+    margin: 0;
+}
+.statue {
+    height: 35px;
+    text-align: left;
+    line-height: 35px;
+    color: #02c8cf;
+    clear: both;
+    background: #202840;
+    text-indent: 10px;
+    font-weight: bold;
+}
+.statue a {
+    color: #02c8cf;
+    font-weight: bold;
+}
+.content {
+    padding: 15px;
+    /* overflow: hidden; */
+    background: #202840;
+    min-height: 970px;
+    height: auto!important;
+    /* height: 970px; */
+    overflow: visible;
+    clear: both;
+}
+.list_news {
+    margin: 0 auto 10px auto;
+    height: auto;
+
+}
+.list_news li {
+    float: left;
+    width: 100%;
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-bottom: 1px dashed #313a54;
+    color: #606060;
+}
+.list_news li a {
+    font-size: 12px;
+    color: #8b94b0;
+    padding-left: 10px;
+}
+.list_news li em {
+    float: right;
+    font-style: normal;
+    font-size: 12px;
+    /* color: #8b94b0; */
+    padding-right: 18px;
+    margin-left: 20px;
+    color: #606060;
+}
+.pager {
+    margin: 0 auto;
+    text-align: center;
+    clear: both;
+    padding-top: 25px;
+    line-height: 30px;
+    color: #ddd;
+    height: 50px;
+    overflow: hidden;
+}
+.pager a {
+    /* color: #ddd; */
+    margin: 0 3px;
+    line-height: 34px;
+    text-align: center;
+    background: #031326;
+    color: #8b94b0;
+    padding: 4px 10px;
+}

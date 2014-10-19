@@ -22,16 +22,18 @@
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</div>
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'responsive' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+    <div id="sub">
+        <div class="nav">
+            <div class="navBox">
+                <ul>
+                    <li><a href="http://ttyx.daw.so/category/39.html" title="intro">Giới Thiệu<p></p></a></li>
+                    <li><a href="./" title="event">Sự Kiện<p></p></a></li>
+                    <li class="home"><a href="#" title="Logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a></li>
+                    <li><a href="#" title="guide">Hướng Dẫn<p></p></a></li>
+                    <li class="ddLast"><a href="#" target="_blank" title="forum">Diễn Đàn<p></p></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
 	<div id="content" class="site-content">
