@@ -852,7 +852,7 @@ body.trang-chu a {
 
 	body.trang-chu #site-navigation {
 		height: 102px;
-		margin-top: -7px;
+		margin-top: -4px;
 	}
 
 	body.trang-chu #site-navigation .menu .menu-item {
@@ -861,10 +861,20 @@ body.trang-chu a {
 		font-family: "Tahoma";
 		font-size: 18.4px;
 		text-align: center;
+		border-right:  1px solid #192238;
+		border-left:  1px solid #2d3958;
 	}
 
 	body.trang-chu #site-navigation .menu .menu-item a {
 		color: #fdfbfb;
+	}
+
+	body.trang-chu #site-navigation .menu .menu-item:first-child {
+		border-left: none;
+	}
+
+	body.trang-chu #site-navigation .menu .menu-item:last-child {
+		border-right: none;
 	}
 
 	body.trang-chu #site-navigation .menu .menu-item:first-child a {
@@ -1357,18 +1367,19 @@ p {
 /*--------------------------------------------------------------
 14.0 Landing Page
 --------------------------------------------------------------*/
+body.landing-page a img {
+	position: relative;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
 @media screen and (min-width: 640px) {
 	body.landing-page {
 		background: url("images/landing/bg.jpg") top center no-repeat #031326;
 		max-width: 1920px;
 		height: 900px;
 		margin: 0 auto;
-	}
-
-	body.landing-page a img {
-		position: relative;
-		top: 0;
-		left: 0;
 	}
 
 	body.landing-page #page {
@@ -1378,7 +1389,7 @@ p {
 	}
 
 	body.landing-page .site-main .logo {
-		background: url("images/landing/logo.png") center no-repeat transparent;
+		background: transparent;
 		width: 455px;
 		height: 237px;
 		margin: 0 auto;
@@ -1391,7 +1402,7 @@ p {
 	}
 
 	body.landing-page .site-main .video {
-		background: url("images/landing/video-bg.jpg") center no-repeat transparent;
+		background: transparent;
 		width: 497px;
 		height: 254px;
 	}
@@ -1401,17 +1412,10 @@ p {
 	}
 
 	body.landing-page .site-main .buttons-group-left {
-		background: url("images/landing/buttons-bg.jpg") center no-repeat transparent;
+		background: transparent;
 		width: 244px;
 		height: 248px;
 		float: left;
-	}
-
-	body.landing-page .site-main .buttons-left {
-		height: 82px;
-		text-align: left;
-		padding-left: 97px;
-		padding-top: 36px;
 	}
 
 	body.landing-page .site-main .buttons-group-right {
@@ -1420,7 +1424,7 @@ p {
 	}
 
 	body.landing-page .site-main .buttons-group-right .champ-1 {
-		margin-top: 3px;
+		margin-top: 0;
 	}
 
 	body.landing-page .site-main .customers-support img {
@@ -1439,13 +1443,75 @@ p {
 		margin-top: -72px;
 		height: 72px;
 		background-color: #000000;
-		-moz-opacity: 0.10;
-		-khtml-opacity: 0.10;
-		opacity: 0.10;
-		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=10);
-		filter: progid:DXImageTransform.Microsoft.Alpha(opacity=10);
-		filter: alpha(opacity=10);
+		-moz-opacity: 0.25;
+		-khtml-opacity: 0.25;
+		opacity: 0.25;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=25);
+		filter: progid:DXImageTransform.Microsoft.Alpha(opacity=25);
+		filter: alpha(opacity=25);
 		position: relative;
 		z-index: 100;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	body.landing-page {
+		background: url("images/landing/bg.jpg") top center no-repeat #031326;
+		width: 100%;
+		padding: 2px;
+	}
+
+	body.landing-page .site-main {
+		width: 100%;
+	}
+
+	body.landing-page .site-main .logo {
+		text-align: center;
+	}
+
+	body.landing-page .site-main .logo img {
+		width: 69.53125%;
+	}
+
+	body.landing-page .site-main .video img {
+		width: 100%;
+	}
+
+	body.landing-page .site-main .buttons-group-left {
+		float: left;
+		width: 49.2%;
+	}
+
+	body.landing-page .site-main .buttons-group-right {
+		float: right;
+		width: 49.2%;
+	}
+
+	body.landing-page .site-main .buttons-group-left img, body.landing-page .site-main .buttons-group-right img {
+		width: 100%;
+	}
+
+	body.landing-page .customers-support img {
+		width: 100%;
+	}
+
+	body.landing-page .site-footer {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	body.landing-page .site-main .buttons-group-left {
+		float: none;
+		width: 100%;
+	}
+
+	body.landing-page .site-main .buttons-group-right {
+		float: none;
+		display: none;
+	}
+
+	body.landing-page .site-main .buttons-group-left img, body.landing-page .site-main .buttons-group-right img {
+		width: 100%;
 	}
 }

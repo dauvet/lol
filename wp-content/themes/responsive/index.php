@@ -15,31 +15,19 @@
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<div class="logo" ></div>
-			<div class="video"></div>
+			<div class="logo" ><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/logo.png"></div>
+			<div class="video"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/video-bg.jpg"></div>
 			<div class="menus">
 				<div class="buttons-group-left">
-					<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>">
-						<div class="buttons-left">
-							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-jail-break-btn.png">
-						</div>
-					</a>
-					<a href="<?php echo landing_settings_get("ios_link") ?>">
-						<div class="buttons-left">
-							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-btn.png">
-						</div>
-					</a>
-					<a href="<?php echo landing_settings_get("android_link") ?>">
-						<div class="buttons-left">
-							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/android-btn.png">
-						</div>
-					</a>
+					<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-jail-break-btn.png"></a>
+					<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-btn.png"></a>
+					<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/android-btn.png"></a>
 				</div>
 				<div class="buttons-group-right">
 					<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" rel="home">
 						<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/home-btn.jpg" />
 					</a>
-					<div class="champ-1"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/champ-1.jpg" /></div>
+					<div class="champ-1"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/champ-1.png" /></div>
 				</div>
 				<div class="clear"></div>
 			</div>
