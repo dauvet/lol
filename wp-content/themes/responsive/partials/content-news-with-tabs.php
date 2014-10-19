@@ -10,7 +10,11 @@ if(!empty($tabs_array)): ?>
 		<div class="tabs-section">
 			<?php foreach ( $tabs_array as $i => $tab ) :
 				$category = get_category_by_slug($tab); ?>
-				<a <?php echo ($i == 0) ? "class='active'" : "" ?> href="javascript:void(0);" rel="<?php echo $tab ?>"><div class="tabs-name"><?php echo $category->name ?></div></a>
+				<a <?php echo ($i == 0) ? "class='active'" : "" ?>
+					href="javascript:void(0);" rel="<?php echo $tab ?>"
+					see-more-link="<?php echo get_category_link($category->term_id) ?>">
+					<div class="tabs-name"><?php echo $category->name ?></div>
+				</a>
 			<?php endforeach; ?>
 			<a class="see-more" href="javascript:void(0);">xem thêm >></a>
 		</div>
@@ -26,18 +30,20 @@ if(!empty($tabs_array)): ?>
 					'post_type'      => 'post',
 					'post_status'    => 'publish'
 				);
-				$news_posts_array = get_posts( $args );
-				foreach ( $news_posts_array as $post ) :
+				$news_posts_array = get_posts( $args ); ?>
+				<ul>
+				<?php foreach ( $news_posts_array as $post ) :
 					//print_r($post);
 					setup_postdata( $post ); ?>
-					<div class="content-items">
+					<li class="content-items">
 						<a href="<?php the_permalink(); ?>"><div class="content-title truncate"><?php the_title(); ?></div></a>
 						<div class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></div>
 						<div class="clear"></div>
-					</div>
+					</li>
 				<?php endforeach;
 				wp_reset_postdata();
 				?>
+				</ul>
 			</div>
 		<?php endforeach; ?>
 	</div>

@@ -807,6 +807,10 @@ object {
 	clear: both;
 }
 
+body.trang-chu a {
+	color: #8b94b0;
+}
+
 /*For desktop*/
 @media screen and (min-width: 640px) {
 	body.trang-chu {
@@ -878,15 +882,18 @@ object {
 	body.trang-chu .news-with-tabs .tabs-section {
 		background-color: #202741;
 		height: 38px;
-		margin-bottom: 20px;
+		margin-bottom: 15px;
 		position: relative;
+	}
+
+	body.trang-chu .news-with-tabs .tabs-section a {
+		text-decoration: none;
 	}
 
 	body.trang-chu .news-with-tabs .tabs-section a.see-more {
 		position: absolute;
 		top: 12px;
 		right: 5px;
-		text-decoration: none;
 		color: #8b94b0;
 		font-weight: normal;
 		font-size: 12px;
@@ -911,8 +918,17 @@ object {
 		display: none;
 	}
 
+	body.trang-chu .news-with-tabs .content-section > ul {
+		margin: 0 0 0 15px;
+		padding: 0;
+	}
+
+	body.trang-chu .news-with-tabs .content-section > ul > li {
+		list-style-type: square;
+	}
+
 	body.trang-chu .news-with-tabs .content-section .content-items {
-		line-height: 40px;
+		line-height: 36px;
 	}
 
 	body.trang-chu .news-with-tabs .content-section .content-items a {
