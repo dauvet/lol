@@ -1,0 +1,14 @@
+.col_qa_actions a{
+    margin-right: 10px;
+}
+
+#col_qa_id{
+    width: 50px;
+}
+#col_qa_actions{
+    width: 150px;
+}
+
+table.qa_list textarea{
+    width: 100%;
+}

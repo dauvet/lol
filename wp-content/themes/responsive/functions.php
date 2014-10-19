@@ -6,6 +6,7 @@
  */
 include  'inc/utils.php';
 include  'inc/consts.php';
+include 'inc/setting_pages.php';
 /**
  * Set the content width based on the theme's design and stylesheet.
  */
@@ -130,60 +131,3 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
-// landing settings
-// by V.H
-add_action( 'admin_menu', 'register_landing_menu' );
-
-function register_landing_menu(){
-	add_menu_page( 'Landing page', 'Landing settings', 'manage_options', 'landing_settings', 'landing_settings_render',
-        get_template_directory_uri() . '/images/landing-page.png', 6 );
-}
-
-function landing_settings_render()
-{
-    global $landing_settings_keys;
-	if (isset($_POST['settings']) && check_admin_referer( 'landing-settings')) {
-        $settings = $_POST['settings'];
-        foreach($landing_settings_keys as $key=>$tag){
-            if (isset($settings[$key])){
-                update_option(LOL_PREFIX . $key, $settings[$key]);
-            }
-        }
-        ?>
-        <div id="setting-error-settings_updated" class="updated settings-error">
-<p><strong>Settings saved.</strong></p></div>
-        <?php
-    }else{
-        foreach($landing_settings_keys as $key=>$tag){
-            $settings[$key] = get_option(LOL_PREFIX . $key);
-        }
-    }
-	?>
-	<div class="wrap">
-		<h2>Landing page settings</h2>
-		<form method="post" action="">
-            <?php wp_nonce_field( 'landing-settings'); ?>
-			<table class="form-table">
-				<tbody>
-                    <?php foreach($landing_settings_keys as $key=>$tag): ?>
-                    <tr>
-                        <th><?php echo $tag['title']; ?></th>
-                        <td>
-                            <?php if ($tag['type'] == 'text'): ?>
-                            <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]" value="<?php if(isset($settings[$key])) echo $settings[$key];  ?>">
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                    <?php endforeach; ?>
-				</tbody>
-			</table>
-
-			<p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'responsive'); ?>"></p>
-		</form>
-	</div>
-	<?php
-}
-
-function landing_settings_get($key){
-    return get_option(LOL_PREFIX . $key);
-}
