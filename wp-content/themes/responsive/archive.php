@@ -9,97 +9,53 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
 
-		<?php if ( have_posts() ) : ?>
+		<div class="sub_wrap">
+			<div class="sub_left">
+				<ul class="subdownload">
+					<li><a href="#" target="_blank"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/download_1.jpg" alt="android"></a></li>
+					<li><a href="javascript:void(0);" onclick="alert('a！')" title="iso"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/download_2.jpg"></a></li>
+					<li><a title="IOS" href="#l" target="_blank"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/download_3.jpg"></a></li>
+				</ul>
+				<dl class="adds"><dd><a><img src="<?php echo get_bloginfo('template_url') ?>/images/event/ads.png" alt=""></a></dd></dl>
+				<div id="example">
+					<div class="catechose">
+						<h1>NHÂN VẬT</h1>
+					</div>
+					<div class="slides">
+						<div class="slides_container">
 
-			<header class="page-header">
-				<h1 class="page-title">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="sub_right">
+				<div class="subtab2">
+					<?php wp_nav_menu( array('menu' => 'event-menu' ));  ?>
+				</div>
+				<div class="statue">
+					<a href="#" title="">Trang Chủ</a> &gt; <a href="#"><?php echo single_cat_title("", false); ?></a>
+				</div>
+				<div class="content">
+					<ul class="list_news">
 					<?php
-						if ( is_category() ) :
-							single_cat_title();
+					while ( have_posts()) : the_post() ?>
 
-						elseif ( is_tag() ) :
-							single_tag_title();
+						<li><a href="<?php the_permalink(); ?>"><em><?php echo "10/12/1991" ?></em><?php the_title(); ?></a> </li>
 
-						elseif ( is_author() ) :
-							printf( __( 'Author: %s', 'responsive' ), '<span class="vcard">' . get_the_author() . '</span>' );
+					<?php endwhile ?>
+					</ul>
+					<div class="pager">  <a id="prevPageNow" href="javascript:void(0);">&lt;</a>  <a id="pageNow" href="javascript:void(0);">1</a><a href="http://ttyx.daw.so/category/42/2.html">2</a><a href="http://ttyx.daw.so/category/42/3.html">3</a>  <a id="nextPage" href="http://ttyx.daw.so/category/42/2.html">&gt;</a> </div>
+				</div>
+			</div>
 
-						elseif ( is_day() ) :
-							printf( __( 'Day: %s', 'responsive' ), '<span>' . get_the_date() . '</span>' );
+		</div>
 
-						elseif ( is_month() ) :
-							printf( __( 'Month: %s', 'responsive' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'responsive' ) ) . '</span>' );
+	</main><!-- #main -->
+</div><!-- #primary -->
 
-						elseif ( is_year() ) :
-							printf( __( 'Year: %s', 'responsive' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'responsive' ) ) . '</span>' );
 
-						elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
-							_e( 'Asides', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-gallery' ) ) :
-							_e( 'Galleries', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-image' ) ) :
-							_e( 'Images', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-video' ) ) :
-							_e( 'Videos', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-quote' ) ) :
-							_e( 'Quotes', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-link' ) ) :
-							_e( 'Links', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-status' ) ) :
-							_e( 'Statuses', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-audio' ) ) :
-							_e( 'Audios', 'responsive' );
-
-						elseif ( is_tax( 'post_format', 'post-format-chat' ) ) :
-							_e( 'Chats', 'responsive' );
-
-						else :
-							_e( 'Archives', 'responsive' );
-
-						endif;
-					?>
-				</h1>
-				<?php
-					// Show an optional term description.
-					$term_description = term_description();
-					if ( ! empty( $term_description ) ) :
-						printf( '<div class="taxonomy-description">%s</div>', $term_description );
-					endif;
-				?>
-			</header><!-- .page-header -->
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php responsive_paging_nav(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; ?>
-
-		</main><!-- #main -->
-	</section><!-- #primary -->
-
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>
