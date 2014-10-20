@@ -1280,7 +1280,10 @@ p {
     float: left;
     text-align: center;
 }
-.subtab2 li.current_page_item a, .subtab2 li.current_page_item a:hover {
+.subtab2 li.current-menu-item a, .subtab2 li.current-menu-item a:hover {
+    background: url(images/event/tab_active.jpg) no-repeat left top;
+}
+.subtab2 li.current-menu-item a:first-child{
     background: url(images/event/tab_active.jpg) no-repeat left top;
 }
 .subtab2 li a {
