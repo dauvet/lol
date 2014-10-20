@@ -23,11 +23,11 @@ class QA_List_Table extends WP_List_Table {
     function extra_tablenav( $which ) {
         if ( $which == "top" ){
             //The code that goes before the table is here
-            echo "Hello, I'm before the table";
+            //echo "Hello, I'm before the table";
         }
         if ( $which == "bottom" ){
             //The code that goes after the table is there
-            echo "Hi, I'm after the table";
+            //echo "Hi, I'm after the table";
         }
     }
 
