@@ -9,6 +9,7 @@ get_header(); ?>
 
 			<div class="sub_wrap">
 				<div class="sub_left">
+					<?php get_sidebar('left'); ?>
 					<ul class="subdownload">
 						<li><a href="#" target="_blank"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/download_1.jpg" alt="android"></a></li>
 						<li><a href="javascript:void(0);" onclick="alert('a！')" title="iso"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/download_2.jpg"></a></li>
