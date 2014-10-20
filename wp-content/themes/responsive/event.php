@@ -28,50 +28,38 @@ get_header(); ?>
                 </div>
                 <div class="sub_right">
                     <div class="subtab2">
-                        <ul>
-                            <li>
-                                <a href="#" class="active">Mới Nhất</a>
-                            </li>
-                            <li>
-                                <a href="#">Tin Tức</a>
-                            </li>
-                            <li>
-                                <a href="#" >Thông Báo</a>
-                            </li>
-                            <li>
-                                <a href="#" >Sự Kiện</a>
-                            </li>
-                        </ul>
+						<?php wp_nav_menu( array('menu' => 'event-menu' ));  ?>
                     </div>
+
                     <div class="statue">
                         <a href="#" title="">Trang Chủ</a> &gt; <a href="#">Tin Tức</a>
                     </div>
                     <div class="content">
                         <ul class="list_news">
                             <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
-                            <li><a title="[HOT] Những game mobile  dễ gây ức chế mới ra mắt " href="#"><em>25/08/2014</em>[HOT] Những game mobile  dễ gây ức chế mới ra mắt </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
+                            <li><a title="[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t " href="#"><em>25/08/2014</em>[HOT] Nh?ng game mobile  d? gây ?c ch? m?i ra m?t </a></li>
 
                         </ul>
                         <div class="pager">  <a id="prevPageNow" href="javascript:void(0);">&lt;</a>  <a id="pageNow" href="javascript:void(0);">1</a><a href="http://ttyx.daw.so/category/42/2.html">2</a><a href="http://ttyx.daw.so/category/42/3.html">3</a>  <a id="nextPage" href="http://ttyx.daw.so/category/42/2.html">&gt;</a> </div>

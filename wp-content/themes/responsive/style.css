@@ -1280,7 +1280,7 @@ p {
     float: left;
     text-align: center;
 }
-.subtab2 li a.active, .subtab2 li a:hover {
+.subtab2 li.current_page_item a, .subtab2 li.current_page_item a:hover {
     background: url(images/event/tab_active.jpg) no-repeat left top;
 }
 .subtab2 li a {
