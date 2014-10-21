@@ -46,6 +46,8 @@ function responsive_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'responsive' ),
 		'landing_mobile_menu' => __( 'Landing Mobile Menu', 'responsive' ),
+		'about' => __( 'About Menu', 'responsive' ),
+		'event' => __( 'Event Menu', 'responsive' ),
 	) );
 
 	/*
@@ -131,4 +133,5 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
 
