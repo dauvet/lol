@@ -48,7 +48,7 @@
 					<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
 				</div>
 				<div id="champion_slider" class="champion_slider">
-
+					<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '97' ); } ?>
 				</div>
 				<div id="events" class="events-section">
 					<div class="events-title"></div>
@@ -79,8 +79,16 @@
 						</ul>
 					</div>
 				</div>
+
 				<div id="buttons" class="buttons-section">
-					<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
+					<?php if(function_exists( 'wpmd_is_ios' ) && wpmd_is_ios()): ?>
+						<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
+					<?php elseif(function_exists( 'wpmd_is_android()' ) && wpmd_is_android()): ?>
+						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+					<?php else: ?>
+						<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
+						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+					<?php endif; ?>
 				</div>
 			</div>
 		</main><!-- #main -->
