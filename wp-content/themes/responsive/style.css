@@ -1187,10 +1187,7 @@ p {
     background: none;
 }
 
-.nav ul li a:hover {
-    background: url(http://image.daw.so/hero/themes/images/nav_a.jpg) no-repeat center bottom;
-    color: #02c8cf;
-}
+
 .home a img{
     position: absolute;
     right: 40%;

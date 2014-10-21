@@ -8,32 +8,12 @@
  */
 
 get_header(); ?>
-<?
-$event_menu = wp_get_nav_menu_items('Event Menu');
-$categories = get_the_category();
-if ($categories){
-	$cur_cat = $categories[0];
-	$found = false;
-	foreach($event_menu as $item){
-		if ($item->object == 'category' && $item->object_id == $cur_cat->cat_ID){
-			// Xử lý khi thấy category hiện tại đang nằm trong menu 'Event menu'
-			// include menu event vào đây
-			$found = $true;
-			break;
-		}
-	}
-	if (!$found){
-		// Nếu chưa tìm thấy  trong menu 'Event menu' thì tiếp tục tìm trong menu
-		$about_menu = wp_get_nav_menu_items('About Menu');
-		foreach($about_menu as $item){
-			if ($item->object == 'category' && $item->object_id == $cur_cat->cat_ID){
-				// Xử lý khi thấy category hiện tại đang nằm trong menu 'About menu'
-				// include menu about vào
-				break;
-			}
-		}
-	}
-}
+<?php
+	$event_menu = wp_get_nav_menu_items('Event Menu');
+	/*$categories = get_the_category();
+	if ($categories){
+		$cur_cat = $categories[0];
+	}*/
 ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
@@ -59,7 +39,12 @@ if ($categories){
 			</div>
 			<div class="sub_right">
 				<div class="subtab2">
-					<?php wp_nav_menu( array('menu' => 'event-menu' ));  ?>
+					<?php foreach($event_menu as $item) :?>
+						<?php if($item->object == 'category' && $item->object_id == get_query_var( 'cat' )): ?>
+							<?php wp_nav_menu( array('menu' => 'event-menu' ));  ?>
+						<?php endif; ?>
+
+					<?php endforeach;?>
 				</div>
 				<div class="statue">
 					<a href="#" title="">Trang Chủ</a> &gt; <a href="#"><?php echo single_cat_title("", false); ?></a>

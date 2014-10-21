@@ -29,11 +29,16 @@ get_header(); ?>
 					</div>
 				</div>
 				<div class="sub_right">
-					<div class="subtab2">
-						<?php wp_nav_menu( array('menu' => 'event-menu' ));  ?>
-					</div>
+					<?php  $about_menu = wp_get_nav_menu_items('About Menu'); ?>
+					<?php foreach($about_menu as $item) :?>
+						<?php if($item->object == 'post' && $item->object_id == get_the_ID()): ?>
+							<div class="subtab2">
+								<?php wp_nav_menu( array('menu' => 'about-menu' ));  ?>
+							</div>
+						<?php endif; ?>
+					<?php endforeach;?>
 					<div class="statue">
-						<a href="#" title="">Trang Chủ</a> &gt; <a href="#">Sự Kiện</a>
+						<a href="#" title="">Trang Chủ</a> &gt; <a href="#">Giới Thiệu</a> &gt; <a href="#"><?php echo get_the_title(); ?></a>
 					</div>
 					<div class="content">
 						<?php while ( have_posts() ) : the_post(); ?>
