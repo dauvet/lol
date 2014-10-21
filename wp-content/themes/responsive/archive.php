@@ -52,7 +52,7 @@ if ($categories){
 					</div>
 					<div class="slides">
 						<div class="slides_container">
-
+							<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '94' ); }?>
 						</div>
 					</div>
 				</div>
