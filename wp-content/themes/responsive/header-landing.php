@@ -18,6 +18,7 @@
 	<link type="text/css" href="<?php echo get_bloginfo('template_url') ?>/layouts/jquery.scrollbar.css" rel="stylesheet">
 
 	<script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/lol.landingpage.js"></script>
 
 	<?php wp_head(); ?>
 </head>

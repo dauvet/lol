@@ -865,6 +865,10 @@ body.trang-chu a {
 		border-left:  1px solid #2d3958;
 	}
 
+	body.trang-chu .nav-menu .menu-item:hover {
+		background: url("images/home/nav_a.jpg") no-repeat scroll center bottom transparent;
+	}
+
 	body.trang-chu #site-navigation .menu .menu-item a {
 		color: #fdfbfb;
 	}
@@ -917,9 +921,11 @@ body.trang-chu a {
 		width: 79px;
 		height: 38px;
 		text-align: center;
+		cursor: hand;
+		cursor: pointer;
 	}
 
-	body.trang-chu .news-with-tabs .tabs-section a.active .tabs-name {
+	body.trang-chu .news-with-tabs .tabs-section .tabs-name.active {
 		background: url("images/home/tab-active.png");
 		height: 44px;
 	}
@@ -935,6 +941,7 @@ body.trang-chu a {
 
 	body.trang-chu .news-with-tabs .content-section > ul > li {
 		list-style-type: square;
+		display: list-item;
 	}
 
 	body.trang-chu .news-with-tabs .content-section .content-items {
@@ -1099,60 +1106,11 @@ body.trang-chu a {
 		background-color: #060b1b;
 	}
 
-    body.trang-chu div.mobile {
-	    display: none;
-    }
-
 }
 
+/*For mobile*/
 @media screen and (max-width: 640px) {
-	/*TODO*/
-	body.trang-chu {
-		background: url("images/home/mobile/header-bg.png") #020c23 top center no-repeat;
-		background-size: 100% auto;
-		width: 100%;
-	}
 
-	body.trang-chu #page {
-		position: relative;
-	}
-
-	body.trang-chu .site-header .logo img {
-		width: 39.0625%;
-		height: auto;
-		z-index: 1;
-	}
-
-	body.trang-chu .site-main .video {
-		width: 77.65625%;
-		margin: 0 auto ;
-		padding: 0 0.78125%;
-		position: relative;
-		z-index: 2;
-	}
-
-	body.trang-chu .site-main .video img {
-		width: 100%;
-		position: relative;
-		top: 0;
-		left: 0;
-		z-index: 3;
-	}
-
-	body.trang-chu .site-main .video iframe {
-		width: 98.4375%;
-		position: absolute;
-		z-index: 100;
-		left: 0.78125%;
-	}
-
-	body.trang-chu .champion_slider {
-		width: 95%;
-	}
-
-	body.trang-chu div.desktop {
-		display: none;
-	}
 }
 
 /*--------------------------------------------------------------
@@ -1455,66 +1413,143 @@ body.landing-page a img {
 		position: relative;
 		z-index: 100;
 	}
+
+	body.landing-page div.mobile {
+		display: none;
+	}
 }
 
 @media screen and (max-width: 640px) {
 	body.landing-page {
-		background: url("images/landing/bg.jpg") top center no-repeat #031326;
-		width: 100%;
-		padding: 2px;
-	}
-
-	body.landing-page .site-main {
+		background: url("images/landing/mobile/header-bg.png") #020c23 top center no-repeat;
+		background-size: 100% auto;
 		width: 100%;
 	}
 
-	body.landing-page .site-main .logo {
-		text-align: center;
+	body.landing-page #page {
+		position: relative;
+	}
+
+	body.landing-page div.mobile {
+		position: relative;
 	}
 
 	body.landing-page .site-main .logo img {
-		width: 69.53125%;
+		width: 40%;
+	}
+
+	body.landing-page .site-main .mini-menu {
+		width: 41.09375%;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	body.landing-page .site-main .mini-menu-bg {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+	}
+
+	body.landing-page .site-main .mini-menu .mini-menu-content {
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 2;
+	}
+
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item {
+		width: 50%;
+	}
+
+	body.landing-page .site-main .mini-menu img {
+		width: 100%;
+	}
+
+	body.landing-page .site-main .video {
+		width: 77.65625%;
+		position: absolute;
+		z-index: 2;
+		top: 26.52947719688543%;
+		left: 11.09375%;
 	}
 
 	body.landing-page .site-main .video img {
 		width: 100%;
+		position: relative;
+		top: 0;
+		left: 0;
+		z-index: 3;
 	}
 
-	body.landing-page .site-main .buttons-group-left {
+	body.landing-page .site-main .video iframe {
+		width: 98.4375%;
+		position: absolute;
+		z-index: 100;
+		left: 0.78125%;
+	}
+
+	body.landing-page .champion_slider {
+		width: 95%;
+		height: 25.3615127919911%;
+		position: absolute;
+		z-index: 2;
+		top: 43.27030033370412%;
+		left: 2.65625%;
+	}
+
+	body.landing-page .events-section {
+		width: 95.9375%;
+		height: 22.96996662958843%;
+		position: absolute;
+		z-index: 2;
+		top: 70.41156840934372%;
+		left: 1.875%;
+		background: url("images/landing/mobile/event-bg.png") center no-repeat transparent;
+		background-size: 100% 100%;
+	}
+
+	body.landing-page .events-section .events-title {
+		color: #fcfbf9;
+		font-weight: bold;
+		height: 14.04358353510896%;
+		width: 100%;
+		text-align: center;
+	}
+
+	body.landing-page .events-section .events-content {
+		padding: 3.268765133171913% 4.375% 3.268765133171913% 8.75%;
+	}
+
+	body.landing-page .events-section .events-content ul li {
+		display: list-item;
+		list-style-type: square;
+	}
+
+	body.landing-page .events-section .events-content .content-title {
+		width: 71.71875%;
 		float: left;
-		width: 49.2%;
 	}
 
-	body.landing-page .site-main .buttons-group-right {
+	body.landing-page .events-section .events-content .content-date-modified {
+		width: 28.28125%;
 		float: right;
-		width: 49.2%;
+		text-align: right;
 	}
 
-	body.landing-page .site-main .buttons-group-left img, body.landing-page .site-main .buttons-group-right img {
+	body.landing-page .buttons-section {
+		position: absolute;
+		z-index: 2;
 		width: 100%;
+		top: 94.49388209121246%;
 	}
 
-	body.landing-page .customers-support img {
-		width: 100%;
-	}
 
-	body.landing-page .site-footer {
+	body.landing-page div.desktop {
 		display: none;
-	}
-}
-
-@media screen and (max-width: 320px) {
-	body.landing-page .site-main .buttons-group-left {
-		float: none;
-		width: 100%;
-	}
-
-	body.landing-page .site-main .buttons-group-right {
-		float: none;
-		display: none;
-	}
-
-	body.landing-page .site-main .buttons-group-left img, body.landing-page .site-main .buttons-group-right img {
-		width: 100%;
 	}
 }

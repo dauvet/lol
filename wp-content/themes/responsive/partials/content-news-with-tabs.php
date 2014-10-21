@@ -10,11 +10,11 @@ if(!empty($tabs_array)): ?>
 		<div class="tabs-section">
 			<?php foreach ( $tabs_array as $i => $tab ) :
 				$category = get_category_by_slug($tab); ?>
-				<a <?php echo ($i == 0) ? "class='active'" : "" ?>
-					href="javascript:void(0);" rel="<?php echo $tab ?>"
-					see-more-link="<?php echo get_category_link($category->term_id) ?>">
-					<div class="tabs-name"><?php echo $category->name ?></div>
-				</a>
+
+				<div class="tabs-name<?php echo ($i == 0) ? " active" : "" ?>"
+				     href="javascript:void(0);" rel="<?php echo $tab ?>"
+				     see-more-link="<?php echo get_category_link($category->term_id) ?>" ><?php echo $category->name ?></div>
+
 			<?php endforeach; ?>
 			<a class="see-more" href="javascript:void(0);">xem thêm >></a>
 		</div>

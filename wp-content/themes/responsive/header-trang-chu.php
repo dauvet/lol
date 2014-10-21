@@ -32,29 +32,19 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
-		<!-- DESKTOP -->
-		<div class="desktop">
-			<div class="site-branding">
-				<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" rel="home"><div class="logo" ></div></a>
-			</div>
-			<div class="download-menu">
-				<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
-				<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
-				<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
-			</div>
-
-			<nav id="site-navigation" class="main-navigation" role="navigation">
-				<button class="menu-toggle"><?php _e( 'Primary Menu', 'responsive' ); ?></button>
-				<?php wp_nav_menu( array('menu' => 'Home Menu' )); ?>
-			</nav><!-- #site-navigation -->
+		<div class="site-branding">
+			<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" rel="home"><div class="logo" ></div></a>
 		</div>
-		<!-- END DESKTOP -->
-
-		<!-- MOBILE -->
-		<div class="mobile">
-			<a class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/mobile/logo.png"></a>
+		<div class="download-menu">
+			<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
+			<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
+			<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
 		</div>
-		<!-- END MOBILE -->
+
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle"><?php _e( 'Primary Menu', 'responsive' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
