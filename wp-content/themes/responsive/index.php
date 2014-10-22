@@ -48,7 +48,7 @@
 					<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
 				</div>
 				<div id="champion_slider" class="champion_slider">
-					<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '97' ); } ?>
+					<?php masterslider(4); ?>
 				</div>
 				<div id="events" class="events-section">
 					<div class="events-title"></div>

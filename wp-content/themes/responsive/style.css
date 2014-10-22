@@ -1581,6 +1581,11 @@ body.landing-page a img {
 		z-index: 2;
 	}
 
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu {
+		width: 100%;
+		position: relative;
+	}
+
 	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item {
 		width: 50%;
 	}
