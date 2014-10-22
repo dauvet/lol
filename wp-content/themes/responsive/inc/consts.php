@@ -24,10 +24,6 @@ $landing_settings_keys = array(
         'title' => __('Youtube Video Clip link', 'responsive'),
         'type' => 'text'
     ),
-    'facebook_link' => array(
-        'title' => __('Facebook Page link', 'responsive'),
-        'type' => 'text'
-    ),
 );
 
 global $home_settings_keys;
@@ -39,5 +35,9 @@ $home_settings_keys = array(
     'home_trailer_youtube_link' => array(
         'title' => __('Trailer Youtube Link', 'responsive'),
         'type' => 'text'
+    ),
+    'facebook_link' => array(
+	    'title' => __('Facebook Page link', 'responsive'),
+	    'type' => 'text'
     ),
 );
