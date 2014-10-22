@@ -21,17 +21,6 @@ get_header(); ?>
 		<div class="sub_wrap">
 			<div class="sub_left">
 				<?php get_sidebar('left'); ?>
-
-				<div id="example">
-					<div class="catechose">
-						<h1>NHÂN VẬT</h1>
-					</div>
-					<div class="slides">
-						<div class="slides_container">
-							<?php masterslider(1); ?>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="sub_right">
 				<div class="subtab2">

@@ -1141,6 +1141,7 @@ img {
     background: url(images/event/banner.png) no-repeat center top;
     height: 425px;
     overflow: visible;
+
 }
 
 
@@ -1192,6 +1193,7 @@ img {
     -webkit-box-sizing:border-box;
     color: #fff;
     font-size: 14px;
+
 }
 #page-event nav li.last a
 {
@@ -1239,6 +1241,8 @@ img {
         text-indent: 25px;
         padding: 10px;
     }
+
+
 }
 
 /*Styles for screen 515px and lower*/
@@ -1303,6 +1307,24 @@ img {
     width: 250px;
     float: left;
 }
+#page-event .master-slider-main-widget{
+    border: 1px solid #202840;
+
+}
+#page-event .master-slider-main-widget h3{
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+    border-bottom: 1px solid #202840;
+    padding: 10px;
+}
+#page-event .master-slider-main-widget .nhan-vat{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.sub_left .subdownload li a:hover{ opacity:0.9;Alpha(opacity=90)}
 
 /* Right */
 .sub_right {
