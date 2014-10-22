@@ -1182,19 +1182,26 @@ p {
 }
 .nav ul li.home a {
     padding-top: 15px;
+    color: #fffda5;
 }
 .nav ul li.ddLast {
     background: none;
 }
-
-
+.nav ul li a:hover{
+    color: #fffda5;
+}
 .home a img{
     position: absolute;
     right: 40%;
 }
+
 /*<!-- END HEADER -->*/
 #page-event .site-content{
     background: #031326;
+}
+#page-event .widget{
+    margin: 0;
+    margin-bottom: 10px;
 }
 .sub_wrap {
     width: 1000px;
@@ -1206,12 +1213,7 @@ p {
     width: 250px;
     float: left;
 }
-.sub_left .subdownload li {
-    float: left;
-}
-.adds dd {
-    margin-bottom: 5px;
-}
+
 /* Right */
 .sub_right {
     width: 740px;
@@ -1275,6 +1277,7 @@ p {
     /* height: 970px; */
     overflow: visible;
     clear: both;
+    margin-bottom: 30px;
 }
 .list_news {
     margin: 0 auto 10px auto;
@@ -1323,6 +1326,7 @@ p {
     color: #8b94b0;
     padding: 4px 10px;
 }
+
 
 /*--------------------------------------------------------------
 14.0 Landing Page

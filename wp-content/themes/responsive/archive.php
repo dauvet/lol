@@ -21,7 +21,7 @@ get_header(); ?>
 		<div class="sub_wrap">
 			<div class="sub_left">
 				<?php get_sidebar('left'); ?>
-				<dl class="adds"><dd><a><img src="<?php echo get_bloginfo('template_url') ?>/images/event/ads.jpg" alt=""></a></dd></dl>
+
 				<div id="example">
 					<div class="catechose">
 						<h1>NHÂN VẬT</h1>
