@@ -1650,11 +1650,20 @@ body.landing-page a img {
 
 	body.landing-page .events-section .events-content {
 		padding: 3.268765133171913% 4.375% 3.268765133171913% 8.75%;
+		width: 100%;
+		height: 85.85365853658537%;
+	}
+
+	body.landing-page .events-section .events-content ul {
+		width: 100%;
+		height: 100%;
 	}
 
 	body.landing-page .events-section .events-content ul li {
 		display: list-item;
 		list-style-type: square;
+		width: 100%;
+		height: 16.66666666666667%;
 	}
 
 	body.landing-page .events-section .events-content .content-title {
@@ -1666,6 +1675,7 @@ body.landing-page a img {
 		width: 28.28125%;
 		float: right;
 		text-align: right;
+		font-size: 12px;
 	}
 
 	body.landing-page .buttons-section {
