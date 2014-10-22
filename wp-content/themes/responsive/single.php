@@ -43,8 +43,11 @@ get_header(); ?>
 
 							<?php //responsive_post_nav(); ?>
 
-
-
+                            <?php
+                            if ( comments_open() || get_comments_number() ) {
+                            comments_template();
+                            }
+                            ?>
 						<?php endwhile; // end of the loop. ?>
 
 					</div>
