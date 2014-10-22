@@ -1193,7 +1193,9 @@ p {
     right: 40%;
 }
 /*<!-- END HEADER -->*/
-
+#page-event .site-content{
+    background: #031326;
+}
 .sub_wrap {
     width: 1000px;
     margin: 0 auto;
