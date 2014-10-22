@@ -1485,6 +1485,14 @@ body.landing-page a img {
 	left: 0;
 	display: block;
 }
+body.landing-page a img:hover {
+	-moz-opacity: 0.70;
+	-khtml-opacity: 0.70;
+	opacity: 0.70;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+	filter:alpha(opacity=70);
+}
 
 @media screen and (min-width: 640px) {
 	body.landing-page {
@@ -1591,6 +1599,7 @@ body.landing-page a img {
 
 	body.landing-page .site-main .mini-menu {
 		width: 41.09375%;
+		height: 2.057842046718576%;
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -1607,19 +1616,36 @@ body.landing-page a img {
 
 	body.landing-page .site-main .mini-menu .mini-menu-content {
 		width: 100%;
+		height: 100%;
 		position: absolute;
 		left: 0;
 		top: 0;
 		z-index: 2;
 	}
 
+	body.landing-page .site-main .mini-menu .menu-landing-mobile-menu-container {
+		width: 100%;
+		height: 100%;
+	}
+
 	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu {
 		width: 100%;
+		height: 100%;
 		position: relative;
+		display: table;
 	}
 
 	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item {
 		width: 50%;
+		position: relative;
+		display: table-cell;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item a {
+		color: #fdd7a6;
+		font-weight: bold;
 	}
 
 	body.landing-page .site-main .mini-menu img {
@@ -1643,10 +1669,12 @@ body.landing-page a img {
 	}
 
 	body.landing-page .site-main .video iframe {
-		width: 98.4375%;
+		width: 98.99598393574297%;
+		height: 95.65490196078431%;
 		position: absolute;
 		z-index: 100;
-		left: 0.78125%;
+		left: 0.5020080321285141%;
+		top: 1.176470588235294%;
 	}
 
 	body.landing-page .champion_slider {
@@ -1717,5 +1745,30 @@ body.landing-page a img {
 
 	body.landing-page div.desktop {
 		display: none;
+	}
+}
+@media screen and (max-width: 430px) and (min-width: 400px) {
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item a {
+		font-size: 11px !important;
+		line-height: 11px !important;
+	}
+}
+@media screen and (max-width: 399px) and (min-width: 320px) {
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item a {
+		font-size: 10px !important;
+		line-height: 10px !important;
+	}
+}
+@media screen and (max-width: 319px) and (min-width: 300px) {
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item a {
+		font-size: 9px !important;
+		line-height: 9px !important;
+	}
+}
+
+@media screen and (max-width: 299px) {
+	body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item a {
+		font-size: 8px !important;
+		line-height: 8px !important;
 	}
 }

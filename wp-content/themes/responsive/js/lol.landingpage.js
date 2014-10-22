@@ -1,4 +1,14 @@
 $(document).on("ready", function() {
+	$('.fancybox-media').fancybox({
+		height: "80%",
+		openEffect  : 'none',
+		closeEffect : 'none',
+		helpers : {
+			media : {}
+		}
+	});
+
+
 	var truncate = function() {
 		$('.truncate').each(function() {
 			var size = $(this).width();

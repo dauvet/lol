@@ -17,7 +17,7 @@
 		<main id="main" class="site-main" role="main">
 			<div class="desktop">
 				<div class="logo" ><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/logo.png"></div>
-				<div class="video"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/video-bg.jpg"></div>
+				<div class="video"><a class="fancybox-media" href="<?php echo landing_settings_get("youtube_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/video-bg.jpg"></a></div>
 				<div class="menus">
 					<div class="buttons-group-left">
 						<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-jail-break-btn.png"></a>
@@ -42,10 +42,12 @@
 						<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/menu-bg.png"/>
 					</div>
 					<div class="mini-menu-content"><?php wp_nav_menu( array( 'theme_location' => 'landing_mobile_menu' ) ); ?></div>
+					<div class="clear"></div>
 				</div>
 
 				<div id="video" class="video">
 					<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
+					<iframe width="98.99598393574297%" height="98.03921568627451%" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div id="champion_slider" class="champion_slider">
 					<?php masterslider(4); ?>
