@@ -1508,6 +1508,19 @@ body.landing-page a img:hover {
 		position: relative;
 	}
 
+	body.landing-page .social-buttons {
+		position: absolute;
+		right: -60px;
+		top: 250px;
+		width: 50px;
+	}
+
+	body.landing-page .social-buttons .social-ring-button {
+		height: auto;
+		float: none;
+		margin-bottom: 10px;
+	}
+
 	body.landing-page .site-main .logo {
 		background: transparent;
 		width: 455px;
