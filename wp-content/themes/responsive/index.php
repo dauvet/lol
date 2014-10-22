@@ -55,7 +55,7 @@
 					<div class="events-content">
 						<?php
 						$args = array(
-							'posts_per_page' => 5,
+							'posts_per_page' => 6,
 							'offset'         => 0,
 							'category_name'  => 'su-kien',
 							'orderby'        => 'post_date',
