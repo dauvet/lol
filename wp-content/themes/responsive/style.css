@@ -1384,8 +1384,7 @@ img {
     padding: 15px;
     /* overflow: hidden; */
     background: #202840;
-    min-height: 970px;
-    height: auto!important;
+    height: auto;
     /* height: 970px; */
     overflow: visible;
     clear: both;
