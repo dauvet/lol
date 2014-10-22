@@ -17,7 +17,10 @@ get_header("trang-chu"); ?>
 					include(locate_template('partials/content-news-with-tabs.php'));
 					?>
 				</div>
-				<div class="banner-1"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/banner-1.jpg"></div>
+				<div class="banner-1">
+					<div class="desktop"><?php masterslider(7); ?></div>
+					<div class="mobile"><?php masterslider(8); ?></div>
+				</div>
 				<div class="clear"></div>
 			</div>
 			<div class="main-content">
@@ -39,7 +42,7 @@ get_header("trang-chu"); ?>
 				<div class="clip-1">
 					<div class="clip-title">TRAILER</div>
 					<div class="clip-section">
-						<iframe width="370" height="226" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
+						<iframe width="100%" height="100%" src="<?php echo landing_settings_get("home_trailer_youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
 					</div>
 				</div>
 				<div class="clear"></div>
@@ -54,7 +57,8 @@ get_header("trang-chu"); ?>
 				</div>
 				<div class="facebook-1">
 					<div class="facebook-1-title">FACEBOOK</div>
-					<iframe src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:210px;" allowTransparency="true"></iframe>
+					<iframe class="desktop" src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("home_facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:210px;" allowTransparency="true"></iframe>
+					<iframe class="mobile" src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("home_facebook_link") ?>&amp;colorscheme=light&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 100%; allowTransparency="true"></iframe>
 				</div>
 				<div class="clear"></div>
 			</div>

@@ -27,7 +27,7 @@ $(document).on("ready", function() {
 			var size = $(this).width();
 			var moreText = '...';
 			var title = $(this).text();
-			if(title.length <= moreText.length) {
+			if(title.length + moreText.length < $(this).attr('title-text').length) {
 				$(this).html($(this).attr("title-text"));
 			}
 
@@ -42,5 +42,25 @@ $(document).on("ready", function() {
 	truncate();
 	$(window).on("resize", function() {
 		truncate();
+	});
+
+	$(".mobile ul.menu").after('<a href="#" id="pull">Menu</a>');
+
+	$(function() {
+		var pull 		= $('#pull');
+		menu 		= $('nav ul');
+		menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
 	});
 });

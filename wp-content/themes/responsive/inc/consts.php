@@ -28,15 +28,11 @@ $landing_settings_keys = array(
 
 global $home_settings_keys;
 $home_settings_keys = array(
-    'home_image_link' => array(
-        'title' => __('Image Link', 'responsive'),
-        'type' => 'text'
-    ),
     'home_trailer_youtube_link' => array(
         'title' => __('Trailer Youtube Link', 'responsive'),
         'type' => 'text'
     ),
-    'facebook_link' => array(
+    'home_facebook_link' => array(
 	    'title' => __('Facebook Page link', 'responsive'),
 	    'type' => 'text'
     ),

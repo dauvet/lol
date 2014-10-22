@@ -45,6 +45,7 @@ function responsive_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'responsive' ),
+		'primary_mobile' => __('Primary Mobile Menu', 'responsive'),
 		'landing_mobile_menu' => __( 'Landing Mobile Menu', 'responsive' ),
 		'about' => __( 'About Menu', 'responsive' ),
 		'event' => __( 'Event Menu', 'responsive' ),

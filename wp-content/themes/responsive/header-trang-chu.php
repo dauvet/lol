@@ -15,6 +15,7 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
+	<link type="text/css" href="<?php echo get_bloginfo('template_url') ?>/layouts/normalize.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo get_bloginfo('template_url') ?>/layouts/jquery.scrollbar.css" rel="stylesheet">
 
 	<script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/jquery-1.11.1.min.js"></script>
@@ -41,10 +42,13 @@
 			<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
 		</div>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'responsive' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		<div class="sub">
+			<nav id="site-navigation" class="main-navigation" role="navigation">
+<!--				<button class="menu-toggle">--><?php //_e( 'Primary Menu', 'responsive' ); ?><!--</button>-->
+				<div class="desktop"><?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?></div>
+				<div class="mobile"><?php wp_nav_menu( array( 'theme_location' => 'primary_mobile' ) ); ?></div>
+			</nav><!-- #site-navigation -->
+		</div>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
