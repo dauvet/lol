@@ -28,7 +28,7 @@ get_header(); ?>
 					</div>
 					<div class="slides">
 						<div class="slides_container">
-							<?php if ( function_exists( 'soliloquy' ) ) { soliloquy( '94' ); }?>
+							<?php masterslider(1); ?>
 						</div>
 					</div>
 				</div>
