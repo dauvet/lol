@@ -27,7 +27,7 @@
             <div class="navBox">
                 <ul>
                     <li><a href="<?php echo esc_url( home_url( '/cach-choi/' ))  ?>" title="intro">Giới Thiệu<p></p></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/category/su-kien' ) );?>" title="event">Sự Kiện<p></p></a></li>
+                    <li><a href="<?php echo esc_url( home_url( '/danh-muc/su-kien' ) );?>" title="event">Sự Kiện<p></p></a></li>
                     <li class="home"><a href="#" title="Logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a></li>
                     <li><a href="#" title="guide">Hướng Dẫn<p></p></a></li>
                     <li class="ddLast"><a href="#" target="_blank" title="forum">Diễn Đàn<p></p></a></li>
