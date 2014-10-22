@@ -10,10 +10,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="sub_wrap">
-				<div class="sub_left">
-					<?php get_sidebar('left'); ?>
 
-				</div>
 				<div class="sub_right">
 					<?php  $about_menu = wp_get_nav_menu_items('About Menu'); ?>
 					<?php foreach($about_menu as $item) :?>
@@ -24,7 +21,8 @@ get_header(); ?>
 						<?php endif; ?>
 					<?php endforeach;?>
 					<div class="statue">
-						<a href="#" title="">Trang Chủ</a> &gt; <a href="#">Giới Thiệu</a> &gt; <a href="#"><?php echo get_the_title(); ?></a>
+                        <?php $category = get_the_category() ; //var_dump( $term_link = get_term_link( $term ));?>
+						<a href="<?php echo home_url(); ?>" title="">Trang Chủ</a> &gt; <a href="<?php echo get_category_link( $category[0]->term_id ); ?>"><?php echo $category[0]->cat_name ?></a> &gt; <a href="#"><?php echo get_the_title(); ?></a>
 					</div>
 					<div class="content">
 						<?php while ( have_posts() ) : the_post(); ?>
@@ -42,7 +40,10 @@ get_header(); ?>
 
 					</div>
 				</div>
+                <div class="sub_left">
+                    <?php get_sidebar('left'); ?>
 
+                </div>
 			</div>
 
 

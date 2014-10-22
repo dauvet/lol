@@ -1215,6 +1215,16 @@ img {
 }
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 760px) {
+    .sub_left{
+        width: 100% !important;
+    }
+    .sub_right{
+        width: 100% !important;
+    }
+    .sub_wrap{
+        width: 100% !important;
+    }
+
     #page-event nav li.home{
         display: none;
     }
@@ -1242,11 +1252,19 @@ img {
         padding: 10px;
     }
 
-
 }
 
 /*Styles for screen 515px and lower*/
 @media only screen and (max-width : 480px) {
+    .sub_left{
+        width: 100% !important;
+    }
+    .sub_right{
+        width: 100% !important;
+    }
+    .sub_wrap{
+        width: 100% !important;
+    }
     #page-event nav li.home{
         display: none;
     }
@@ -1277,6 +1295,15 @@ img {
 
 /*Smartphone*/
 @media only screen and (max-width : 320px) {
+    .sub_left{
+        width: 100% !important;
+    }
+    .sub_right{
+        width: 100% !important;
+    }
+    .sub_wrap{
+        width: 100% !important;
+    }
     #page-event nav li.home{
         display: none;
     }
@@ -1446,7 +1473,9 @@ img {
 .social-ring .social-ring-button iframe{
     width: 85px !important;
 }
-
+.entry-header {
+    display: none;
+}
 /*--------------------------------------------------------------
 14.0 Landing Page
 --------------------------------------------------------------*/
