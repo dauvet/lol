@@ -14,27 +14,43 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+    <link type="text/css" href="<?php echo get_bloginfo('template_url') ?>/layouts/normalize.css" rel="stylesheet">
 <script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/jquery-1.11.1.min.js"></script>
+    <script>
+        $(function() {
+            var pull 		= $('#pull');
+            menu 		= $('nav ul');
+            menuHeight	= menu.height();
+
+            $(pull).on('click', function(e) {
+                e.preventDefault();
+                menu.slideToggle();
+            });
+
+            $(window).resize(function(){
+                var w = $(window).width();
+                if(w > 320 && menu.is(':hidden')) {
+                    menu.removeAttr('style');
+                }
+            });
+        });
+    </script>
 <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <div id="page-event" class="hfeed site">
-	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'responsive' ); ?></a>
-
     <div id="sub">
-        <div class="nav">
-            <div class="navBox">
-                <ul>
-                    <li><a href="<?php echo esc_url( home_url( '/cach-choi/' ))  ?>" title="intro">Giới Thiệu<p></p></a></li>
-                    <li><a href="<?php echo esc_url( home_url( '/danh-muc/su-kien' ) );?>" title="event">Sự Kiện<p></p></a></li>
-                    <li class="home"><a href="#" title="Logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a></li>
-                    <li><a href="#" title="guide">Hướng Dẫn<p></p></a></li>
-                    <li class="ddLast"><a href="#" target="_blank" title="forum">Diễn Đàn<p></p></a></li>
-                </ul>
-            </div>
-        </div>
-
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="<?php echo esc_url( home_url( '/cach-choi/' ))  ?>" title="intro">Giới Thiệu</a></li>
+                <li><a href="<?php echo esc_url( home_url( '/danh-muc/su-kien' ) );?>" title="event">Sự Kiện</a></li>
+                <li class="home"><a href="#" title="Logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a></li>
+                <li><a href="#">Hướng Dẫn</a></li>
+                <li class="last"><a href="#">Diễn Đàn</a></li>
+            </ul>
+            <a href="#" id="pull">Menu</a>
+        </nav>
     </div>
 
 	<div id="content" class="site-content">
