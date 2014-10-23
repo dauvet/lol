@@ -64,6 +64,48 @@ $(document).on("ready", function() {
 		});
 	});
 
+	jQuery(function($) {
+
+		var _oldShow = $.fn.show;
+
+		$.fn.show = function(speed, oldCallback) {
+			return $(this).each(function() {
+				var obj         = $(this),
+					newCallback = function() {
+						if ($.isFunction(oldCallback)) {
+							oldCallback.apply(obj);
+						}
+						obj.trigger('afterShow');
+					};
+
+				// you can trigger a before show if you want
+				obj.trigger('beforeShow');
+
+				// now use the old function to show the element passing the new callback
+				_oldShow.apply(obj, [speed, newCallback]);
+			});
+		}
+	});
+
+	jQuery(function($) {
+		$('.wpcf7-response-output')
+			.bind('beforeShow', function() {
+				//alert('beforeShow');
+				var _self = $(this);
+				var to = setTimeout(function() {
+					_self.fadeOut();
+					clearTimeout(to);
+				}, 3000);
+			})
+			.bind('afterShow', function() {
+				//alert('afterShow');
+			})
+			.show(1000, function() {
+				//alert('in show callback');
+			})
+			.show();
+	});
+
     $(".fancybox-modal").fancybox({
         maxWidth	: 800,
         maxHeight	: 600,
