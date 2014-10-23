@@ -61,12 +61,12 @@
             <ul class="clearfix">
                 <li><a href="<?php echo esc_url( home_url( '/cach-choi/' ))  ?>" title="intro">Giới Thiệu</a></li>
                 <li><a href="<?php echo esc_url( home_url( '/danh-muc/su-kien' ) );?>" title="event">Sự Kiện</a></li>
-                <li class="home"><a href="#" title="Logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a></li>
+                <li class="home"><a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" title="Logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a></li>
                 <li><a href="#">Hướng Dẫn</a></li>
                 <li class="last"><a href="#">Diễn Đàn</a></li>
             </ul>
             <a href="#" id="pull">Menu</a>
         </nav>
     </div>
-    <img id="logo-mobi" src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo">
+    <a id="logo-mobi" href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a>
     <div id="content" class="site-content">

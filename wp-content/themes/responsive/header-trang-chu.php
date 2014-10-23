@@ -59,6 +59,7 @@
 				<div class="mobile"><?php wp_nav_menu( array( 'theme_location' => 'primary_mobile' ) ); ?></div>
 			</nav><!-- #site-navigation -->
 		</div>
+        <a id="logo-mobi" href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
