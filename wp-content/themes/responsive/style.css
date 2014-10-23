@@ -967,6 +967,9 @@ body.trang-chu {
 		line-height: 36px;
 	}
 
+    body.trang-chu .news-with-tabs .content-section .content-items a:hover{
+        color: #FF0000;
+    }
 	body.trang-chu .news-with-tabs .content-section .content-items a {
 		text-decoration: none;
 	}
@@ -1365,7 +1368,13 @@ img {
     .sub_wrap{
         width: 100% !important;
     }
-
+    #page-event .DownloadWidget .subdownload li{
+        text-align: center;
+        display: block;
+    }
+    #page-event .widget_sp_image{
+        text-align: center;
+    }
     #page-event nav li.home{
         display: none;
     }
@@ -1571,6 +1580,9 @@ img {
     overflow: hidden;
     border-bottom: 1px dashed #313a54;
     color: #606060;
+}
+.list_news li a:hover{
+    color: #FF0000;
 }
 .list_news li a {
     font-size: 12px;
