@@ -21,7 +21,7 @@ get_header(); ?>
 						<?php endif; ?>
 					<?php endforeach;?>
 					<div class="statue">
-                        <?php $category = get_the_category() ; //var_dump( $term_link = get_term_link( $term ));?>
+                        <?php $category = get_the_category() ;?>
 						<a href="<?php echo home_url(); ?>" title="">Trang Chủ</a> &gt; <a href="<?php echo get_category_link( $category[0]->term_id ); ?>"><?php echo $category[0]->cat_name ?></a> &gt; <a href="#"><?php echo get_the_title(); ?></a>
 					</div>
 					<div class="content">
