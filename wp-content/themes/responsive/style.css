@@ -1112,17 +1112,22 @@ body.trang-chu {
 	}
 
 	body.trang-chu .facebook-1 .facebook-1-title {
-		background: url("images/home/fb_logo.png") 16px center no-repeat #ba091d;
+		background: #202741;
 		font-weight: bold;
 		font-size: 18px;
 		color: #ffffff;
 		height: 46px;
 		line-height: 46px;
-		padding-left: 75px;
+		/*padding-left: 75px;*/
+		padding-left: 10px;
 	}
 
 	body.trang-chu .facebook-1 iframe body {
 		color: #697171 !important;
+	}
+
+	body.trang-chu #question-ask-modal {
+
 	}
 
 	body  footer {
