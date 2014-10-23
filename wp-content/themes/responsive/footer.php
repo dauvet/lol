@@ -12,7 +12,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="desktop">
-			<span>Copyright © 2014 Ingamemobi - All rights reserved.</span>
+			<span><?php echo home_settings_get('home_footer_text'); ?></span>
 		</div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->

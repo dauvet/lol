@@ -136,3 +136,9 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 
+//apply_filters( "get_{$meta_type}_metadata", null, $object_id, $meta_key, $single );
+//add_filter('get_post_post_metadata', 'hook_get_post_post_metadata', 10, 4);
+//function hook_get_post_post_metadata($tmp, $object_id, $meta_key, $single )
+//{
+//    //if ($meta_key)
+//}

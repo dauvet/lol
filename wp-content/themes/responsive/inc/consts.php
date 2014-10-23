@@ -36,4 +36,8 @@ $home_settings_keys = array(
 	    'title' => __('Facebook Page link', 'responsive'),
 	    'type' => 'text'
     ),
+    'home_footer_text' => array(
+        'title' => __('Footer Text', 'responsive'),
+        'type' => 'text'
+    ),
 );
