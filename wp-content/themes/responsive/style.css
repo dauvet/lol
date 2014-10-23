@@ -433,6 +433,7 @@ a:hover,
 a:focus,
 a:active {
 	color: midnightblue;
+    outline: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1652,12 +1653,13 @@ img {
 .statue {
     height: 35px;
     text-align: left;
-    line-height: 35px;
+    line-height: 20px;
     color: #02c8cf;
     clear: both;
     background: #202840;
-    text-indent: 10px;
+    /*text-indent: 10px;*/
     font-weight: bold;
+    padding: 10px 15px 0;
 }
 .statue a {
     color: #02c8cf;
@@ -1758,6 +1760,13 @@ body.landing-page a img:hover {
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha"(Opacity=70);
 	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
 	filter:alpha(opacity=70);
+}
+
+body.landing-page .content-items .content-title:hover{
+    color: #FF0000;
+}
+body.landing-page .content-items a:visited{
+    color: #ffffff;
 }
 
 @media screen and (min-width: 760px) {
