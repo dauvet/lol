@@ -939,6 +939,19 @@ body.trang-chu {
 		background-color: #252d44;
 
 	}
+	body.trang-chu .question-ask-modal input[type="submit"] {
+		background: url("images/home/send_q_btn.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+		border: medium none;
+		cursor: pointer;
+		float: right;
+		height: 31px;
+		line-height: 18px;
+		width: 94px;
+		color: #fff;
+	}
+	body.trang-chu .question-ask-modal input[type="text"] {
+		margin-left: 5px;
+	}
 
     body.trang-chu .question-ask-modal textarea {
 	    background: none repeat scroll 0 0 #181b21;
