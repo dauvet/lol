@@ -24,7 +24,7 @@ get_header("trang-chu"); ?>
 				<div class="clear"></div>
 			</div>
 			<div class="main-content">
-				<div class="question-title">CÂU HỎI<a class="see-more" href="javascript:void(0);">xem thêm >></a></div>
+				<div class="question-title">CÂU HỎI<!--a class="see-more" href="javascript:void(0);">xem thêm >></a--></div>
 				<div class="question-section">
 					<div class="question-wrapper">
 						<div id="question-content-1" class="question-content scrollbar-arrow">
@@ -38,8 +38,8 @@ get_header("trang-chu"); ?>
 							<?php endforeach; ?>
 						</div>
 						<div class="question-ask">
-							<a class="fancybox-modal" href="#question-ask-modal" ><div class="question-ask-btn" ></div></a>
-							<div id="question-ask-modal" class="question-ask-modal"><?php echo do_shortcode( '[contact-form-7 id="188" title="Contact form 1"]' ); ?></div>
+							<a class="fancybox-modal" href="#question-ask-modal"><div class="question-ask-btn" ></div></a>
+							<div id="question-ask-modal" class="question-ask-modal" style="display: none;"><?php echo do_shortcode( '[contact-form-7 id="188" title="Contact form 1"]' ); ?></div>
 						</div>
 						<div class="clear"></div>
 					</div>
