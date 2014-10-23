@@ -14,7 +14,9 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-    <link type="text/css" href="<?php echo get_bloginfo('template_url') ?>/layouts/normalize.css" rel="stylesheet">
+<link rel="icon" href="<?php echo get_bloginfo('template_url') ?>/images/favicon.ico" />
+<link rel="shortcut icon" href="<?php  echo get_bloginfo('template_url') ?>/images/favicon.ico" />
+<link type="text/css" href="<?php echo get_bloginfo('template_url') ?>/layouts/normalize.css" rel="stylesheet">
 <script type="text/javascript" src="<?php echo get_bloginfo('template_url') ?>/js/jquery-1.11.1.min.js"></script>
     <script>
         $(function() {
