@@ -39,7 +39,10 @@ get_header("trang-chu"); ?>
 						</div>
 						<div class="question-ask">
 							<a class="fancybox-modal" href="#question-ask-modal"><div class="question-ask-btn" ></div></a>
-							<div id="question-ask-modal" class="question-ask-modal" style="display: none;"><?php echo do_shortcode( '[contact-form-7 id="188" title="Contact form 1"]' ); ?></div>
+							<div id="question-ask-modal" class="question-ask-modal" style="display: none;">
+								<div class="question-ask-modal-title">Câu hỏi</div>
+								<?php echo do_shortcode( '[contact-form-7 id="188" title="Contact form 1"]' ); ?>
+							</div>
 						</div>
 						<div class="clear"></div>
 					</div>
