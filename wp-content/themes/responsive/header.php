@@ -68,5 +68,5 @@
             <a href="#" id="pull">Menu</a>
         </nav>
     </div>
-
+    <img id="logo-mobi" src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo">
     <div id="content" class="site-content">

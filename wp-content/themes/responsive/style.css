@@ -1443,6 +1443,17 @@ img {
     right: 40%;
     top: 30%;
 }
+#logo-mobi:focus{
+    outline: none;
+}
+#logo-mobi{
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    margin-left: -138px;
+    text-decoration: none;
+}
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 760px) {
     .sub_left{
@@ -1463,6 +1474,9 @@ img {
     }
     #page-event nav li.home{
         display: none;
+    }
+    #logo-mobi{
+        display: block;
     }
     #page-event nav {
         height: auto;
