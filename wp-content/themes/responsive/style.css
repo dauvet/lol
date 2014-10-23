@@ -1502,7 +1502,9 @@ img {
     padding-right: 10px;
 }
 .sub_left .subdownload li a:hover{ opacity:0.9;Alpha(opacity=90)}
-
+#page-event .ms-basic-view ,#page-event .ms-basic-view .ms-slide-bgcont{
+    height: 317px !important;
+}
 /* Right */
 .sub_right {
     width: 740px;
