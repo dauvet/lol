@@ -8,7 +8,8 @@ $(document).on("ready", function() {
 			_self.find(".content-section").hide();
 			_self.find(".content-section[rel='"+ rel +"']").show();
 			$(this).addClass("active");
-			_self.find("a.see-more").attr("href", $(this).attr("see-more-link"))
+			_self.find("a.see-more").attr("href", $(this).attr("see-more-link"));
+			truncate($(".content-section[rel='"+$(this).attr('rel')+"']"));
 		});
 		$(this).find(".tabs-section .tabs-name.active").trigger("click");
 	});
@@ -22,8 +23,14 @@ $(document).on("ready", function() {
 	});
 
 	// truncate
-	function truncate() {
-		$('.truncate').each(function() {
+	function truncate(ele) {
+		var e = null
+		if(typeof ele !== "undefined") {
+			e = ele.find('.truncate');
+		} else {
+			e = $('.truncate');
+		}
+		e.each(function() {
 			var size = $(this).width();
 			var moreText = '...';
 			var title = $(this).text();
