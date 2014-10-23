@@ -1570,7 +1570,7 @@ img {
 .list_news {
     margin: 0 auto 10px auto;
     height: auto;
-
+    display: inline-block;
 }
 .list_news li {
     float: left;

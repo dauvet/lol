@@ -41,7 +41,7 @@ get_header(); ?>
 							'post_type' => 'post',
 							'category_name' =>  $cat->slug,
 							'orderby' => 'post_date',
-							'posts_per_page' => 5,
+
 							'paged' => $paged
 						);
 						$query = new WP_Query($args);
@@ -51,17 +51,21 @@ get_header(); ?>
 
                     </ul>
 					<?php
-					echo '
+					if($query->max_num_pages > 1){
+						echo '
 						<div id="wp_pagination" class="page">
 							<a class="first page button" href="'.get_pagenum_link(1).'">&laquo;</a>
 							<a class="previous page button" href="'.get_pagenum_link(($curpage-1 > 0 ? $curpage-1 : 1)).'">&lsaquo;</a>';
-										for($i=1;$i<=$query->max_num_pages;$i++)
-											echo '<a class="'.($i == $curpage ? 'active ' : '').'page button" href="'.get_pagenum_link($i).'">'.$i.'</a>';
-										echo '
+						for($i=1;$i<=$query->max_num_pages;$i++)
+							echo '<a class="'.($i == $curpage ? 'active ' : '').'page button" href="'.get_pagenum_link($i).'">'.$i.'</a>';
+						echo '
 							<a class="next page button" href="'.get_pagenum_link(($curpage+1 <= $query->max_num_pages ? $curpage+1 : $query->max_num_pages)).'">&rsaquo;</a>
 							<a class="last page button" href="'.get_pagenum_link($query->max_num_pages).'">&raquo;</a>
 						</div>
 						';
+					}
+
+
 						wp_reset_postdata();
 					?>
                 </div>
