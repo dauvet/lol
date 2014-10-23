@@ -38,7 +38,8 @@ get_header("trang-chu"); ?>
 							<?php endforeach; ?>
 						</div>
 						<div class="question-ask">
-							<div class="question-ask-btn"></div>
+							<a class="fancybox-modal" href="#question-ask-modal" ><div class="question-ask-btn" ></div></a>
+							<div id="question-ask-modal" class="question-ask-modal"><?php echo do_shortcode( '[contact-form-7 id="188" title="Contact form 1"]' ); ?></div>
 						</div>
 						<div class="clear"></div>
 					</div>
