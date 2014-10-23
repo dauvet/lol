@@ -803,6 +803,29 @@ object {
 /*--------------------------------------------------------------
 13.0 Home Page
 --------------------------------------------------------------*/
+.scrollToTop{
+    width:100px;
+    height:130px;
+    padding:10px;
+    text-align:center;
+    font-weight: bold;
+    color: #444;
+    text-decoration: none;
+    position:fixed;
+    bottom:75px;
+    right:20px;
+    display:none;
+    background: url('images/go-top.png') no-repeat center center transparent;
+    background-size: 64px 64px;
+    outline: 0;
+}
+.scrollToTop:hover{
+    text-decoration:none;
+}
+.scrollToTop:focus{
+    outline: 0;
+}
+
 .clear {
 	clear: both;
 }
@@ -2002,3 +2025,4 @@ body.landing-page a img:hover {
 		line-height: 8px !important;
 	}
 }
+

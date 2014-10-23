@@ -18,6 +18,7 @@
 </div><!-- #page -->
 
 <div class="site-footer-bg"></div>
+<a href="#" class="scrollToTop"></a>
 <?php wp_footer(); ?>
 
 </body>
