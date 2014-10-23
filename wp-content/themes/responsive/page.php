@@ -25,7 +25,7 @@ get_header(); ?>
 						</div>
 					<?php endif; ?>
 				<?php endforeach;?>
-				
+
 				<div class="content">
 					<?php while ( have_posts() ) : the_post(); ?>
 
