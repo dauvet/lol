@@ -53,15 +53,21 @@ get_header(); ?>
 					<?php
 					if($query->max_num_pages > 1){
 						echo '
-						<div id="wp_pagination" class="page">
+						<div id="wp_pagination" class="page">';
+						if($curpage > 1){
+							echo '
 							<a class="first page button" href="'.get_pagenum_link(1).'">&laquo;</a>
 							<a class="previous page button" href="'.get_pagenum_link(($curpage-1 > 0 ? $curpage-1 : 1)).'">&lsaquo;</a>';
+						}
+
 						for($i=1;$i<=$query->max_num_pages;$i++)
 							echo '<a class="'.($i == $curpage ? 'active ' : '').'page button" href="'.get_pagenum_link($i).'">'.$i.'</a>';
-						echo '
+						if($curpage != $query->max_num_pages){
+							echo '
 							<a class="next page button" href="'.get_pagenum_link(($curpage+1 <= $query->max_num_pages ? $curpage+1 : $query->max_num_pages)).'">&rsaquo;</a>
-							<a class="last page button" href="'.get_pagenum_link($query->max_num_pages).'">&raquo;</a>
-						</div>
+							<a class="last page button" href="'.get_pagenum_link($query->max_num_pages).'">&raquo;</a>';
+						}
+						echo '</div>
 						';
 					}
 
