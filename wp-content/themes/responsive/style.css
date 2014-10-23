@@ -1737,6 +1737,7 @@ body.landing-page a img:hover {
 		line-height: 72px;
 		position: relative;
 		z-index: 99;
+		background-color: transparent;
 	}
 
 	body.landing-page .site-footer-bg {
