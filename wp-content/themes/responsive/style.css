@@ -910,6 +910,51 @@ body.trang-chu {
 	body.trang-chu .main-content {
 		margin-top: 10px;
 	}
+
+	body.trang-chu .question-ask-modal {
+		color: #98a1be;
+		background-color: #252d44;
+
+	}
+
+    body.trang-chu .question-ask-modal textarea {
+	    background: none repeat scroll 0 0 #181b21;
+	    border: 1px solid #3a3a3a;
+	    color: #fff;
+	    font-size: 12px;
+	    height: 80px;
+	    line-height: 24px;
+	    padding: 10px;
+	    width: 100%;
+	    margin-top: 15px;
+    }
+
+	body.trang-chu .question-ask-modal p {
+		padding: 0 20px;
+	}
+
+	body.trang-chu  .question-ask-modal-title {
+		background-color: #37456a;
+		height: 36px;
+		line-height: 36px;
+		font-size: 18px;
+		padding: 0 20px;
+		color: #ffffff;
+	}
+	body.trang-chu .wpcf7-response-output {
+		margin: 5px;
+	}
+
+    body.trang-chu .wpcf7-form {
+	    padding: 15px;
+    }
+    body.trang-chu .captcha .captcha-image,  body.trang-chu .captcha .captcha-input {
+	    float: left;
+    }
+	body.trang-chu .captcha .captcha-input {
+		width: 50px;
+		margin-left: 10px;
+	}
 }
 
 	body.trang-chu .news-with-tabs .tabs-section {
