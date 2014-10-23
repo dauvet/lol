@@ -28,10 +28,14 @@ get_header("trang-chu"); ?>
 				<div class="question-section">
 					<div class="question-wrapper">
 						<div id="question-content-1" class="question-content scrollbar-arrow">
-							<?php for($i = 0; $i < 10; $i++): ?>
-								<div class="question"><span>Q:</span> Đá linh thạch có tác dụng gì ?</div>
-								<div class="answer"><span>A:</span> Dùng để nâng cấp sao cho anh hùng, thấp nhất cấp 1, cao nhất cấp 5.</div>
-							<?php endfor; ?>
+							<?php $qas = get_posts(array('post_type'=>'qa')); ?>
+							<?php foreach($qas as $qa):
+								setup_postdata( $qa );
+							?>
+<!--								<pre>--><?php //print_r($qa) ?><!--</pre>-->
+								<div class="question"><?php echo $qa->post_title; ?></div>
+								<div class="answer"><?php the_content() ?></div>
+							<?php endforeach; ?>
 						</div>
 						<div class="question-ask">
 							<div class="question-ask-btn"></div>
