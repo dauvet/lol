@@ -34,13 +34,36 @@ get_header(); ?>
                 <div class="content">
                     <ul class="list_news">
                         <?php
-                        while ( have_posts()) : the_post() ?>
-
+						$cat = get_category( get_query_var( 'cat' ) );
+						global $paged;
+						$curpage = $paged ? $paged : 1;
+						$args = array(
+							'post_type' => 'post',
+							'category_name' =>  $cat->slug,
+							'orderby' => 'post_date',
+							'posts_per_page' => 5,
+							'paged' => $paged
+						);
+						$query = new WP_Query($args);
+                        while ( $query->have_posts()) : $query->the_post() ?>
                             <li><a href="<?php the_permalink(); ?>"><em><?php echo "10/12/1991" ?></em><?php the_title(); ?></a> </li>
-
                         <?php endwhile ?>
+
                     </ul>
-                    <div class="pager">  <a id="prevPageNow" href="javascript:void(0);">&lt;</a>  <a id="pageNow" href="javascript:void(0);">1</a><a href="http://ttyx.daw.so/category/42/2.html">2</a><a href="http://ttyx.daw.so/category/42/3.html">3</a>  <a id="nextPage" href="http://ttyx.daw.so/category/42/2.html">&gt;</a> </div>
+					<?php
+					echo '
+						<div id="wp_pagination" class="page">
+							<a class="first page button" href="'.get_pagenum_link(1).'">&laquo;</a>
+							<a class="previous page button" href="'.get_pagenum_link(($curpage-1 > 0 ? $curpage-1 : 1)).'">&lsaquo;</a>';
+										for($i=1;$i<=$query->max_num_pages;$i++)
+											echo '<a class="'.($i == $curpage ? 'active ' : '').'page button" href="'.get_pagenum_link($i).'">'.$i.'</a>';
+										echo '
+							<a class="next page button" href="'.get_pagenum_link(($curpage+1 <= $query->max_num_pages ? $curpage+1 : $query->max_num_pages)).'">&rsaquo;</a>
+							<a class="last page button" href="'.get_pagenum_link($query->max_num_pages).'">&raquo;</a>
+						</div>
+						';
+						wp_reset_postdata();
+					?>
                 </div>
             </div>
 			<div class="sub_left">
