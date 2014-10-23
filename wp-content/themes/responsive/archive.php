@@ -46,7 +46,8 @@ get_header(); ?>
 						);
 						$query = new WP_Query($args);
                         while ( $query->have_posts()) : $query->the_post() ?>
-                            <li><a href="<?php the_permalink(); ?>"><em><?php echo "10/12/1991" ?></em><?php the_title(); ?></a> </li>
+
+                            <li><a href="<?php the_permalink(); ?>"><em><?php echo get_the_date('Y-m-d'); ?></em><?php the_title(); ?></a> </li>
                         <?php endwhile ?>
 
                     </ul>
