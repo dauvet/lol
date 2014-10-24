@@ -1,117 +1,119 @@
 $(document).on("ready", function() {
-	// init events
-	$(".news-with-tabs").each(function() {
-		var _self = $(this);
-		$(this).find(".tabs-section .tabs-name").on("click", function() {
-			var rel = $(this).attr("rel");
-			_self.find(".tabs-section .tabs-name").removeClass("active")
-			_self.find(".content-section").hide();
-			_self.find(".content-section[rel='"+ rel +"']").show();
-			$(this).addClass("active");
-			_self.find("a.see-more").attr("href", $(this).attr("see-more-link"));
-			truncate($(".content-section[rel='"+$(this).attr('rel')+"']"));
-		});
-		$(this).find(".tabs-section .tabs-name.active").trigger("click");
-	});
+    var isMobile = $(".mobile:hidden").length == 0;
 
-	// init scroll bar
-	$(".scrollbar-arrow").scrollbar({
-		"onUpdate" : function() {
-			//$(this.container).css({ "width" : "195px" });
-			$(this.scrolly.scrollbar).css({ "height" : "195px" });
-		}
-	});
+    // init events
+    $(".news-with-tabs").each(function() {
+        var _self = $(this);
+        $(this).find(".tabs-section .tabs-name").on("click", function() {
+            var rel = $(this).attr("rel");
+            _self.find(".tabs-section .tabs-name").removeClass("active")
+            _self.find(".content-section").hide();
+            _self.find(".content-section[rel='"+ rel +"']").show();
+            $(this).addClass("active");
+            _self.find("a.see-more").attr("href", $(this).attr("see-more-link"));
+            //truncate($(".content-section[rel='"+$(this).attr('rel')+"']"));
+        });
+        $(this).find(".tabs-section .tabs-name.active").trigger("click");
+    });
 
-	// truncate
-	function truncate(ele) {
-		var e = null
-		if(typeof ele !== "undefined") {
-			e = ele.find('.truncate');
-		} else {
-			e = $('.truncate');
-		}
-		e.each(function() {
-			var size = $(this).width();
-			var moreText = '...';
-			var title = $(this).text();
-			if(title.length + moreText.length < $(this).attr('title-text').length) {
-				$(this).html($(this).attr("title-text"));
-			}
+    ////init scroll bar
+    $(".scrollbar-arrow").scrollbar({
+        "onUpdate" : function() {
+            //$(this.container).css({ "width" : "195px" });
+            $(this.scrolly.scrollbar).css({ "height" : "195px" });
+        }
+    });
 
-			$(this).truncate({
-				width: size,
-				token: moreText,
-				side: 'right',
-				multiline: false
-			});
-		});
-	}
-	truncate();
-	$(window).on("resize", function() {
-		truncate();
-	});
+    // truncate
+    function truncate(ele) {
+        var e = null
+        if(typeof ele !== "undefined") {
+            e = ele.find('.truncate');
+        } else {
+            e = $('.truncate');
+        }
+        e.each(function() {
+            var size = $(this).width();
+            var moreText = '...';
+            var title = $(this).text();
+            if(title.length + moreText.length < $(this).attr('title-text').length) {
+                $(this).html($(this).attr("title-text"));
+            }
 
-	$(".mobile ul.menu").after('<a href="#" id="pull">Menu</a>');
+            $(this).truncate({
+                width: size,
+                token: moreText,
+                side: 'right',
+                multiline: false
+            });
+        });
+    }
+    //truncate();
+    $(window).on("resize", function() {
+        //truncate();
+    });
 
-	$(function() {
-		var pull 		= $('#pull');
-		menu 		= $('nav ul');
-		menuHeight	= menu.height();
+    $(".mobile ul.menu").after('<a href="#" id="pull">Menu</a>');
 
-		$(pull).on('click', function(e) {
-			e.preventDefault();
-			menu.slideToggle();
-		});
+    $(function() {
+        var pull 		= $('#pull');
+        menu 		= $('nav ul');
+        menuHeight	= menu.height();
 
-		$(window).resize(function(){
-			var w = $(window).width();
-			if(w > 320 && menu.is(':hidden')) {
-				menu.removeAttr('style');
-			}
-		});
-	});
+        $(pull).on('click', function(e) {
+            e.preventDefault();
+            menu.slideToggle();
+        });
 
-	jQuery(function($) {
+        $(window).resize(function(){
+            var w = $(window).width();
+            if(w > 320 && menu.is(':hidden')) {
+                menu.removeAttr('style');
+            }
+        });
+    });
 
-		var _oldShow = $.fn.show;
+    jQuery(function($) {
 
-		$.fn.show = function(speed, oldCallback) {
-			return $(this).each(function() {
-				var obj         = $(this),
-					newCallback = function() {
-						if ($.isFunction(oldCallback)) {
-							oldCallback.apply(obj);
-						}
-						obj.trigger('afterShow');
-					};
+        var _oldShow = $.fn.show;
 
-				// you can trigger a before show if you want
-				obj.trigger('beforeShow');
+        $.fn.show = function(speed, oldCallback) {
+            return $(this).each(function() {
+                var obj         = $(this),
+                    newCallback = function() {
+                        if ($.isFunction(oldCallback)) {
+                            oldCallback.apply(obj);
+                        }
+                        obj.trigger('afterShow');
+                    };
 
-				// now use the old function to show the element passing the new callback
-				_oldShow.apply(obj, [speed, newCallback]);
-			});
-		}
-	});
+                // you can trigger a before show if you want
+                obj.trigger('beforeShow');
 
-	jQuery(function($) {
-		$('.wpcf7-response-output')
-			.bind('beforeShow', function() {
-				//alert('beforeShow');
-				var _self = $(this);
-				var to = setTimeout(function() {
-					_self.fadeOut();
-					clearTimeout(to);
-				}, 3000);
-			})
-			.bind('afterShow', function() {
-				//alert('afterShow');
-			})
-			.show(1000, function() {
-				//alert('in show callback');
-			})
-			.show();
-	});
+                // now use the old function to show the element passing the new callback
+                _oldShow.apply(obj, [speed, newCallback]);
+            });
+        }
+    });
+
+    jQuery(function($) {
+        $('.wpcf7-response-output')
+            .bind('beforeShow', function() {
+                //alert('beforeShow');
+                var _self = $(this);
+                var to = setTimeout(function() {
+                    _self.fadeOut();
+                    clearTimeout(to);
+                }, 3000);
+            })
+            .bind('afterShow', function() {
+                //alert('afterShow');
+            })
+            .show(1000, function() {
+                //alert('in show callback');
+            })
+            .show();
+    });
 
     $(".fancybox-modal").fancybox({
         maxWidth	: 800,
