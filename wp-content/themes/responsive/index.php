@@ -18,9 +18,11 @@
 			<div class="desktop">
 				<div class="social-buttons">
 					<div class="social-ring">
-						<div class="social-ring-button"><fb:like href="<?php get_home_url(); ?>" layout="box_count" action="like" show_faces="false" share="false"></fb:like></div>
-						<div class="social-ring-button"><iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.d4db41a5a14a4516e6d4ecf6250c7419.en.html#_=1414002978634&amp;count=vertical&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=<?php get_home_url(); ?>&amp;size=m&amp;text=&amp;url=<?php get_home_url(); ?>" class="sr-twitter-button twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 50px; height: 62px;"></iframe></div>
-						<div class="social-ring-button"><div class="g-plusone" data-size="tall" data-href="<?php get_home_url(); ?>"></div></div>
+						<div class="social-ring-button">
+							<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo get_home_url(); ?>&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe>
+						</div>
+						<div class="social-ring-button"><iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.d4db41a5a14a4516e6d4ecf6250c7419.en.html#_=1414002978634&amp;count=vertical&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=<?php echo get_home_url(); ?>&amp;size=m&amp;text=&amp;url=<?php echo get_home_url(); ?>" class="sr-twitter-button twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 50px; height: 62px;"></iframe></div>
+						<div class="social-ring-button"><div class="g-plusone" data-size="tall" data-href="<?php echo get_home_url(); ?>"></div></div>
 					</div>
 				</div>
 				<div class="logo" ><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/logo.png"></div>
