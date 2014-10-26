@@ -40,4 +40,11 @@ $home_settings_keys = array(
         'title' => __('Footer Text', 'responsive'),
         'type' => 'text'
     ),
+    'home_slider' => array(
+        'title' => __('Home slider', 'responsive'),
+        'type' => 'select',
+        'object' => get_mastersliders(),
+        'object_key' => 'ID',
+        'object_value' => 'title'
+    )
 );

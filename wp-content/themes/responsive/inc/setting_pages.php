@@ -24,6 +24,40 @@ function enqueue_qa_js()
     wp_enqueue_style( 'qa-style', get_template_directory_uri()  . '/inc/qa.css');
 }
 
+// render table settings
+function setting_table_render($settings, $setting_keys)
+{
+    ?>
+    <table class="form-table">
+        <tbody>
+                <?php foreach($setting_keys as $key=>$tag): ?>
+            <tr>
+                <th><?php echo $tag['title']; ?></th>
+                <td>
+                    <?php if ($tag['type'] == 'text'): ?>
+                        <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]" value="<?php if(isset($settings[$key])) echo $settings[$key];  ?>">
+                    <?php elseif ($tag['type'] == 'select' && !empty($tag['object']) && is_array($tag['object']) && !empty($tag['object_key']) && !empty($tag['object_value']) ): ?>
+                        <?php
+                        $default = isset($tag['default'])?$tag['default']:'';
+                        $opt = get_option(LOL_PREFIX . $key);
+                        if (empty($opt)){
+                            $opt = $default;
+                        }
+                        ?>
+                        <select name="settings[<?php echo $key; ?>]" <?php if(isset($tag['id'])) echo 'id="' . $tag['id'] . '"'; ?> <?php if(isset($tag['class'])) echo 'class="' . $tag['class'] . '"'; ?> >
+                            <?php foreach($tag['object'] as $obj): ?>
+                                <option value="<?php echo $obj[$tag['object_key']]; ?>" <?php echo (!empty($opt)&&$opt==$obj[$tag['object_key']]?'selected':''); ?>><?php echo $obj[$tag['object_value']]; ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    <?php endif; ?>
+                </td>
+            </tr>
+        <?php endforeach; ?>
+        </tbody>
+    </table>
+    <?php
+}
+
 // landing page
 function landing_settings_render()
 {
@@ -49,20 +83,7 @@ function landing_settings_render()
         <h2>Landing page settings</h2>
         <form method="post" action="">
             <?php wp_nonce_field( 'landing-settings'); ?>
-            <table class="form-table">
-                <tbody>
-                <?php foreach($landing_settings_keys as $key=>$tag): ?>
-                    <tr>
-                        <th><?php echo $tag['title']; ?></th>
-                        <td>
-                            <?php if ($tag['type'] == 'text'): ?>
-                                <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]" value="<?php if(isset($settings[$key])) echo $settings[$key];  ?>">
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
+            <?php setting_table_render($settings, $landing_settings_keys); ?>
 
             <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'responsive'); ?>"></p>
         </form>
@@ -99,20 +120,7 @@ function home_settings_render()
         <h2>Home page settings</h2>
         <form method="post" action="">
             <?php wp_nonce_field( 'home-settings'); ?>
-            <table class="form-table">
-                <tbody>
-                <?php foreach($home_settings_keys as $key=>$tag): ?>
-                    <tr>
-                        <th><?php echo $tag['title']; ?></th>
-                        <td>
-                            <?php if ($tag['type'] == 'text'): ?>
-                                <input class="regular-text" type="text" name="settings[<?php echo $key; ?>]" value="<?php if(isset($settings[$key])) echo $settings[$key];  ?>">
-                            <?php endif; ?>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-                </tbody>
-            </table>
+            <?php setting_table_render($settings, $home_settings_keys); ?>
 
             <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'responsive'); ?>"></p>
         </form>

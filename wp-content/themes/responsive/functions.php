@@ -135,10 +135,9 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+function load_fonts() {
+    wp_register_style('googleFonts', 'http://fonts.googleapis.com/css?family=Roboto:400,500,700,300,100,900&subset=latin,vietnamese');
+    wp_enqueue_style( 'googleFonts');
+}
 
-//apply_filters( "get_{$meta_type}_metadata", null, $object_id, $meta_key, $single );
-//add_filter('get_post_post_metadata', 'hook_get_post_post_metadata', 10, 4);
-//function hook_get_post_post_metadata($tmp, $object_id, $meta_key, $single )
-//{
-//    //if ($meta_key)
-//}
+add_action('wp_print_styles', 'load_fonts');
