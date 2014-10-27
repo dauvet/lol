@@ -95,9 +95,14 @@ get_header("landing"); ?>
 				</div>
 
 				<div id="buttons" class="buttons-section">
-					<?php if(function_exists( 'wpmd_is_ios' ) && wpmd_is_ios()): ?>
+					<?php
+					// MOBILE DETECT
+					require_once "lib/mobile-detect-2.8.5/Mobile_Detect.php";
+					$detect = new Mobile_Detect;
+					?>
+					<?php if($detect->isiOS()): ?>
 						<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
-					<?php elseif(function_exists( 'wpmd_is_android()' ) && wpmd_is_android()): ?>
+					<?php elseif($detect->isAndroidOS()): ?>
 						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
 					<?php else: ?>
 						<a href="<?php echo landing_settings_get("ios_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
