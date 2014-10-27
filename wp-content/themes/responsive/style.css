@@ -901,7 +901,11 @@ body.trang-chu {
         border-left: 1px solid #2d3958;
     }
 
-    body.trang-chu .nav-menu .menu-item:hover {
+	body.trang-chu #site-navigation .menu .menu-item a {
+		font-weight: bold;
+	}
+
+	body.trang-chu .nav-menu .menu-item:hover {
         background: url("images/home/nav_a.jpg") no-repeat scroll center bottom transparent;
     }
 
