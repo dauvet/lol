@@ -1239,6 +1239,12 @@ body  footer {
     body.trang-chu .download-menu img {
         width: 30%;
     }
+	body.trang-chu .download-menu a.dl-ios img {
+		width: 33%;
+	}
+	body.trang-chu .download-menu a.dl-android img {
+		width: 45%;
+	}
 
     body.trang-chu nav a {
         color: #ffffff;
@@ -1293,6 +1299,9 @@ body  footer {
         width: 66.30331753554502%;
         overflow: hidden;
         height: 32px;
+	    white-space: nowrap;
+	    text-overflow: ellipsis;
+
     }
 
     body.trang-chu .news-with-tabs .content-section .content-date-modified {
@@ -1375,6 +1384,10 @@ body  footer {
         right: 15px;
         top: 10px;
     }
+
+	body.trang-chu .download-menu {
+		top: 320px;
+	}
 }
 
 @media only screen and (max-width : 415px) {
