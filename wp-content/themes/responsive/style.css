@@ -1756,6 +1756,9 @@ h1 {
     font-size: 28px;
     text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
 }
+.fbFeedbackPost .postText{
+    color: #ffffff !important;
+}
 /* collapse */
 #collapse-widget h3 {
     margin: 0;
@@ -1792,43 +1795,7 @@ pre#event-log {
     display: block;
 }
 
-/* Responsive design
---- */
-@media screen and (max-width: 1056px) {
-    body {
-        width: 672px;
-    }
-    .c2 {
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-}
 
-.test { background: #ccc; padding: 10px; border-bottom: 1px solid #aaa;}
-.test + div { background: #fff; padding: 10px; }
-
-@media
-only screen and (max-width: 704px),
-only screen and (-webkit-min-device-pixel-ratio : 1.5){
-    body {
-        width: 320px;
-    }
-    .c1 {
-        margin-right: 0;
-        margin-bottom: 0;
-    }
-    h1 {
-        font-size: 28px;
-        text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
-    }
-}
-
-@media
-only screen and (-webkit-min-device-pixel-ratio : 1.5){
-    body {
-        padding: 0 12px;
-    }
-}
 
 /*--------------------------------------------------------------
 14.0 single Page
