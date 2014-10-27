@@ -66,7 +66,7 @@ get_header("trang-chu"); ?>
             <div class="facebook-1">
                 <div class="facebook-1-title">CỘNG ĐỒNG</div>
                 <iframe id="facebook-1-desktop" class="desktop" src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("home_facebook_link") ?>&amp;width=392&amp;height=258&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 392px; height:210px;" allowTransparency="true"></iframe>
-                <iframe id="facebook-1-mobile" src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("home_facebook_link") ?>&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 100%; allowTransparency="true"></iframe>
+                <iframe id="facebook-1-mobile" class="mobile" src="//www.facebook.com/plugins/likebox.php?href=<?php echo landing_settings_get("home_facebook_link") ?>&amp;colorscheme=dark&amp;show_faces=true&amp;header=false&amp;stream=false&amp;show_border=false" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width: 100%; allowTransparency="true"></iframe>
             </div>
             <div class="clear"></div>
         </div>
