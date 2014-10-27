@@ -45,70 +45,75 @@ get_header("landing"); ?>
 		</div>
 
 		<div class="mobile">
-			<div id="logo" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/logo.png"/></div>
-			<div id="mini-menu" class="mini-menu">
-				<div id="mini-menu-bg" class="mini-menu-bg">
-					<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/menu-bg.png"/>
-				</div>
-				<div class="mini-menu-content"><?php wp_nav_menu( array( 'theme_location' => 'landing_mobile_menu' ) ); ?></div>
-				<div class="clear"></div>
-			</div>
-
-			<div id="video" class="video">
-				<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
-				<iframe width="98.99598393574297%" height="98.03921568627451%" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
-			</div>
-
-			<div class="bot_section">
-				<div id="champion_slider" class="champion_slider">
-					<?php masterslider(4); ?>
-				</div>
-				<div class="clear"></div>
-				<div id="events" class="events-section">
-					<div class="events-title"></div>
-					<div class="events-content">
-						<?php
-						$args = array(
-							'posts_per_page' => 6,
-							'offset'         => 0,
-							'category_name'  => 'su-kien',
-							'orderby'        => 'post_date',
-							'order'          => 'DESC',
-							'post_type'      => 'post',
-							'post_status'    => 'publish'
-						);
-						$news_posts_array = get_posts( $args ); ?>
-						<ul>
-							<?php foreach ( $news_posts_array as $post ) :
-								//print_r($post);
-								setup_postdata( $post ); ?>
-								<li class="content-items">
-									<a href="<?php the_permalink(); ?>"><div class="content-title truncate" title-text="<?php the_title() ?>"><?php the_title(); ?></div></a>
-									<div class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></div>
-									<div class="clear"></div>
-								</li>
-							<?php endforeach;
-							wp_reset_postdata();
-							?>
-						</ul>
-					</div>
-				</div>
-
-				<div id="buttons" class="buttons-section">
-					<?php
-					// MOBILE DETECT
-					require_once "lib/mobile-detect-2.8.5/Mobile_Detect.php";
-					$detect = new Mobile_Detect;
-					?>
-					<?php if($detect->isiOS()): ?>
-						<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
-					<?php elseif($detect->isAndroidOS()): ?>
-						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
-					<?php else: ?>
-						<a href="<?php echo landing_settings_get("ios_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
-						<a href="<?php echo landing_settings_get("android_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+			<div class="mobile-wrapper">
+				<div class="top_section">
+					<div id="logo" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/logo.png"/></div>
+					<div id="mini-menu" class="mini-menu">
+						<div id="mini-menu-bg" class="mini-menu-bg">
+							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/menu-bg.png"/>
+						</div>
+						<div class="mini-menu-content"><?php wp_nav_menu( array( 'theme_location' => 'landing_mobile_menu' ) ); ?></div>
 						<div class="clear"></div>
-					<?php endif; ?>
+					</div>
+
+					<div id="video" class="video">
+						<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
+						<iframe width="98.99598393574297%" height="98.03921568627451%" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
+					</div>
+
+				</div>
+
+				<div class="bot_section">
+					<div id="champion_slider" class="champion_slider">
+						<?php masterslider(4); ?>
+					</div>
+					<div class="clear"></div>
+					<div id="events" class="events-section">
+						<div class="events-title"></div>
+						<div class="events-content">
+							<?php
+							$args = array(
+								'posts_per_page' => 6,
+								'offset'         => 0,
+								'category_name'  => 'su-kien',
+								'orderby'        => 'post_date',
+								'order'          => 'DESC',
+								'post_type'      => 'post',
+								'post_status'    => 'publish'
+							);
+							$news_posts_array = get_posts( $args ); ?>
+							<ul>
+								<?php foreach ( $news_posts_array as $post ) :
+									//print_r($post);
+									setup_postdata( $post ); ?>
+									<li class="content-items">
+										<a href="<?php the_permalink(); ?>"><div class="content-title truncate" title-text="<?php the_title() ?>"><?php the_title(); ?></div></a>
+										<div class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></div>
+										<div class="clear"></div>
+									</li>
+								<?php endforeach;
+								wp_reset_postdata();
+								?>
+							</ul>
+						</div>
+					</div>
+
+					<div id="buttons" class="buttons-section">
+						<?php
+						// MOBILE DETECT
+						require_once "lib/mobile-detect-2.8.5/Mobile_Detect.php";
+						$detect = new Mobile_Detect;
+						?>
+						<?php if($detect->isiOS()): ?>
+							<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
+						<?php elseif($detect->isAndroidOS()): ?>
+							<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+						<?php else: ?>
+							<a href="<?php echo landing_settings_get("ios_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
+							<a href="<?php echo landing_settings_get("android_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+							<div class="clear"></div>
+						<?php endif; ?>
+					</div>
 				</div>
 			</div>
 		</div>

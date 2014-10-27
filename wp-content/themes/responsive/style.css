@@ -2025,8 +2025,9 @@ body.landing-page .content-items a:visited{
         width: 100%;
         position: absolute;
         z-index: 2;
-        top: 26.52947719688543%;
+        /*top: 26.52947719688543%;*/
         /*left: 11.09375%;*/
+	    top: 58.04878048780488%;
     }
 
     body.landing-page .site-main .video img {
@@ -2046,18 +2047,28 @@ body.landing-page .content-items a:visited{
         top: 1.176470588235294%;
     }
 
-	body.landing-page .bot_section {
-		position: absolute;
+	body.landing-page .mobile-wrapper {
+		position: relative;
+	}
+
+	body.landing-page .top_section {
+		position: relative;
 		width: 100%;
-		top: 45.7%;
+		/*margin-bottom: 10px;*/
+	}
+
+	body.landing-page .bot_section {
+		position: relative;
+		width: 100%;
+		/*top: 45.7%;*/
 	}
 
 	body.landing-page .champion_slider {
         width: 95%;
-        height: 25.3615127919911%;
+        /*height: 25.3615127919911%;*/
         position: relative;
         z-index: 2;
-        top: 45.7%;
+        /*top: 45.7%;*/
         left: 2.65625%;
     }
 

@@ -28,8 +28,8 @@ $(document).on("ready", function() {
 
 	var mobileResize = function() {
 		var winW = $(window).width();
-		var winH = 1798 * winW / 640;
-		$(".mobile").css({
+		var winH = 820 * winW / 640;
+		$(".top_section").css({
 			"width" : winW,
 			"height" : winH
 		});
