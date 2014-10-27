@@ -97,8 +97,9 @@
 					<?php elseif(function_exists( 'wpmd_is_android()' ) && wpmd_is_android()): ?>
 						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
 					<?php else: ?>
-						<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
-						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+						<a href="<?php echo landing_settings_get("ios_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/ios-btn.png"></a>
+						<a href="<?php echo landing_settings_get("android_link") ?>"><img style="width: 50%" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/android-btn.png"></a>
+						<div class="clear"></div>
 					<?php endif; ?>
 				</div>
 			</div>

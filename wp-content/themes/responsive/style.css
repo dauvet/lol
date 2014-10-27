@@ -1799,8 +1799,7 @@ img {
 --------------------------------------------------------------*/
 body.landing-page a img {
     position: relative;
-    top: 0;
-    left: 0;
+    float: left;
     display: block;
 }
 body.landing-page a img:hover {
