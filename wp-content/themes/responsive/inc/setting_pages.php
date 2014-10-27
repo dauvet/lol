@@ -9,6 +9,8 @@ function register_pages_menu(){
         get_template_directory_uri() . '/images/home-page.png', 7 );
     add_menu_page( 'Q/A', 'Q/A', 'manage_options', 'qa_management', 'qa_management_render',
         get_template_directory_uri() . '/images/qa-management.png', 8 );
+    add_menu_page( 'Event page', 'Event settings', 'manage_options', 'event_settings', 'event_settings_render',
+        get_template_directory_uri() . '/images/qa-management.png', 9 );
 
     add_action( 'admin_enqueue_scripts', 'enqueue_qa_js' );
 
@@ -22,6 +24,18 @@ function enqueue_qa_js()
         'delete_confirm_msg' => __('Do you want to delete this QA?','responsive'),
     ) );
     wp_enqueue_style( 'qa-style', get_template_directory_uri()  . '/inc/qa.css');
+}
+
+add_action('admin_enqueue_scripts', 'add_admin_enqueue_scripts');
+function add_admin_enqueue_scripts() {
+    wp_enqueue_script( 'jquery-ui-datepicker' );
+    ?>
+    <?php
+}
+
+add_action('admin_print_styles', 'add_admin_print_styles');
+function add_admin_print_styles() {
+    wp_enqueue_style( 'jquery-ui-datepicker-style' , '//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css');
 }
 
 // render table settings
@@ -46,15 +60,33 @@ function setting_table_render($settings, $setting_keys)
                         ?>
                         <select name="settings[<?php echo $key; ?>]" <?php if(isset($tag['id'])) echo 'id="' . $tag['id'] . '"'; ?> <?php if(isset($tag['class'])) echo 'class="' . $tag['class'] . '"'; ?> >
                             <?php foreach($tag['object'] as $obj): ?>
+                                <?php if(is_array($obj)): ?>
                                 <option value="<?php echo $obj[$tag['object_key']]; ?>" <?php echo (!empty($opt)&&$opt==$obj[$tag['object_key']]?'selected':''); ?>><?php echo $obj[$tag['object_value']]; ?></option>
+                                <?php else: ?>
+                                <option value="<?php echo $obj->{$tag['object_key']}; ?>" <?php echo (!empty($opt)&&$opt==$obj->{$tag['object_key']}?'selected':''); ?>><?php echo $obj->{$tag['object_value']}; ?></option>
+                                <?php endif; ?>
                             <?php endforeach; ?>
                         </select>
+                    <?php elseif ($tag['type'] == 'date'): ?>
+                        <input name="settings[<?php echo $key; ?>]>" value="<?php if(isset($settings[$key])) echo $settings[$key]; ?>" type="text" class="date-picker from-date">
                     <?php endif; ?>
                 </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
+
+    <script>
+        jQuery(document).ready(function($){
+            $('.date-picker').each(function(){
+                var tmp = $(this).datepicker().datepicker( "option", "dateFormat", 'dd-mm-yy');
+                if ($(this).val()){
+                    tmp.datepicker('setDate', $(this).val());
+                }
+            });
+
+        });
+    </script>
     <?php
 }
 
@@ -217,4 +249,40 @@ function ajax_qa_update()
 
         exit();
     }
+}
+
+// event page settings
+function event_settings_render()
+{
+    global $event_settings_keys;
+    if (isset($_POST['settings']) && check_admin_referer( 'event-settings')) {
+        $settings = $_POST['settings'];
+        foreach($event_settings_keys as $key=>$tag){
+            if (isset($settings[$key])){
+                update_option(LOL_PREFIX . $key, $settings[$key]);
+            }
+        }
+        ?>
+        <div id="setting-error-settings_updated" class="updated settings-error">
+            <p><strong><?php _e('Settings saved.','responsive'); ?></strong></p></div>
+    <?php
+    }else{
+        foreach($event_settings_keys as $key=>$tag){
+            $settings[$key] = get_option(LOL_PREFIX . $key);
+        }
+    }
+    ?>
+    <div class="wrap">
+        <h2>Home page settings</h2>
+        <form method="post" action="">
+            <?php wp_nonce_field( 'event-settings'); ?>
+            <?php setting_table_render($settings, $event_settings_keys); ?>
+            <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'responsive'); ?>"></p>
+        </form>
+    </div>
+<?php
+}
+
+function event_settings_get($key){
+    return get_option(LOL_PREFIX . $key);
 }
