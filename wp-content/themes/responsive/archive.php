@@ -29,7 +29,7 @@ get_header(); ?>
                     <?php endforeach;?>
                 </div>
                 <div class="statue">
-                    <a href="<?php echo home_url(); ?>" title="">Trang Chủ</a> &gt; <a href="#"><?php echo single_cat_title("", false); ?></a>
+                    <a href="<?php echo esc_url( home_url( '/trang-chu/' )) ?>" title="">Trang Chủ</a> &gt; <a href="#"><?php echo single_cat_title("", false); ?></a>
                 </div>
                 <div class="content">
                     <ul class="list_news">
@@ -80,6 +80,7 @@ get_header(); ?>
 			<div class="sub_left">
 				<?php get_sidebar('left'); ?>
 			</div>
+
 
 
 		</div>

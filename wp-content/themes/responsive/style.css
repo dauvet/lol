@@ -1661,6 +1661,7 @@ img {
 #page-event .ms-basic-view ,#page-event .ms-basic-view .ms-slide-bgcont{
     height: 317px !important;
 }
+
 /* Right */
 .sub_right {
     width: 740px;
@@ -1682,7 +1683,6 @@ img {
     width: 79px;
     color: #02c8cf;
     font-size: 16px;
-    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
     float: left;
     text-align: center;
 }
@@ -1777,6 +1777,84 @@ img {
 #page-event .page a.active {
     background-color: #cccccc;
 }
+h1 {
+    font-size: 28px;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
+}
+/* collapse */
+#collapse-widget h3 {
+    margin: 0;
+    background-color: rgb(228,10,85);
+    background-image: linear-gradient(bottom, rgb(228,10,85) 14%, rgb(255,36,111) 57%);
+    background-image: -o-linear-gradient(bottom, rgb(228,10,85) 14%, rgb(255,36,111) 57%);
+    background-image: -moz-linear-gradient(bottom, rgb(228,10,85) 14%, rgb(255,36,111) 57%);
+    background-image: -webkit-linear-gradient(bottom, rgb(228,10,85) 14%, rgb(255,36,111) 57%);
+    background-image: -ms-linear-gradient(bottom, rgb(228,10,85) 14%, rgb(255,36,111) 57%);
+}
+
+#collapse-widget h3 a {
+    background: url("images/event/sprite.png") 15px 13px no-repeat;
+    display: block;
+    padding: 10px;
+    padding-left: 32px;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: normal;
+    border-bottom: 1px solid rgba(128, 10, 85, 0.5);
+    text-shadow: 1px 1px 1px rgb(128,10,85);
+}
+#collapse-widget h3:hover { background: #830a00 }
+#collapse-widget h3.open  { background: rgb(255,70,120); }
+#collapse-widget h3.open a { background-position: 13px -25px; }
+#collapse-widget h3 + div { padding: 10px; }
+
+/* Event example
+--- */
+pre#event-log {
+    background: #fafacc;
+    padding: 10px;
+    display: block;
+}
+
+/* Responsive design
+--- */
+@media screen and (max-width: 1056px) {
+    body {
+        width: 672px;
+    }
+    .c2 {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+}
+
+.test { background: #ccc; padding: 10px; border-bottom: 1px solid #aaa;}
+.test + div { background: #fff; padding: 10px; }
+
+@media
+only screen and (max-width: 704px),
+only screen and (-webkit-min-device-pixel-ratio : 1.5){
+    body {
+        width: 320px;
+    }
+    .c1 {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+    h1 {
+        font-size: 28px;
+        text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
+    }
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5){
+    body {
+        padding: 0 12px;
+    }
+}
+
 /*--------------------------------------------------------------
 14.0 single Page
 --------------------------------------------------------------*/

@@ -22,11 +22,11 @@ get_header(); ?>
 					<?php endforeach;?>
 					<div class="statue">
                         <?php $category = get_the_category() ;?>
-						<a href="<?php echo home_url(); ?>" title="">Trang Chủ</a> &gt; <a href="<?php echo get_category_link( $category[0]->term_id ); ?>"><?php echo $category[0]->cat_name ?></a> &gt; <a href="#"><?php echo get_the_title(); ?></a>
+						<a href="<?php echo esc_url( home_url( '/trang-chu/' )); ?>" title="">Trang Chủ</a> &gt; <a href="<?php echo get_category_link( $category[0]->term_id ); ?>"><?php echo $category[0]->cat_name ?></a> &gt; <a href="#"><?php echo get_the_title(); ?></a>
 					</div>
 					<div class="content">
 						<?php while ( have_posts() ) : the_post(); ?>
-
+                            <?php the_title( '<h1>', '</h1>' ); ?>
 							<?php get_template_part( 'content', 'single' ); ?>
 
 							<?php //responsive_post_nav(); ?>
