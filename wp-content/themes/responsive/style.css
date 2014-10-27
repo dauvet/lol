@@ -86,7 +86,7 @@ html {
 body {
     background: #fff; /* Fallback for when there is no custom background color defined. */
     /*font-family: Tahoma, Arial, sans-serif;*/
-    font-size: 12px;
+    font-size: 14px;
     color: #8b94b0;
     font-family: 'Roboto', sans-serif;
 }
@@ -107,7 +107,6 @@ section {
 footer {
     text-align: center;
     line-height: 95px;
-    font-size: 14px;
 }
 
 ol,
@@ -161,7 +160,6 @@ select,
 textarea {
     color: #8b94b0;
     /*font-family: Tahoma, Arial, sans-serif;*/
-    font-size: 14px;
 }
 
 h1,
@@ -200,8 +198,6 @@ address {
 pre {
     background: #eee;
     font-family: "Courier 10 Pitch", Courier, monospace;
-    font-size: 15px;
-    font-size: 1.5rem;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
@@ -566,7 +562,6 @@ a:active {
     clip: auto !important;
     color: #21759b;
     display: block;
-    font-size: 14px;
     font-weight: bold;
     height: auto;
     left: 5px;
@@ -901,8 +896,6 @@ body.trang-chu {
     body.trang-chu #site-navigation .menu .menu-item {
         width: 192px;
         line-height: 102px;
-        /*font-family: "Tahoma";*/
-        font-size: 14px;
         text-align: center;
         border-right: 1px solid #192238;
         border-left: 1px solid #2d3958;
@@ -914,7 +907,6 @@ body.trang-chu {
 
     body.trang-chu #site-navigation .menu .menu-item a {
         color: #fdfbfb;
-	    font-size: 14px;
     }
 
     body.trang-chu #site-navigation .menu .menu-item:first-child {
@@ -969,7 +961,6 @@ body.trang-chu .question-ask-modal textarea {
     background: none repeat scroll 0 0 #181b21;
     border: 1px solid #3a3a3a;
     color: #fff;
-    font-size: 12px;
     height: 80px;
     line-height: 24px;
     padding: 10px;
@@ -1021,7 +1012,6 @@ body.trang-chu .news-with-tabs .tabs-section .tabs-name {
     display: inline-block;
     line-height: 39px;
     color: #fdfbfb;
-    font-size: 14px;
     width: 79px;
     height: 38px;
     text-align: center;
@@ -1066,11 +1056,6 @@ body.trang-chu .news-with-tabs .content-section .content-title {
     float: left;
 }
 
-body.trang-chu .news-with-tabs .content-section .content-date-modified {
-    float: right;
-    padding-right: 15px;
-}
-
 body.trang-chu .news-with-tabs-section {
     float: left;
 }
@@ -1106,7 +1091,6 @@ body.trang-chu .question-title {
     line-height: 28px;
     position: relative;
     font-weight: bold;
-    font-size: 14px;
     color: #f8f9fb;
 }
 
@@ -1139,7 +1123,6 @@ body.trang-chu .question-content-1 {
 }
 
 body.trang-chu .question, body.trang-chu .answer {
-    font-size: 14px;
     line-height: 30px;
     padding-right: 40px;
 }
@@ -1192,7 +1175,6 @@ body.trang-chu .clip-1 {
 
 body.trang-chu .clip-1 .clip-title {
     font-weight: bold;
-    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -1211,11 +1193,8 @@ body.trang-chu .facebook-1 {
 body.trang-chu .facebook-1 .facebook-1-title {
     background: #202741;
     font-weight: bold;
-    /*font-size: 18px;*/
-    /*color: #ffffff;*/
     height: 46px;
     line-height: 46px;
-    /*padding-left: 75px;*/
     padding-left: 10px;
 }
 
@@ -1254,7 +1233,6 @@ body  footer {
 
     body.trang-chu nav a {
         color: #ffffff;
-        font-size: 14px;
     }
 
 
@@ -1306,11 +1284,6 @@ body  footer {
         width: 66.30331753554502%;
         overflow: hidden;
         height: 32px;
-    }
-
-    body.trang-chu .news-with-tabs .content-section .content-date-modified {
-        width: 23%;
-        text-align: right;
     }
 
     body.trang-chu .banner-1 {
@@ -1411,7 +1384,6 @@ li {
     display: inline;
 }
 a {
-    font-size: 12px;
     text-decoration: none;
     color: #d1d1d1;
 }
@@ -1478,8 +1450,6 @@ img {
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     color: #fff;
-    font-size: 14px;
-
 }
 #page-event nav li.last a
 {
@@ -1646,7 +1616,6 @@ img {
 }
 #page-event .master-slider-main-widget h3{
     font-weight: bold;
-    font-size: 16px;
     color: #fff;
     border-bottom: 1px solid #202840;
     padding: 10px;
@@ -1682,7 +1651,6 @@ img {
     line-height: 36px;
     width: 79px;
     color: #02c8cf;
-    font-size: 16px;
     float: left;
     text-align: center;
 }
@@ -1744,15 +1712,12 @@ img {
     color: #FF0000;
 }
 .list_news li a {
-    font-size: 12px;
     color: #8b94b0;
     padding-left: 10px;
 }
 .list_news li em {
     float: right;
     font-style: normal;
-    font-size: 12px;
-    /* color: #8b94b0; */
     padding-right: 18px;
     margin-left: 20px;
     color: #606060;
@@ -2150,13 +2115,6 @@ body.landing-page .content-items a:visited{
     body.landing-page .events-section .events-content .content-title {
         width: 71.71875%;
         float: left;
-    }
-
-    body.landing-page .events-section .events-content .content-date-modified {
-        width: 28.28125%;
-        float: right;
-        text-align: right;
-        font-size: 12px;
     }
 
     body.landing-page .buttons-section {
