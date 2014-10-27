@@ -1484,7 +1484,7 @@ img {
 #page-event .home a img{
     position: absolute;
     right: 40%;
-    top: 30%;
+    top: 25%;
 }
 #logo-mobi:focus{
     outline: none;
@@ -1500,6 +1500,7 @@ img {
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 760px) {
     .sub_left{
+        display: none;
         width: 100% !important;
     }
     .sub_right{
@@ -1550,6 +1551,7 @@ img {
 /*Styles for screen 515px and lower*/
 @media only screen and (max-width : 480px) {
     .sub_left{
+        display: none;
         width: 100% !important;
     }
     .sub_right{
@@ -1589,6 +1591,7 @@ img {
 /*Smartphone*/
 @media only screen and (max-width : 320px) {
     .sub_left{
+        display: none;
         width: 100% !important;
     }
     .sub_right{
