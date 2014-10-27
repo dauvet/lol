@@ -13,7 +13,7 @@ get_header("trang-chu"); ?>
             <div class="news-with-tabs-section" rel="1">
                 <?php
                 $words_limit = 10;
-                $tabs_array = array('tin-tuc','su-kien','thong-bao','hoat-dong');
+                $tabs_array = array('tin-tuc','su-kien','thong-bao');
                 include(locate_template('partials/content-news-with-tabs.php'));
                 ?>
             </div>

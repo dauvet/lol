@@ -1377,9 +1377,12 @@ body  footer {
     body.trang-chu .news-with-tabs .tabs-section .tabs-name {
         width: 75px;
     }
-    body.trang-chu .news-with-tabs .tabs-section a.see-more {
-        display: none;
-    }
+}
+
+@media only screen and (max-width : 320px) {
+	body.trang-chu .news-with-tabs .tabs-section a.see-more {
+		display: none;
+	}
 }
 
 /*--------------------------------------------------------------
