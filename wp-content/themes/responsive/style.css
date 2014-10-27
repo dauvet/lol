@@ -1056,6 +1056,11 @@ body.trang-chu .news-with-tabs .content-section .content-title {
     float: left;
 }
 
+body.trang-chu .news-with-tabs .content-section .content-date-modified {
+    float: right;
+    padding-right: 15px;
+}
+
 body.trang-chu .news-with-tabs-section {
     float: left;
 }
@@ -1284,6 +1289,11 @@ body  footer {
         width: 66.30331753554502%;
         overflow: hidden;
         height: 32px;
+    }
+
+    body.trang-chu .news-with-tabs .content-section .content-date-modified {
+        width: 23%;
+        text-align: right;
     }
 
     body.trang-chu .banner-1 {
@@ -2115,6 +2125,13 @@ body.landing-page .content-items a:visited{
     body.landing-page .events-section .events-content .content-title {
         width: 71.71875%;
         float: left;
+    }
+
+    body.landing-page .events-section .events-content .content-date-modified {
+        width: 28.28125%;
+        float: right;
+        text-align: right;
+        font-size: 12px;
     }
 
     body.landing-page .buttons-section {
