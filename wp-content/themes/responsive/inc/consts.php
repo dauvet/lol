@@ -48,3 +48,24 @@ $home_settings_keys = array(
         'object_value' => 'title'
     )
 );
+
+global $event_settings_keys;
+$event_settings_keys = array(
+    'event_category' => array(
+        'title' => __('Event category', 'responsive'),
+        'type' => 'select',
+        'object' => get_categories(array(
+            'hide_empty' => 0,
+        )),
+        'object_key' => 'term_id',
+        'object_value' => 'name',
+    ),
+    'event_show_date_from' => array(
+        'title' => __('Show posts date from', 'responsive'),
+        'type' => 'date',
+    ),
+    'event_show_date_to' => array(
+        'title' => __('Show posts date to', 'responsive'),
+        'type' => 'date',
+    )
+);
