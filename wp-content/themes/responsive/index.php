@@ -11,56 +11,59 @@
  * @package responsive
  */
 
-	get_header("landing"); ?>
+get_header("landing"); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
-			<div class="desktop">
-				<div class="social-buttons">
-					<div class="social-ring">
-						<div class="social-ring-button">
-							<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo get_home_url(); ?>&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe>
-						</div>
-						<div class="social-ring-button"><iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.d4db41a5a14a4516e6d4ecf6250c7419.en.html#_=1414002978634&amp;count=vertical&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=<?php echo get_home_url(); ?>&amp;size=m&amp;text=&amp;url=<?php echo get_home_url(); ?>" class="sr-twitter-button twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 50px; height: 62px;"></iframe></div>
-						<div class="social-ring-button"><div class="g-plusone" data-size="tall" data-href="<?php echo get_home_url(); ?>"></div></div>
+<div id="primary" class="content-area">
+	<main id="main" class="site-main" role="main">
+		<div class="desktop">
+			<div class="social-buttons">
+				<div class="social-ring">
+					<div class="social-ring-button">
+						<iframe src="//www.facebook.com/plugins/like.php?href=<?php echo get_home_url(); ?>&amp;width&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65&amp;" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:65px;" allowTransparency="true"></iframe>
 					</div>
+					<div class="social-ring-button"><iframe frameborder="0" id="twitter-widget-0" scrolling="no" allowtransparency="true" src="http://platform.twitter.com/widgets/tweet_button.d4db41a5a14a4516e6d4ecf6250c7419.en.html#_=1414002978634&amp;count=vertical&amp;id=twitter-widget-0&amp;lang=en&amp;original_referer=<?php echo get_home_url(); ?>&amp;size=m&amp;text=&amp;url=<?php echo get_home_url(); ?>" class="sr-twitter-button twitter-share-button twitter-tweet-button twitter-share-button twitter-count-vertical" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 50px; height: 62px;"></iframe></div>
+					<div class="social-ring-button"><div class="g-plusone" data-size="tall" data-href="<?php echo get_home_url(); ?>"></div></div>
 				</div>
-				<div class="logo" ><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/logo.png"></div>
-				<div class="video"><a class="fancybox-media" href="<?php echo landing_settings_get("youtube_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/video-bg.jpg"></a></div>
-				<div class="menus">
-					<div class="buttons-group-left">
-						<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-jail-break-btn.png"></a>
-						<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-btn.png"></a>
-						<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/android-btn.png"></a>
-					</div>
-					<div class="buttons-group-right">
-						<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" rel="home">
-							<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/home-btn.jpg" />
-						</a>
-						<div class="champ-1"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/champ-1.png" /></div>
-					</div>
-					<div class="clear"></div>
+			</div>
+			<div class="logo" ><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/logo.png"></div>
+			<div class="video"><a class="fancybox-media" href="<?php echo landing_settings_get("youtube_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/video-bg.jpg"></a></div>
+			<div class="menus">
+				<div class="buttons-group-left">
+					<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-jail-break-btn.png"></a>
+					<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/ios-btn.png"></a>
+					<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/android-btn.png"></a>
 				</div>
-				<div class="customers-support"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/cskh.png" /></div>
+				<div class="buttons-group-right">
+					<a href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>" rel="home">
+						<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/home-btn.jpg" />
+					</a>
+					<div class="champ-1"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/champ-1.png" /></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+			<div class="customers-support"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/cskh.png" /></div>
+		</div>
+
+		<div class="mobile">
+			<div id="logo" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/logo.png"/></div>
+			<div id="mini-menu" class="mini-menu">
+				<div id="mini-menu-bg" class="mini-menu-bg">
+					<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/menu-bg.png"/>
+				</div>
+				<div class="mini-menu-content"><?php wp_nav_menu( array( 'theme_location' => 'landing_mobile_menu' ) ); ?></div>
+				<div class="clear"></div>
 			</div>
 
-			<div class="mobile">
-				<div id="logo" class="logo"><img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/logo.png"/></div>
-				<div id="mini-menu" class="mini-menu">
-					<div id="mini-menu-bg" class="mini-menu-bg">
-						<img src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/menu-bg.png"/>
-					</div>
-					<div class="mini-menu-content"><?php wp_nav_menu( array( 'theme_location' => 'landing_mobile_menu' ) ); ?></div>
-					<div class="clear"></div>
-				</div>
+			<div id="video" class="video">
+				<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
+				<iframe width="98.99598393574297%" height="98.03921568627451%" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
+			</div>
 
-				<div id="video" class="video">
-					<img class="video-bg" src="<?php echo get_bloginfo('template_url') ?>/images/landing/mobile/video-bg.jpg"/>
-					<iframe width="98.99598393574297%" height="98.03921568627451%" src="<?php echo landing_settings_get("youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
-				</div>
+			<div class="bot_section">
 				<div id="champion_slider" class="champion_slider">
 					<?php masterslider(4); ?>
 				</div>
+				<div class="clear"></div>
 				<div id="events" class="events-section">
 					<div class="events-title"></div>
 					<div class="events-content">
@@ -103,9 +106,10 @@
 					<?php endif; ?>
 				</div>
 			</div>
-		</main><!-- #main -->
-		<div class="clear"></div>
-	</div><!-- #primary -->
+		</div>
+	</main><!-- #main -->
+	<div class="clear"></div>
+</div><!-- #primary -->
 
 <?php //get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -902,7 +902,7 @@ body.trang-chu {
         width: 192px;
         line-height: 102px;
         /*font-family: "Tahoma";*/
-        font-size: 18.4px;
+        font-size: 14px;
         text-align: center;
         border-right: 1px solid #192238;
         border-left: 1px solid #2d3958;
@@ -914,6 +914,7 @@ body.trang-chu {
 
     body.trang-chu #site-navigation .menu .menu-item a {
         color: #fdfbfb;
+	    font-size: 14px;
     }
 
     body.trang-chu #site-navigation .menu .menu-item:first-child {
@@ -2015,10 +2016,16 @@ body.landing-page .content-items a:visited{
         top: 1.176470588235294%;
     }
 
-    body.landing-page .champion_slider {
+	body.landing-page .bot_section {
+		position: absolute;
+		width: 100%;
+		top: 45.7%;
+	}
+
+	body.landing-page .champion_slider {
         width: 95%;
         height: 25.3615127919911%;
-        position: absolute;
+        position: relative;
         z-index: 2;
         top: 45.7%;
         left: 2.65625%;
@@ -2027,12 +2034,13 @@ body.landing-page .content-items a:visited{
     body.landing-page .events-section {
         width: 95.9375%;
         height: 22.96996662958843%;
-        position: absolute;
+        position: relative;
         z-index: 2;
-        top: 71.41156840934372%;
+        /*top: 71.41156840934372%;*/
         left: 1.875%;
         background: url("images/landing/mobile/event-bg.png") center no-repeat transparent;
         background-size: 100% 100%;
+	    margin-top: 10px;
     }
 
     body.landing-page .events-section .events-title {
@@ -2074,10 +2082,11 @@ body.landing-page .content-items a:visited{
     }
 
     body.landing-page .buttons-section {
-        position: absolute;
+        position: relative;
         z-index: 2;
         width: 100%;
-        top: 94.49388209121246%;
+        /*top: 94.49388209121246%;*/
+	    margin-top: 10px;
     }
 
     body.landing-page .buttons-section img {

@@ -33,7 +33,11 @@ $(document).on("ready", function() {
 			"width" : winW,
 			"height" : winH
 		});
-		truncate();
+		//truncate();
+        var evW = $(".events-section").width();
+        $(".events-section").css({
+            "height": evW * 413 / 614
+        });
 	};
 
 	$(window).on("resize", function() {
