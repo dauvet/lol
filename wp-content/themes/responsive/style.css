@@ -1038,12 +1038,15 @@ body.trang-chu .news-with-tabs .content-section > ul {
 }
 
 body.trang-chu .news-with-tabs .content-section > ul > li {
-    list-style-type: square;
-    display: list-item;
+	clear: left;
 }
 
 body.trang-chu .news-with-tabs .content-section .content-items {
     line-height: 36px;
+	/*list-style-type: square;*/
+	/*display: list-item;*/
+	padding-left: 18px;
+	background: url("images/square.png") left center no-repeat transparent;
 }
 
 body.trang-chu .news-with-tabs .content-section .content-items a:hover{
@@ -1296,7 +1299,7 @@ body  footer {
 
     body.trang-chu .news-with-tabs-section[rel="1"] .content-title,
     body.trang-chu .news-with-tabs-section[rel="2"] .content-title {
-        width: 66.30331753554502%;
+        width: 64.30331753554502%;
         overflow: hidden;
         height: 32px;
 	    white-space: nowrap;
@@ -2106,33 +2109,31 @@ body.landing-page .content-items a:visited{
     }
 
     body.landing-page .events-section .events-content {
-        padding: 3.268765133171913% 4.375% 3.268765133171913% 8.75%;
+        padding: 3.268765133171913% 4.375% 3.268765133171913% 4.75%;
         width: 100%;
         height: 85.85365853658537%;
     }
 
-    body.landing-page .events-section .events-content ul {
-        width: 100%;
-        height: 100%;
-    }
-
-    body.landing-page .events-section .events-content ul li {
-        display: list-item;
-        list-style-type: square;
+    body.landing-page .events-section .events-content .content-items {
         width: 100%;
         height: 16.66666666666667%;
+	    padding-left: 5.268765133171913%;
+	    padding-top: 2.5%;
+	    background: url("images/square.png") left center no-repeat transparent;
     }
 
     body.landing-page .events-section .events-content .content-title {
         width: 71.71875%;
         float: left;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
     }
 
     body.landing-page .events-section .events-content .content-date-modified {
         width: 28.28125%;
         float: right;
         text-align: right;
-        font-size: 12px;
     }
 
     body.landing-page .buttons-section {
@@ -2152,6 +2153,18 @@ body.landing-page .content-items a:visited{
         display: none;
     }
 }
+
+@media screen and (max-width: 540px) {
+	body.landing-page .events-section .events-content .content-items {
+		padding-top: 2%;
+	}
+}
+@media screen and (max-width: 440px) {
+	body.landing-page .events-section .events-content .content-items {
+		padding-top: 1%;
+	}
+}
+
 @media screen and (max-width: 430px) and (min-width: 400px) {
     body.landing-page .site-main .mini-menu .mini-menu-content ul.menu li.menu-item a {
         font-size: 11px !important;

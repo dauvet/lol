@@ -82,19 +82,17 @@ get_header("landing"); ?>
 								'post_status'    => 'publish'
 							);
 							$news_posts_array = get_posts( $args ); ?>
-							<ul>
-								<?php foreach ( $news_posts_array as $post ) :
-									//print_r($post);
-									setup_postdata( $post ); ?>
-									<li class="content-items">
-										<a href="<?php the_permalink(); ?>"><div class="content-title truncate" title-text="<?php the_title() ?>"><?php the_title(); ?></div></a>
-										<div class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></div>
-										<div class="clear"></div>
-									</li>
-								<?php endforeach;
-								wp_reset_postdata();
-								?>
-							</ul>
+							<?php foreach ( $news_posts_array as $post ) :
+								//print_r($post);
+								setup_postdata( $post ); ?>
+								<div class="content-items">
+									<a href="<?php the_permalink(); ?>"><span class="content-title truncate" title-text="<?php the_title() ?>"><?php the_title(); ?></span></a>
+									<span class="content-date-modified"><?php echo date('d/m/Y', strtotime($post->post_date)); ?></span>
+									<span class="clear"></span>
+								</div>
+							<?php endforeach;
+							wp_reset_postdata();
+							?>
 						</div>
 					</div>
 
