@@ -7,6 +7,7 @@
 include  'inc/utils.php';
 include  'inc/consts.php';
 include 'inc/setting_pages.php';
+include 'inc/shortcodes.php';
 /**
  * Set the content width based on the theme's design and stylesheet.
  */

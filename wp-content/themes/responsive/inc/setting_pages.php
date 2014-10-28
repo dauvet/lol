@@ -41,7 +41,7 @@ function add_admin_print_styles() {
 // render table settings
 function setting_table_render($settings, $setting_keys)
 {
-    ?>
+	?>
     <table class="form-table">
         <tbody>
                 <?php foreach($setting_keys as $key=>$tag): ?>
@@ -68,7 +68,7 @@ function setting_table_render($settings, $setting_keys)
                             <?php endforeach; ?>
                         </select>
                     <?php elseif ($tag['type'] == 'date'): ?>
-                        <input name="settings[<?php echo $key; ?>]>" value="<?php if(isset($settings[$key])) echo $settings[$key]; ?>" type="text" class="date-picker from-date">
+                        <input id="<?php echo $key; ?>" name="settings[<?php echo $key; ?>]>" value="<?php if(isset($settings[$key])) echo $settings[$key]; ?>" type="text" class="date-picker from-date">
                     <?php endif; ?>
                 </td>
             </tr>
@@ -77,12 +77,18 @@ function setting_table_render($settings, $setting_keys)
     </table>
 
     <script>
+	
         jQuery(document).ready(function($){
-            $('.date-picker').each(function(){
-                var tmp = $(this).datepicker().datepicker( "option", "dateFormat", 'dd-mm-yy');
-                if ($(this).val()){
-                    tmp.datepicker('setDate', $(this).val());
-                }
+		
+		            $('.date-picker').each(function(){
+				//alert($(this).attr('id'));
+				//$('#' + $(this).attr('id')).datepicker();
+				//tmp.datepicker().datepicker( "option", "dateFormat", 'dd-mm-yy');
+                //alert($(this).val());
+				//tmp.datepicker('setDate',new Date(2014,11,21));
+                /*if ($(this).val()){
+                    tmp.datepicker('setDate', new Date(2014,1,1));
+                }*/
             });
 
         });
