@@ -28,7 +28,7 @@ get_header(); ?>
 						<?php while ( have_posts() ) : the_post(); ?>
                             <?php the_title( '<h1>', '</h1>' ); ?>
 							<?php get_template_part( 'content', 'single' ); ?>
-                            <?php echo do_shortcode("[bws_related_posts]"); ?>
+
 							<?php //responsive_post_nav(); ?>
 
                             <?php

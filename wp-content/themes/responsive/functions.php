@@ -42,8 +42,8 @@ function responsive_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-
-	// This theme uses wp_nav_menu() in one location.
+    set_post_thumbnail_size( 100, 50, true );
+    // This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'responsive' ),
 		'primary_mobile' => __('Primary Mobile Menu', 'responsive'),
@@ -142,3 +142,5 @@ function load_fonts() {
 }
 
 add_action('wp_print_styles', 'load_fonts');
+
+/** Display related posts in Genesis based on Tags */
