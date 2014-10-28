@@ -1754,6 +1754,7 @@ img {
     overflow: visible;
     clear: both;
     margin-bottom: 30px;
+    line-height: 18px;
 }
 .list_news {
     margin: 0 auto 10px auto;

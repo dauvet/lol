@@ -24,6 +24,13 @@ $landing_settings_keys = array(
         'title' => __('Youtube Video Clip link', 'responsive'),
         'type' => 'text'
     ),
+    'landing_slider' => array(
+        'title' => __('Slider', 'responsive'),
+        'type' => 'select',
+        'object' => get_mastersliders(),
+        'object_key' => 'ID',
+        'object_value' => 'title'
+    )
 );
 
 global $home_settings_keys;
@@ -41,7 +48,7 @@ $home_settings_keys = array(
         'type' => 'text'
     ),
     'home_slider' => array(
-        'title' => __('Home slider', 'responsive'),
+        'title' => __('Slider', 'responsive'),
         'type' => 'select',
         'object' => get_mastersliders(),
         'object_key' => 'ID',
@@ -67,5 +74,9 @@ $event_settings_keys = array(
     'event_show_date_to' => array(
         'title' => __('Show posts date to', 'responsive'),
         'type' => 'date',
+    ),
+    'event_show_posts_count' => array(
+        'title' => __('Number of posts show', 'responsive'),
+        'type' => 'text',
     )
 );

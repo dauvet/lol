@@ -68,7 +68,7 @@ function setting_table_render($settings, $setting_keys)
                             <?php endforeach; ?>
                         </select>
                     <?php elseif ($tag['type'] == 'date'): ?>
-                        <input id="<?php echo $key; ?>" name="settings[<?php echo $key; ?>]>" value="<?php if(isset($settings[$key])) echo $settings[$key]; ?>" type="text" class="date-picker from-date">
+                        <input id="<?php echo $key; ?>" name="settings[<?php echo $key; ?>]>" value="<?php if(isset($settings[$key])) echo $settings[$key]; ?>" type="text" class="date-picker">
                     <?php endif; ?>
                 </td>
             </tr>
@@ -79,18 +79,7 @@ function setting_table_render($settings, $setting_keys)
     <script>
 	
         jQuery(document).ready(function($){
-		
-		            $('.date-picker').each(function(){
-				//alert($(this).attr('id'));
-				//$('#' + $(this).attr('id')).datepicker();
-				//tmp.datepicker().datepicker( "option", "dateFormat", 'dd-mm-yy');
-                //alert($(this).val());
-				//tmp.datepicker('setDate',new Date(2014,11,21));
-                /*if ($(this).val()){
-                    tmp.datepicker('setDate', new Date(2014,1,1));
-                }*/
-            });
-
+		    $('.date-picker').datepicker({ dateFormat: 'dd-mm-yy' });
         });
     </script>
     <?php
