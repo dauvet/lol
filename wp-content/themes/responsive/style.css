@@ -1432,7 +1432,6 @@ img {
     background: url(images/event/banner.png) no-repeat center top;
     height: 425px;
     overflow: visible;
-
 }
 
 
@@ -1515,6 +1514,12 @@ img {
 }
 /*Styles for screen 600px and lower*/
 @media screen and (max-width: 760px) {
+    #sub {
+        width: 100%;
+        background: url(images/event/wap_image.jpg) no-repeat center top;
+        height: 425px;
+        overflow: visible;
+    }
     .sub_left{
         display: none;
         width: 100% !important;
@@ -1566,6 +1571,12 @@ img {
 
 /*Styles for screen 515px and lower*/
 @media only screen and (max-width : 480px) {
+    #sub {
+        width: 100%;
+        background: url(images/event/wap_image.jpg) no-repeat center top;
+        height: 425px;
+        overflow: visible;
+    }
     .sub_left{
         display: none;
         width: 100% !important;
@@ -1606,6 +1617,12 @@ img {
 
 /*Smartphone*/
 @media only screen and (max-width : 320px) {
+    #sub {
+        width: 100%;
+        background: url(images/event/wap_image.jpg) no-repeat center top;
+        height: 425px;
+        overflow: visible;
+    }
     .sub_left{
         display: none;
         width: 100% !important;
@@ -1782,9 +1799,20 @@ h1 {
     font-size: 28px;
     text-shadow: 0px 0px 1px rgba(0,0,0,0.7);
 }
+/* Facebook comment*/
+h3.binh-luan{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#FatPandaFacebookComments{
+    background-color: #ffffff !important;
+}
 .fbFeedbackPost .postText{
     color: #ffffff !important;
 }
+
 /* collapse */
 #collapse-widget h3 {
     margin: 0;
