@@ -1810,7 +1810,7 @@ h1 {
 }
 #collapse-widget h3:hover { background: #830a00 }
 #collapse-widget h3.open  { background: rgb(255,70,120); }
-#collapse-widget h3.open a { background-position: 13px -25px; }
+#collapse-widget h3.open a { background-position: 13px -25px}
 #collapse-widget h3 + div { padding: 10px; }
 
 /* Event example
@@ -1821,8 +1821,14 @@ pre#event-log {
     display: block;
 }
 
-
-
+/*fsb-social-bar*/
+#fsb-social-bar{
+    background: #202840 !important;
+    border-top: none !important;
+}
+#fsb-social-bar .fsb-title{
+    color: #ffffff !important;
+}
 /*--------------------------------------------------------------
 14.0 single Page
 --------------------------------------------------------------*/
