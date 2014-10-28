@@ -813,7 +813,7 @@ object {
     right:10px;
     display:none;
     background: url('images/go-top.png') no-repeat center center transparent;
-    background-size: 40px 40px;
+    background-size: 32px 54px;
     outline: 0;
 }
 .scrollToTop:hover{
