@@ -1866,6 +1866,46 @@ pre#event-log {
 #fsb-social-bar .fsb-title{
     color: #ffffff !important;
 }
+/* su kien dac biet*/
+.sub_left .list_post{
+    padding-bottom: 20px;
+}
+.sub_left .list_post ul li{
+    overflow: hidden;
+    position: relative;
+}
+.sub_left .list_post li a{
+    color: #dce3e4;
+    background: url("images/event/nav_event.png") no-repeat;
+    padding: 0 10px 0 30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+.sub_left .list_post li a:hover ,.sub_left .list_post li.current a{
+    color: #dce3e4;
+    background: url("images/event/nav_hover.png") no-repeat;
+    padding: 0 10px 0 30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
+/*related post*/
+.relatedposts {margin: 0 0 40px 0; clear: both }
+.relatedposts h3 {font-size: 20px; margin: 0 0 15px 0; border-bottom: 1px solid #dbdbdb;padding: 3px }
+
+.relatedthumb {margin: 0 20px 0 1px; display: inline-block}
+.relatedthumb img {margin: 0 0 3px 0; padding: 0;max-width: none;width: 326px}
+.relatedthumb a {color :#333; text-decoration: none; display:block;  width: 326px;color: #ffffff}
+.relatedthumb a:hover{
+    text-decoration: underline;
+}
 /*--------------------------------------------------------------
 14.0 single Page
 --------------------------------------------------------------*/

@@ -4,6 +4,7 @@
 add_shortcode( 'event_post_list', 'event_post_list' );
 function event_post_list($atts)
 {
+    global $wp_query;
     extract(shortcode_atts(array(
         'date_from' => date('Y-m-d',strtotime('-1 week')),
         'date_to' => date('Y-m-d'),
@@ -33,7 +34,7 @@ function event_post_list($atts)
 	
 	<ul>
 		<?php foreach($posts as $post): ?>
-		<li><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></li>
+		<li <?php if ( $post->ID == $wp_query->post->ID ) { echo ' class="current"'; } else {} ?>><a href="<?php echo get_permalink($post->ID); ?>"><?php echo $post->post_title; ?></a></li>
 		<?php endforeach; ?>
 	</ul>
 	<?php

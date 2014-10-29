@@ -28,23 +28,31 @@ get_header(); ?>
 						<?php while ( have_posts() ) : the_post(); ?>
                             <?php the_title( '<h1>', '</h1>' ); ?>
 							<?php get_template_part( 'content', 'single' ); ?>
-
-							<?php //responsive_post_nav(); ?>
-
-                            <?php
-                            if ( comments_open() || get_comments_number() ) {
-                            comments_template();
-                            }
-                            ?>
 						<?php endwhile; // end of the loop. ?>
-
+                            <?php related_post() ?>
+                        <?php
+                        if ( comments_open() || get_comments_number() ) {
+                            comments_template();
+                        }
+                        ?>
 					</div>
-				</div>
-                <?php var_dump($category[0]->cat_name); ?>
-                <div class="sub_left">
-                    <?php get_sidebar('left'); ?>
 
-                </div>
+				</div>
+                    <?php if(event_settings_get('event_category')==$category[0]->term_id): ?>
+                        <div class="sub_left">
+                            <div class="list_post">
+                                <?php
+                                $from_date = DateTime::createFromFormat('d-m-Y',event_settings_get('event_show_date_from'))->format('Y/m/d');
+                                $to_date = DateTime::createFromFormat('d-m-Y',event_settings_get('event_show_date_to'))->format('Y/m/d');
+                                echo do_shortcode("[event_post_list date_from='{$from_date}' date_to='{$to_date}']");
+                                ?>
+                            </div>
+                        </div>
+                     <?php else: ?>
+                        <div class="sub_left">
+                            <?php get_sidebar('left'); ?>
+                        </div>
+                    <?php endif; ?>
 			</div>
 
 
