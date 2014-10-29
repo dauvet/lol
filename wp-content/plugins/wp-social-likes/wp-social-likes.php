@@ -209,7 +209,7 @@ class wpsociallikes
 			return;
 		}
 
-		if ('page' == $_POST['post_type']) {
+		if (isset($_POST['post_type']) && 'page' == $_POST['post_type']) {
 			if (!current_user_can('edit_page', $post_id)) {
 				return;
 			}
@@ -220,14 +220,14 @@ class wpsociallikes
 		}
 
 		update_post_meta($post_id, 'sociallikes', isset($_POST['wpsociallikes']));
-		if (($_POST['image_url'] == "") && $this->options['pinterestImg']) {
+		if ((!isset($_POST['image_url']) || $_POST['image_url'] == "") && $this->options['pinterestImg']) {
 			$img_url = "";
 			$post = get_post($post_id);
 			$img_url = $this->get_post_first_img($post); 
 			update_post_meta($post_id, 'sociallikes_img_url', $img_url);
 		}
 		else {
-			update_post_meta($post_id, 'sociallikes_img_url', $_POST['image_url']);
+			update_post_meta($post_id, 'sociallikes_img_url', isset($_POST['image_url'])?$_POST['image_url']:'');
 		}
 	}
 
