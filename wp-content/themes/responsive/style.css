@@ -1223,7 +1223,9 @@ body  footer {
     background-color: #060b1b;
 }
 
-
+.mobile-show.download-menu {
+	display: none;
+}
 
 /*For mobile*/
 @media screen and (max-width: 760px) {
@@ -1248,6 +1250,27 @@ body  footer {
     body.trang-chu .download-menu a.dl-android img {
         width: 45%;
     }
+
+    /*FOR ALL PAGE*/
+	.mobile-show.download-menu {
+		position: absolute;
+		top: 380px;
+		left: 0;
+		text-align: center;
+		width: 100%;
+		display: block;
+
+	}
+	.mobile-show.download-menu img {
+		width: 30%;
+	}
+	.mobile-show.download-menu a.dl-ios img {
+		width: 33%;
+	}
+	.mobile-show.download-menu a.dl-android img {
+		width: 45%;
+	}
+	/*END*/
 
     body.trang-chu nav a {
         color: #ffffff;
@@ -1391,6 +1414,10 @@ body  footer {
     body.trang-chu .download-menu {
         top: 320px;
     }
+
+	.mobile-show.download-menu {
+		top: 320px;
+	}
 }
 
 @media only screen and (max-width : 415px) {
