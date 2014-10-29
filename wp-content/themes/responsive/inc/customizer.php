@@ -37,7 +37,6 @@ function lol_widgets_init(){
 		));
 	}
 	register_widget('Download_Widget');
-    register_widget('Collapse_Widget');
 }
 add_action( 'widgets_init', 'lol_widgets_init' );
 
@@ -95,97 +94,41 @@ class Download_Widget extends WP_Widget
 	}
 
 }
-/* Collapse Button */
-class Collapse_Widget extends WP_Widget
+function related_post()
 {
-    function Collapse_Widget()
-    {
-        $widget_ops = array('classname' => 'CollapseWidget', 'description' => 'Displays a collapse content');
-        $this->WP_Widget('CollapseWidget', 'Collapse Content', $widget_ops);
-    }
+    global $post;
+    $orig_post = $post;
+    global $post;
+    $tags = wp_get_post_tags($post->ID);
 
-    function form($instance)
-    {
-        $instance = wp_parse_args((array)$instance, array('category_name' => ''));
-        $title = isset($instance['title']) ? esc_attr($instance['title']) : '';
-        $number = isset($instance['number']) ? absint($instance['number']) : 5;
-        $category_name = esc_attr($instance['category_name']);
+    if ($tags) {
+        $tag_ids = array();
+        foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+        $args=array(
+            'tag__in' => $tag_ids,
+            'post__not_in' => array($post->ID),
+            'posts_per_page'=>2, // Number of related posts to display.
+            'ignore_sticky_posts'=>1
+        );
+
+        $my_query = new wp_query( $args );
         ?>
-        <p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>"
-                   name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>"/></p>
-
-        <p>
-            <label for="<?php echo $this->get_field_id('category_name'); ?>"><?php _e('Only from category:'); ?></label>
-            <input type="text" value="<?php echo $category_name; ?>"
-                   name="<?php echo $this->get_field_name('category_name'); ?>"
-                   id="<?php echo $this->get_field_id('category_name'); ?>" class="widefat"/>
-            <br/>
-            <small><?php _e('Category IDs, separated by commas.'); ?></small>
-        </p>
-
-        <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Number of posts to show:'); ?></label>
-            <input id="<?php echo $this->get_field_id('number'); ?>"
-                   name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>"
-                   size="3"/></p>
-    <?php
-    }
-
-
-    function update($new_instance, $old_instance)
-    {
-        $instance = $old_instance;
-        $instance['title'] = strip_tags($new_instance['title']);
-        $instance['number'] = (int)$new_instance['number'];
-        $instance['category_name'] = strip_tags($new_instance['category_name']);
-
-
-        return $instance;
-    }
-
-    function widget($args, $instance)
-    {
-        extract($args, EXTR_SKIP);
-        /* echo $before_widget;
-         */
-        ?><!--
-        <div id="collapse-widget" data-collapse>
-            <h3>Fruits</h3>
-            <div>I like fruits. This <a href="#work">link should work</a></div>
-
-            <h3>Info</h3>
-            <div>This is some information</div>
-        </div>
-        --><?php
-        /*        echo $after_widget;*/
-        $title = apply_filters('widget_title', empty($instance['title']) ? __('Recent Posts') : $instance['title'], $instance, $this->id_base);
-        $category_name = empty($instance['category_name']) ? '' : $instance['category_name'];
-        if (empty($instance['number']) || !$number = absint($instance['number']))
-            $number = 10;
-
-        $r = new WP_Query(apply_filters('widget_posts_args', array('posts_per_page' => $number, 'no_found_rows' => true, 'post_status' => 'publish', 'category__and' => array($category_name), 'ignore_sticky_posts' => true)));
-        if ($r->have_posts()) :
+            <div class="relatedposts">
+            <h3>CÙNG CHỦ ĐỀ</h3>
+        <?php
+        while( $my_query->have_posts() ) {
+            $my_query->the_post();
             ?>
-            <?php echo $before_widget; ?>
-            <?php if ($title) echo $before_title . $title . $after_title; ?>
-            <ul>
-                <?php while ($r->have_posts()) : $r->the_post(); ?>
-                    <li>
-                        <a href="<?php the_permalink() ?>"
-                           title="<?php echo esc_attr(get_the_title() ? get_the_title() : get_the_ID()); ?>">
 
-                            <?php if (get_the_title()) the_title(); else the_ID(); ?>
-                        </a>
-
-                    </li>
-                <?php endwhile; ?>
-            </ul>
-            <?php echo $after_widget; ?>
-            <?php
-            // Reset the global $the_post as this query will have stomped on it
-            wp_reset_postdata();
-
-        endif;
+            <div class="relatedthumb">
+                <a rel="external" href="<? the_permalink()?>"><?php the_post_thumbnail(array(400,159)); ?><br />
+                    <h1><?php the_title(); ?></h1>
+                </a>
+            </div>
+        <?php }
+        ?></div><?php
     }
+    $post = $orig_post;
+    wp_reset_query();
 
 }

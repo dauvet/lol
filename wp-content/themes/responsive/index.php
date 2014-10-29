@@ -65,7 +65,7 @@ get_header("landing"); ?>
 
 				<div class="bot_section">
 					<div id="champion_slider" class="champion_slider">
-						<?php masterslider(4); ?>
+						<?php masterslider(landing_settings_get("landing_slider")); ?>
 					</div>
 					<div class="clear"></div>
 					<div id="events" class="events-section">

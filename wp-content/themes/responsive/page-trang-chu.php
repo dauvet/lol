@@ -18,7 +18,7 @@ get_header("trang-chu"); ?>
                 ?>
             </div>
             <div class="banner-1">
-                <?php echo do_shortcode('[masterslider id="9"]'); ?>
+	            <?php masterslider(landing_settings_get("home_slider")); ?>
             </div>
             <div class="clear"></div>
         </div>

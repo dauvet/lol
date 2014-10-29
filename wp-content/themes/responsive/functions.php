@@ -42,7 +42,7 @@ function responsive_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-    set_post_thumbnail_size( 100, 50, true );
+   // set_post_thumbnail_size( 300, 159, true );
     // This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'responsive' ),
