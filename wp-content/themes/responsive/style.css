@@ -1784,9 +1784,8 @@ img {
     margin-bottom: 30px;
     line-height: 18px;
 }
-#page-event .content
 
-#page-event .content .entry-content a, #page-event .content .entry-content a:hover {
+#page-event .content .entry-content a, #page-event .content .entry-content a:visited, #page-event .content .entry-content a:active, #page-event .content .entry-content a:hover {
     color: #4db2ec;
 }
 #page-event .content .entry-content h1 {
