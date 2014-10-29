@@ -40,6 +40,7 @@ get_header(); ?>
 
 					</div>
 				</div>
+                <?php var_dump($category[0]->cat_name); ?>
                 <div class="sub_left">
                     <?php get_sidebar('left'); ?>
 
