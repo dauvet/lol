@@ -10,6 +10,7 @@ function event_post_list($atts)
         'date_to' => date('Y-m-d'),
         'offset' => 0,
         'limit' => -1,
+        'category_id' => event_settings_get('event_category'),
     ), $atts));
 
 	$args = array(
@@ -20,10 +21,12 @@ function event_post_list($atts)
 				'inclusive' => true,
 			),
 		),
+        'category' => $category_id,
 		'offset' => $offset,
 		'posts_per_page' => $limit,
 		'orderby' => 'post_date',
-		'order' => 'desc'
+		'order' => 'desc',
+
 	);
     $posts = get_posts($args);
     
