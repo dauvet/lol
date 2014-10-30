@@ -104,10 +104,11 @@ function related_post()
     if ($tags) {
         $tag_ids = array();
         foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+        $post_count = home_settings_get('home_reated_posts_count');
         $args=array(
             'tag__in' => $tag_ids,
             'post__not_in' => array($post->ID),
-            'posts_per_page'=>2, // Number of related posts to display.
+            'posts_per_page'=> $post_count ? $post_count: 2, // Number of related posts to display.
             'ignore_sticky_posts'=>1
         );
 

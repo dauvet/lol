@@ -1977,6 +1977,45 @@ pre#event-log {
     text-decoration: none;
     position: relative;
 }
+/* widget post */
+.sub_left .widget h3{
+    font-size: 130%;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 0;
+
+}
+.sub_left .widget{
+    padding-bottom: 20px;
+}
+.sub_left .widget ul li{
+    overflow: hidden;
+    position: relative;
+}
+.sub_left .widget li a{
+    color: #dce3e4;
+    background: url("images/event/nav_event.png") no-repeat;
+    padding: 0 10px 0 30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.sub_left .widget li a:hover ,.sub_left .widget li.current a{
+    color: #dce3e4;
+    background: url("images/event/nav_hover.png") no-repeat;
+    padding: 0 10px 0 30px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    position: relative;
+}
 /*related post*/
 .relatedposts {margin: 0 0 40px 0; clear: both }
 .relatedposts h3 {font-size: 20px; margin: 0 0 15px 0; border-bottom: 1px solid #dbdbdb;padding: 3px }

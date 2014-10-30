@@ -53,6 +53,10 @@ $home_settings_keys = array(
         'object' => get_mastersliders(),
         'object_key' => 'ID',
         'object_value' => 'title'
+    ),
+    'home_reated_posts_count' => array(
+        'title' => __('Number of related posts', 'responsive'),
+        'type' => 'text',
     )
 );
 
@@ -78,5 +82,5 @@ $event_settings_keys = array(
     'event_show_posts_count' => array(
         'title' => __('Number of posts show', 'responsive'),
         'type' => 'text',
-    )
+    ),
 );
