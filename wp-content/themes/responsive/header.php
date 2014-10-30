@@ -67,25 +67,26 @@
             </ul>
             <a href="#" id="pull">Menu</a>
         </nav>
-    </div>
 
-	<div class="mobile-show download-menu">
-		<?php
-		// MOBILE DETECT
-		require_once "lib/mobile-detect-2.8.5/Mobile_Detect.php";
-		$detect = new Mobile_Detect;
-		?>
-		<?php if($detect->isAndroidOS()): ?>
-			<a class="dl-android" href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
-		<?php elseif($detect->isiOS()): ?>
-			<a class="dl-ios" href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
-			<a class="dl-ios" href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
-		<?php else: ?>
-			<a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
-			<a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
-			<a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
-		<?php endif; ?>
-	</div>
+
+	    <div class="mobile-show all-page download-menu">
+		    <?php
+		    // MOBILE DETECT
+		    require_once "lib/mobile-detect-2.8.5/Mobile_Detect.php";
+		    $detect = new Mobile_Detect;
+		    ?>
+		    <?php if($detect->isAndroidOS()): ?>
+			    <a class="dl-android" href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
+		    <?php elseif($detect->isiOS()): ?>
+			    <a class="dl-ios" href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
+			    <a class="dl-ios" href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
+		    <?php else: ?>
+			    <a href="<?php echo landing_settings_get("android_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/android.png"></a>
+			    <a href="<?php echo landing_settings_get("ios_jailbreak_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-jailbreak.png"></a>
+			    <a href="<?php echo landing_settings_get("ios_link") ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/home/ios-itunes.png"></a>
+		    <?php endif; ?>
+	    </div>
+    </div>
 
     <a id="logo-mobi" href="<?php echo esc_url( get_permalink( get_page_by_path( 'trang-chu' ) ) ); ?>"><img src="<?php echo get_bloginfo('template_url') ?>/images/event/logo.png" alt="Logo"></a>
     <div id="content" class="site-content">

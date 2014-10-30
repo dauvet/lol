@@ -1228,8 +1228,17 @@ body  footer {
     background-color: #060b1b;
 }
 
-.mobile-show.download-menu {
-	display: none;
+/*.mobile-show.download-menu {*/
+	/*display: none;*/
+/*}*/
+
+
+@media screen and (min-width: 760px) {
+	.all-page.download-menu {
+		width: 996px;
+		margin: 240px auto 0 auto;
+		text-align: right;
+	}
 }
 
 /*For mobile*/
@@ -1263,8 +1272,9 @@ body  footer {
     /*FOR ALL PAGE*/
 	.mobile-show.download-menu {
 		position: absolute;
-		top: 380px;
+		/*top: 380px;*/
 		left: 0;
+		bottom: 0;
 		text-align: center;
 		width: 100%;
 		display: block;
@@ -1468,6 +1478,7 @@ img {
     background: url(images/event/banner.png) no-repeat center top;
     height: 425px;
     overflow: visible;
+	position: relative;
 }
 
 
