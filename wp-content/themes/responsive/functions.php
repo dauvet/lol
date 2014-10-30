@@ -144,3 +144,9 @@ function load_fonts() {
 add_action('wp_print_styles', 'load_fonts');
 
 /** Display related posts in Genesis based on Tags */
+add_filter( 'the_content', 'attachment_image_link_remove_filter' );
+function attachment_image_link_remove_filter( $content ) {
+    $content =
+        preg_replace(array('{<a[^>]*><img}','{/></a>}'), array('<img','/>'), $content);
+    return $content;
+}
