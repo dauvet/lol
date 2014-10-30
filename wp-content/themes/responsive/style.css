@@ -1659,7 +1659,7 @@ img {
 @media only screen and (max-width : 320px) {
     #sub {
         width: 100%;
-        background: url(images/event/wap_image.jpg) no-repeat center top;
+        background: url(images/event/wap-image.png) no-repeat center top;
         height: 425px;
         overflow: visible;
     }
@@ -1683,6 +1683,9 @@ img {
     }
     #page-event nav li a {
         border-bottom: 1px solid #576979;
+    }
+    .statue{
+        height: auto!important;
     }
 }
 /*<!-- END HEADER -->*/
