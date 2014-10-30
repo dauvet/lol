@@ -1350,7 +1350,7 @@ body  footer {
     }
 
     body.trang-chu .news-with-tabs .content-section .content-date-modified {
-        width: 23%;
+        /*width: 23%;*/
         text-align: right;
     }
 
