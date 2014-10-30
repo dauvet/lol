@@ -1808,6 +1808,11 @@ img {
     font-size: 16px;
     line-height: 23px;
 }
+#page-event .content .entry-content figcaption
+{
+    font-size: 12px;
+    font-style: italic;
+}
 #page-event .content .entry-content img 
 {
     margin-top: 15px;

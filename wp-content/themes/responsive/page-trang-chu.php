@@ -48,7 +48,7 @@ get_header("trang-chu"); ?>
                 <a class="fancybox-modal question-ask-a" href="#question-ask-modal"><div class="question-ask-btn" ></div></a>
             </div>
             <div class="clip-1">
-                <h2 class="clip-title block-title">TRAILER</h2>
+                <h2 class="clip-title block-title">VIDEO</h2>
                 <div class="clip-section">
                     <iframe width="100%" height="100%" src="<?php echo landing_settings_get("home_trailer_youtube_link") ?>" frameborder="0" allowfullscreen></iframe>
                 </div>
