@@ -64,7 +64,7 @@
 	    	// Only load Socialite if the user has not defined a variable to prevent it.
 	        if ( true === $(this).data('socialite') ) {
 		    	Socialite.load($(this));
-		    	$('.fsb-share-facebook, .fsb-share-google').removeClass('fsb-hide-count');
+		    	$('.fsb-share-facebook, .fsb-share-google, .fsb-share-twitter').removeClass('fsb-hide-count');
 		    }
 	    });
 
