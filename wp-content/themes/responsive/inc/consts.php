@@ -54,10 +54,6 @@ $home_settings_keys = array(
         'object_key' => 'ID',
         'object_value' => 'title'
     ),
-    'home_reated_posts_count' => array(
-        'title' => __('Number of related posts', 'responsive'),
-        'type' => 'text',
-    )
 );
 
 global $event_settings_keys;
@@ -79,8 +75,21 @@ $event_settings_keys = array(
         'title' => __('Show posts date to', 'responsive'),
         'type' => 'date',
     ),
-    'event_show_posts_count' => array(
-        'title' => __('Number of posts show', 'responsive'),
+    'event_posts_count' => array(
+        'title' => __('Number of event related posts to show', 'responsive'),
         'type' => 'text',
     ),
+);
+
+global $pages_settings_keys;
+$pages_settings_keys = array(
+    'page_related_posts_count' => array(
+        'title' => __('Number of related posts to show', 'responsive'),
+        'type' => 'text',
+    ),
+    'page_posts_of_category_count' => array(
+        'title' => __('Number of posts of category to show', 'responsive'),
+        'type' => 'text',
+    ),
+
 );

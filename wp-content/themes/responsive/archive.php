@@ -37,11 +37,13 @@ get_header(); ?>
 						$cat = get_category( get_query_var( 'cat' ) );
 						global $paged;
 						$curpage = $paged ? $paged : 1;
+                        $posts_per_page = settings_get('page_posts_of_category_count');
+                        if (!$posts_per_page) $posts_per_page = 10;
 						$args = array(
 							'post_type' => 'post',
 							'category_name' =>  $cat->slug,
 							'orderby' => 'post_date',
-
+                            'posts_per_page' => $posts_per_page,
 							'paged' => $paged
 						);
 						$query = new WP_Query($args);

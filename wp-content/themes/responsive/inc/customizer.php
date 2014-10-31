@@ -104,7 +104,7 @@ function related_post()
     if ($tags) {
         $tag_ids = array();
         foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
-        $post_count = home_settings_get('home_reated_posts_count');
+        $post_count = settings_get('page_related_posts_count');
         $args=array(
             'tag__in' => $tag_ids,
             'post__not_in' => array($post->ID),

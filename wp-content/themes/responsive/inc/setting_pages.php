@@ -7,10 +7,12 @@ function register_pages_menu(){
         get_template_directory_uri() . '/images/landing-page.png', 6 );
     add_menu_page( 'Home page', 'Home settings', 'manage_options', 'home_settings', 'home_settings_render',
         get_template_directory_uri() . '/images/home-page.png', 7 );
-    add_menu_page( 'Q/A', 'Q/A', 'manage_options', 'qa_management', 'qa_management_render',
-        get_template_directory_uri() . '/images/qa-management.png', 8 );
     add_menu_page( 'Event page', 'Event settings', 'manage_options', 'event_settings', 'event_settings_render',
-        get_template_directory_uri() . '/images/qa-management.png', 9 );
+        get_template_directory_uri() . '/images/event-page.png', 8 );
+    add_menu_page( 'Pages settings', 'Pages settings', 'manage_options', 'pages_settings', 'pages_settings_render',
+        get_template_directory_uri() . '/images/pages.png', 9 );
+    add_menu_page( 'Q/A', 'Q/A', 'manage_options', 'qa_management', 'qa_management_render',
+        get_template_directory_uri() . '/images/qa-management.png', 10 );
 
     add_action( 'admin_enqueue_scripts', 'enqueue_qa_js' );
 
@@ -268,7 +270,7 @@ function event_settings_render()
     }
     ?>
     <div class="wrap">
-        <h2>Home page settings</h2>
+        <h2><?php _e('Event page settings','responsive'); ?></h2>
         <form method="post" action="">
             <?php wp_nonce_field( 'event-settings'); ?>
             <?php setting_table_render($settings, $event_settings_keys); ?>
@@ -280,4 +282,40 @@ function event_settings_render()
 
 function event_settings_get($key){
     return get_option(LOL_PREFIX . $key);
+}
+
+function settings_get($key){
+    return get_option(LOL_PREFIX . $key);
+}
+
+//  pages settings
+function pages_settings_render()
+{
+    global $pages_settings_keys;
+    if (isset($_POST['settings']) && check_admin_referer( 'pages-settings')) {
+        $settings = $_POST['settings'];
+        foreach($pages_settings_keys as $key=>$tag){
+            if (isset($settings[$key])){
+                update_option(LOL_PREFIX . $key, $settings[$key]);
+            }
+        }
+        ?>
+        <div id="setting-error-settings_updated" class="updated settings-error">
+            <p><strong><?php _e('Settings saved.','responsive'); ?></strong></p></div>
+    <?php
+    }else{
+        foreach($pages_settings_keys as $key=>$tag){
+            $settings[$key] = get_option(LOL_PREFIX . $key);
+        }
+    }
+    ?>
+    <div class="wrap">
+        <h2><?php _e('Pages settings','responsive'); ?></h2>
+        <form method="post" action="">
+            <?php wp_nonce_field( 'pages-settings'); ?>
+            <?php setting_table_render($settings, $pages_settings_keys); ?>
+            <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'responsive'); ?>"></p>
+        </form>
+    </div>
+<?php
 }

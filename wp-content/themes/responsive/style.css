@@ -802,7 +802,7 @@ object {
 --------------------------------------------------------------*/
 .scrollToTop{
     width:40px;
-    height:130px;
+    height:40px;
     padding:10px;
     text-align:center;
     font-weight: bold;
@@ -813,7 +813,7 @@ object {
     right:10px;
     display:none;
     background: url('images/go-top.png') no-repeat center center transparent;
-    background-size: 32px 54px;
+    background-size: 40px 40px;
     outline: 0;
 }
 .scrollToTop:hover{

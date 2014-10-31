@@ -44,7 +44,9 @@ get_header(); ?>
                                 <?php
                                 $from_date = DateTime::createFromFormat('d-m-Y',event_settings_get('event_show_date_from'))->format('Y/m/d');
                                 $to_date = DateTime::createFromFormat('d-m-Y',event_settings_get('event_show_date_to'))->format('Y/m/d');
-                                echo do_shortcode("[event_post_list date_from='{$from_date}' date_to='{$to_date}']");
+                                $limit = settings_get('event_posts_count');
+                                if (!$limit) $limit = -1;
+                                echo do_shortcode("[event_post_list date_from='{$from_date}' date_to='{$to_date}' limit='{$limit}']");
                                 ?>
                             </div>
                         </div>
