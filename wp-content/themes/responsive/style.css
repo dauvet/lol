@@ -2406,3 +2406,23 @@ body.landing-page .content-items a:visited{
     }
 }
 
+/* social */
+.social-likes__widget .social-likes__button, .social-likes__widget .social-likes__counter{
+    font-family: 'Roboto', sans-serif;
+}
+.social-likes__widget .social-likes__button{
+    padding: 5px 10px 5px 25px;
+    text-transform: uppercase;
+}
+.social-likes__widget .social-likes__icon_facebook {
+    left: 6px;
+    top: 4px;
+}
+.social-likes__widget .social-likes__icon_twitter {
+    left: 5px;
+    top: 5px;
+}
+.social-likes__widget .social-likes__icon_plusone {
+    left: 5px;
+    top: 4px;
+}
