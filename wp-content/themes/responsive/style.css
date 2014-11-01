@@ -2426,3 +2426,29 @@ body.landing-page .content-items a:visited{
     left: 5px;
     top: 4px;
 }
+.post-tags {
+    margin-bottom: 1.5em;
+}
+/* post tags */
+.post-tags li.tags-title{
+    background-color: #474747;
+    margin-left: 0;
+}
+.post-tags li{
+    float: left;
+    line-height: 18px;
+    padding: 2px 8px 1px 8px;
+    font-weight: bold;
+    font-size: 11px;
+    color: #ffffff;
+    background-color: #b3b3b3;
+    margin-left: 3px;
+    text-transform: uppercase;
+}
+.post-tags li a, .post-tags li a:hover, .post-tags li a:visited{
+    color: #ffffff;
+}
+.post-tags li:hover{
+    background-color: #8B94B0;
+}
+
