@@ -1476,7 +1476,7 @@ img {
 #sub {
     width: 100%;
     background: url(images/event/banner.png) no-repeat center top;
-    height: 425px;
+    height: 424px;
     overflow: visible;
 	position: relative;
 }
@@ -1575,7 +1575,8 @@ img {
     #sub {
         width: 100%;
         /*background: url(images/event/wap_image.jpg) no-repeat center top;*/
-        height: 425px;
+        background: url(images/760-x-424.png) no-repeat center top;
+        height: 424px;
         overflow: visible;
     }
     .sub_left{
@@ -1631,8 +1632,8 @@ img {
 @media only screen and (max-width : 480px) {
     #sub {
         width: 100%;
-        background: url(images/event/wap_image.jpg) no-repeat center top;
-        height: 425px;
+        background: url(images/480-x-424.png) no-repeat center top;
+        height: 424px;
         overflow: visible;
     }
     .sub_left{
@@ -1677,8 +1678,8 @@ img {
 @media only screen and (max-width : 320px) {
     #sub {
         width: 100%;
-        background: url(images/event/wap-image.png) no-repeat center top;
-        height: 425px;
+        background: url(images/320-x-424.png) no-repeat center top;
+        height: 424px;
         overflow: visible;
     }
     .sub_left{
