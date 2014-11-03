@@ -1818,6 +1818,7 @@ img {
 {
     font-size: 16px;
     line-height: 23px;
+    color: #C5C5E2;
 }
 #page-event .content .entry-content figcaption
 {
@@ -1864,7 +1865,7 @@ margin-top: 5px;
     margin-bottom: 5px;
 
 }
-
+/*
 .list_news {
     margin: 0 auto 10px auto;
     height: auto;
@@ -1892,6 +1893,65 @@ margin-top: 5px;
     padding-right: 18px;
     margin-left: 20px;
     color: #606060;
+}*/
+.list_news *{
+    font-size: 15px;
+    font-family: "Tahoma";
+    color: #c5c5e2;
+}
+.list_news a, .list_news a:visited{
+    color: #c5c5e2;
+}
+.list_news a:hover{
+    color: #ff0000;
+}
+.list_news li{
+    display: block;
+    border-top: 1px dashed #313a54;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.list_news li:first-child{
+    border-top: 0;
+    padding-top: 0;
+}
+.list_news .left{
+    display: table-cell;
+    width: 123px;
+    height: 72px;
+    text-align: left;
+    vertical-align: top;
+    padding-right: 15px;
+}
+.list_news .left img{
+    width: 123px;
+    height: 72px;
+}
+.list_news .right{
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: break-all;
+    white-space: normal;
+}
+.list_news .right .p-title{
+    font-weight: bold;
+    float: left;
+}
+.list_news .right .p-date{
+
+    float: right;
+}
+.list_news .right .p-content{
+    margin-top: 2px;
+}
+.list_news .right .p-content p{
+    margin-bottom: 0;
 }
 #page-event .page {
     margin: 0 auto;

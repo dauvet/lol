@@ -32,7 +32,7 @@ get_header(); ?>
                     <a href="<?php echo esc_url( home_url( '/trang-chu/' )) ?>" title="">Trang Chủ</a> &gt; <a href="#"><?php echo single_cat_title("", false); ?></a>
                 </div>
                 <div class="content">
-                    <ul class="list_news">
+                    <ul class="list_news clearfix">
                         <?php
 						$cat = get_category( get_query_var( 'cat' ) );
 						global $paged;
@@ -48,8 +48,17 @@ get_header(); ?>
 						);
 						$query = new WP_Query($args);
                         while ( $query->have_posts()) : $query->the_post() ?>
-
-                            <li><a href="<?php the_permalink(); ?>"><em><?php echo get_the_date('Y-m-d'); ?></em><?php the_title(); ?></a> </li>
+                            <li>
+                                <a class="left" href="<?php the_permalink(); ?>">
+                                    <img src="<?php wp_get_attachment_image_src(get_post_thumbnail_id(),array(123,72)); ?>">
+                                </a>
+                                <div class="right">
+                                    <div class="p-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+                                    <div class="p-date"><?php echo get_the_date('d-m-Y'); ?></div>
+                                    <div class="clear"></div>
+                                    <div class="p-content"><?php the_excerpt(); ?></div>
+                                </div>
+                            </li>
                         <?php endwhile ?>
 
                     </ul>

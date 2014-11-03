@@ -42,7 +42,8 @@ function responsive_setup() {
 	 * @link http://codex.wordpress.org/Function_Reference/add_theme_support#Post_Thumbnails
 	 */
 	add_theme_support( 'post-thumbnails' );
-   // set_post_thumbnail_size( 300, 159, true );
+    //set_post_thumbnail_size( 142, 82, true );
+    set_post_thumbnail_size( 123, 72, true );
     // This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'responsive' ),
@@ -150,3 +151,8 @@ function attachment_image_link_remove_filter( $content ) {
         preg_replace(array('{<a[^>]*><img}','{/></a>}'), array('<img','/>'), $content);
     return $content;
 }
+
+function new_excerpt_more( $more ) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
