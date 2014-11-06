@@ -114,20 +114,20 @@ function related_post()
 
         $my_query = new wp_query( $args );
         ?>
-            <div class="relatedposts">
-            <h3>CÙNG CHỦ ĐỀ</h3>
-        <?php
-        while( $my_query->have_posts() ) {
-            $my_query->the_post();
+        <div class="related-posts">
+            <h3><?php _e('Cùng chủ để', 'responsive'); ?></h3>
+            <ul>
+            <?php
+            while( $my_query->have_posts() ) {
+                $my_query->the_post();
+                ?>
+                <li>
+                    <a rel="external" href="<? the_permalink()?>"><?php the_title(); ?></a>
+                </li>
+            <?php }
             ?>
-
-            <div class="relatedthumb">
-                <a rel="external" href="<? the_permalink()?>"><?php the_post_thumbnail(array(400,159)); ?><br />
-                    <h1><?php the_title(); ?></h1>
-                </a>
-            </div>
-        <?php }
-        ?></div><?php
+            </ul>
+        </div><?php
     }
     $post = $orig_post;
     wp_reset_query();

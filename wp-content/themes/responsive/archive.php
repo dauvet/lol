@@ -50,7 +50,10 @@ get_header(); ?>
                         while ( $query->have_posts()) : $query->the_post() ?>
                             <li>
                                 <a class="left" href="<?php the_permalink(); ?>">
-                                    <img src="<?php wp_get_attachment_image_src(get_post_thumbnail_id(),array(123,72)); ?>">
+									<?php 
+										$img = wp_get_attachment_image_src(get_post_thumbnail_id(),array(123,72));
+									?>
+                                    <img src="<?php echo $img[0]; ?>">
                                 </a>
                                 <div class="right">
                                     <div class="p-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>

@@ -30,12 +30,13 @@ get_header(); ?>
 							<?php get_template_part( 'content', 'single' ); ?>
 						<?php endwhile; // end of the loop. ?>
                         <?php the_tags('<ul class="post-tags clearfix"><li class="tags-title">' . __('TAGS', 'responsive') . '</li><li>','</li><li>','</li></ul>'); ?>
-                            <?php related_post() ?>
+
                         <?php
                         if ( comments_open() || get_comments_number() ) {
                             comments_template();
                         }
                         ?>
+                        <?php related_post() ?>
 					</div>
 
 				</div>
