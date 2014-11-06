@@ -2551,7 +2551,7 @@ body.landing-page .content-items a:visited{
     top: 4px;
 }
 .post-tags {
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
 }
 /* post tags */
 .post-tags li.tags-title{
@@ -2568,6 +2568,7 @@ body.landing-page .content-items a:visited{
     background-color: #b3b3b3;
     margin-left: 3px;
     text-transform: uppercase;
+margin-bottom: 10px;
 }
 .post-tags li a, .post-tags li a:hover, .post-tags li a:visited{
     color: #ffffff;
